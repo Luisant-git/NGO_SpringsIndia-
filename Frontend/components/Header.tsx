@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
+import finalLogo from '../assets/final.png';
+
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -42,7 +44,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <NavLink to="/" className="logo-container">
-              <img src="/final.png" alt="Springs India Foundation Logo" className="logo-image" />
+              <img src={finalLogo} alt="Springs India Foundation Logo" className="logo-image" />
               <div className="logo-text">
                 {/* Springs India <span className="logo-highlight">Foundation</span> */}
               </div>

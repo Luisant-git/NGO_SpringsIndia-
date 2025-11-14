@@ -1,5 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import homeImg from '../../home.JPG';
+import st1 from '../../assets/st1.jpg';
+import st2 from '../../assets/st2.jpg';
+import st3 from '../../assets/st3.jpg';
+import st4 from '../../assets/st4.jpg';
 
 const runningSlides = [
     "Impacting Women, Youth, and Children through Women Empowerment, Youth Development, and Child Welfare through long-term sustainable programs",
@@ -30,25 +35,25 @@ const homeSuccessStories = [
         title: "Women Empowerment — A New Beginning",
         name: "Ms. Menaka",
         story: "A woman who was in crisis trained through our program now earns independently and supports her children's education...",
-        image: "/st1.jpg"
+        image: st1
     },
     {
         title: "Child Education — A Journey of Learning",
         name: "Our Children",
         story: "Children enjoyed after-school activities, gained confidence, and won prizes in competitions, discovering their potential...",
-        image: "/st2.jpg"
+        image: st2
     },
     {
         title: "Celebrating Culture, Together",
         name: "Our Children",
         story: "Our children learn not only academics, but also values, traditions and the joy of shared community moments. Festivals like Pongal help connect them with nature, gratitude, heritage and togetherness.",
-        image: "/st3.jpg"
+        image: st3
     },
     {
         title: "Educational support for children",
         name: "Joyful Learning Environment",
         story: "Children participate in our after-school enrichment program, building foundational skills in reading, writing, numeracy and life values. We focus on confidence, curiosity, and character — not just marks. Learning becomes meaningful when every child feels seen, safe and inspired.",
-        image: "/st4.jpg"
+        image: st4
     }
 ];
 
@@ -195,7 +200,7 @@ const Home: React.FC = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative h-[60vh] md:h-[80vh] bg-cover bg-center" style={{ backgroundImage: "url('/home.JPG')" }}>
+            <section className="relative h-[60vh] md:h-[80vh] bg-cover bg-center" style={{ backgroundImage: `url(${homeImg})` }}>
                 <div className="hero-overlay absolute inset-0"></div>
                 <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight animate-fade-in-down">
