@@ -1,0 +1,14 @@
+.jm-mobile-menu ul li a {
+    color: black; /* Default color */
+    text-decoration: none;
+  }
+  
+  .jm-mobile-menu ul li a.active {
+    color: green; /* Active item color */
+    text-decoration: underline; /* Underline the active item */
+  }
+  
+  .jm-mobile-menu ul li a:hover {
+    color: green; /* Hover effect color */
+  }
+  

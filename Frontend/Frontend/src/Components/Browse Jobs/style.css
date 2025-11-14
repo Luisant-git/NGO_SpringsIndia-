@@ -1,0 +1,32 @@
+.nav-tabs {
+    border-bottom: 2px solid #e2e2e2;
+  }
+  
+  .nav-tabs .nav-link {
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .nav-tabs .nav-link.active {
+    border-bottom: 2px solid #007bff; /* Active tab underline */
+    color: #007bff; /* Active tab color */
+  }
+  
+  .jm-browse-job-tab-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .jm-browse-job-tab-right p {
+    margin-right: 8px;
+  }
+  
+  .form-select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+  }
+  

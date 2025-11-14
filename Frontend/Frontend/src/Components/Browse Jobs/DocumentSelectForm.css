@@ -1,0 +1,60 @@
+.resume-upload {
+  padding: 10px;
+}
+
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.file-input {
+  display: none; /* Hide the default file input */
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #d1d1d1; /* Dashed border */
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  text-align: center;
+}
+
+.file-label:hover {
+  background-color: #e0f2e9; /* Light green on hover */
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+}
+
+.file-icon {
+  margin-right: 10px; /* Spacing between icon and text */
+  color: #4caf50; /* Icon color */
+  font-size: 24px; /* Icon size */
+}
+
+.submit-button {
+  background-color: #4caf50; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+

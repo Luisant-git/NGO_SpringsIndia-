@@ -1,0 +1,120 @@
+/* Professional color theme based on logo */
+:root {
+  --primary-green: #2d7d32;
+  --primary-teal: #00695c;
+  --accent-orange: #ff6f00;
+  --accent-red: #d32f2f;
+  --light-green: #e8f5e8;
+  --light-teal: #e0f2f1;
+  --light-orange: #fff3e0;
+  --dark-text: #1a1a1a;
+  --medium-text: #424242;
+  --light-text: #757575;
+}
+
+/* Custom animations */
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 1s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out 0.3s both;
+}
+
+/* Logo styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-image {
+  height: 70px;
+  width: 250px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-teal);
+}
+
+.logo-highlight {
+  color: var(--accent-orange);
+}
+
+/* Professional gradient backgrounds */
+.hero-overlay {
+  /* background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(36, 41, 39, 0.9) 100%); */
+}
+
+.cta-gradient {
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-green) 100%);
+}
+
+/* Custom hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Professional button styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-red) 100%);
+  color: white;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 111, 0, 0.3);
+}
+
+/* Icon styling */
+.icon-container {
+  background: linear-gradient(135deg, var(--light-teal) 0%, var(--light-green) 100%);
+  color: var(--primary-teal);
+}
+
+/* Mobile logo alignment */
+@media (max-width: 768px) {
+  .logo-container {
+    justify-content: flex-start;
+  }
+  
+  .logo-image {
+    margin-left: -20px;
+  }
+}
