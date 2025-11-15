@@ -44,12 +44,12 @@ const coreValues = [
 ];
 
 const TimelineItem: React.FC<{ year: string; events: string[]; isLeft: boolean }> = ({ year, events, isLeft }) => (
-    <div className={`mb-8 flex justify-between items-center w-full ${isLeft ? 'flex-row-reverse left-timeline' : 'right-timeline'}`}>
-        <div className="order-1 w-5/12"></div>
-        <div className="z-20 flex items-center order-1 shadow-xl w-14 h-14 rounded-full" style={{background: 'linear-gradient(135deg, #ff6f00 0%, #d32f2f 100%)'}}>
+    <div className={`mb-8 flex md:justify-between items-center w-full ${isLeft ? 'md:flex-row-reverse left-timeline' : 'right-timeline'}`}>
+        <div className="order-1 w-5/12 hidden md:block"></div>
+        <div className="z-20 flex items-center order-1 shadow-xl w-14 h-14 rounded-full flex-shrink-0" style={{background: 'linear-gradient(135deg, #ff6f00 0%, #d32f2f 100%)'}}>
             <h1 className="mx-auto font-semibold text-lg text-white">{year}</h1>
         </div>
-        <div className="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+        <div className="order-1 bg-white rounded-lg shadow-xl w-5/12 md:w-5/12 w-full ml-4 md:ml-0 px-6 py-4">
             <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
                 {events.map((event, index) => <li key={index}>{event}</li>)}
             </ul>
@@ -121,8 +121,8 @@ const About: React.FC = () => {
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-gray-800">Our Journey</h2>
                     <p className="text-center mt-2 text-gray-600">Reflecting on our hope, resilience, and vision to serve.</p>
-                    <div className="relative wrap overflow-hidden p-10 h-full">
-                        <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style={{left: '50%'}}></div>
+                    <div className="relative wrap overflow-hidden p-10 md:p-10 p-4 h-full">
+                        <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border hidden md:block" style={{left: '50%'}}></div>
                         {Object.keys(timelineEvents).map((year, index) => (
                             <TimelineItem key={year} year={year} events={timelineEvents[year as keyof typeof timelineEvents]} isLeft={index % 2 === 0} />
                         ))}
