@@ -40,10 +40,10 @@ const Gallery: React.FC = () => {
 
     return (
         <div className="bg-gray-50">
-            <section className="bg-white py-20">
+            <section className="cta-gradient text-white py-20">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl font-bold text-indigo-800">Our Gallery</h1>
-                    <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                    <h1 className="text-4xl font-bold">Our Gallery</h1>
+                    <p className="mt-4 text-lg max-w-3xl mx-auto">
                         A glimpse into the moments that define our journey. See the smiles, the learning, and the impact we create together.
                     </p>
                 </div>
@@ -58,8 +58,8 @@ const Gallery: React.FC = () => {
                                 onClick={() => setFilter(category)}
                                 className={`px-4 py-2 text-sm md:text-base font-semibold rounded-full transition-colors ${
                                     filter === category 
-                                    ? 'bg-indigo-700 text-white' 
-                                    : 'bg-white text-gray-700 hover:bg-indigo-100'
+                                    ? 'bg-teal-600 text-white' 
+                                    : 'bg-white text-gray-700 hover:bg-teal-50'
                                 }`}
                             >
                                 {category}
@@ -79,7 +79,7 @@ const Gallery: React.FC = () => {
                                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"></div>
                                 <div className="absolute bottom-0 left-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                                     <p className="text-white text-sm font-semibold">{image.alt}</p>
-                                    <span className="text-xs text-red-300">{image.category}</span>
+                                    <span className="text-xs text-orange-300">{image.category}</span>
                                 </div>
                             </div>
                         ))}
@@ -89,7 +89,7 @@ const Gallery: React.FC = () => {
                         <div className="text-center mt-12">
                             <button
                                 onClick={handleLoadMore}
-                                className="bg-indigo-700 hover:bg-indigo-800 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
                             >
                                 Load More
                             </button>

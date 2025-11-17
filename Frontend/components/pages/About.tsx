@@ -84,35 +84,80 @@ const About: React.FC = () => {
                 </div>
             </section>
 
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-4 text-center">
-                     <div className="grid md:grid-cols-2 gap-10">
-                        <div>
-                            <h3 className="text-2xl font-bold" style={{color: '#00695c'}}>Our Vision</h3>
-                            <p className="mt-2 text-gray-600 italic">
-                            'Save' to 'Protect', 'Serve' to 'Support', 'Secure' to 'Nurture', 'Set Free' to 'Survive'
+            <section className="py-20 bg-gradient-to-br from-teal-50 to-emerald-50">
+                <div className="container mx-auto px-4">
+                    <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-teal-100 to-emerald-100 mx-auto mb-6">
+                                <i className="fas fa-eye text-3xl text-teal-600"></i>
+                            </div>
+                            <h3 className="text-2xl font-bold text-center text-teal-700 mb-4">Our Vision</h3>
+                            <p className="text-center text-gray-600 italic text-lg leading-relaxed">
+                                'Save' to 'Protect', 'Serve' to 'Support', 'Secure' to 'Nurture', 'Set Free' to 'Survive'
                             </p>
                         </div>
-                        <div>
-                            <h3 className="text-2xl font-bold" style={{color: '#00695c'}}>Our Mission</h3>
-                            <p className="mt-2 text-gray-600">
-                            To save, protect and nurture every woman and child, guide every youth, and support them with care, dignity, and opportunity. We are committed to creating safety and helping each individual to come out of hardships and crisis.
+                        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-orange-100 to-red-100 mx-auto mb-6">
+                                <i className="fas fa-bullseye text-3xl text-orange-600"></i>
+                            </div>
+                            <h3 className="text-2xl font-bold text-center text-teal-700 mb-4">Our Mission</h3>
+                            <p className="text-center text-gray-600 leading-relaxed">
+                                To save, protect and nurture every woman and child, guide every youth, and support them with care, dignity, and opportunity. We are committed to creating safety and helping each individual to come out of hardships and crisis.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="py-20">
+            <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center text-gray-800">Our Core Values</h2>
-                    <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {coreValues.map(value => (
-                            <div key={value.title} className="bg-white p-6 rounded-lg shadow-md card-hover">
-                                <h3 className="text-xl font-semibold" style={{color: '#00695c'}}>{value.title}</h3>
-                                <p className="mt-2 text-gray-600">{value.description}</p>
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Core Values</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">The principles that guide our work and define our commitment to the communities we serve.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
+                            <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
+                                <i className="fas fa-shield-alt text-3xl"></i>
                             </div>
-                        ))}
+                            <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Integrity & Transparency</h3>
+                            <p className="mt-2 text-gray-600 text-center">Upholding ethical practices and ensuring honesty and accountability in all initiatives.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
+                            <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
+                                <i className="fas fa-balance-scale text-3xl"></i>
+                            </div>
+                            <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Equity & Inclusion</h3>
+                            <p className="mt-2 text-gray-600 text-center">Ensuring every individual, especially from marginalized communities, deserves access to quality resources.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
+                            <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
+                                <i className="fas fa-fist-raised text-3xl"></i>
+                            </div>
+                            <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Empowerment & Self-Reliance</h3>
+                            <p className="mt-2 text-gray-600 text-center">Supporting women, youth, and children to build their skills, confidence, and economic independence.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
+                            <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
+                                <i className="fas fa-clipboard-check text-3xl"></i>
+                            </div>
+                            <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Accountability</h3>
+                            <p className="mt-2 text-gray-600 text-center">Delivering clear, measurable results that contribute to meaningful community development.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
+                            <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
+                                <i className="fas fa-leaf text-3xl"></i>
+                            </div>
+                            <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Sustainability & Responsibility</h3>
+                            <p className="mt-2 text-gray-600 text-center">Working towards long-term, meaningful change and community development.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
+                            <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
+                                <i className="fas fa-heart text-3xl"></i>
+                            </div>
+                            <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Holistic Development</h3>
+                            <p className="mt-2 text-gray-600 text-center">Nurturing intellectual, emotional, physical, and moral growth to create responsible citizens.</p>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -1,4 +1,9 @@
 import React from 'react';
+import program1 from '../../assets/program1.jpg';
+import program2 from '../../assets/program2.jpg';
+import program3 from '../../assets/program3.jpg';
+import program4 from '../../assets/program4.jpg';
+import program5 from '../../assets/program5.jpg';
 
 const pillars = [
     {
@@ -35,33 +40,35 @@ const pillars = [
     }
 ];
 
+const programImages = [program1, program2, program3, program4, program5];
+
 const PillarCard: React.FC<{ pillar: typeof pillars[0], index: number }> = ({ pillar, index }) => (
     <div className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} mb-20 items-center`}>
         <div className="md:w-1/2 p-6">
-            <img src={`https://picsum.photos/seed/program${index}/600/400`} alt={pillar.title} className="rounded-lg shadow-2xl w-full h-auto object-cover" />
+            <img src={programImages[index]} alt={pillar.title} className="rounded-lg shadow-2xl w-full h-auto object-cover" />
         </div>
         <div className="md:w-1/2 p-6">
-            <h2 className="text-3xl font-bold text-indigo-800">{pillar.title}</h2>
-            <p className="mt-2 text-red-600 italic">"{pillar.quote}"</p>
+            <h2 className="text-3xl font-bold text-orange-600">{pillar.title}</h2>
+            <p className="mt-2 text-emerald-600 italic font-medium">"{pillar.quote}"</p>
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                    <h4 className="font-semibold text-lg text-gray-700">Activities</h4>
-                    <ul className="mt-2 list-disc list-inside text-gray-600 space-y-1">
+                    <h4 className="font-semibold text-lg text-amber-700">Activities</h4>
+                    <ul className="mt-2 list-disc list-inside text-slate-700 space-y-1">
                         {pillar.activities.map(item => <li key={item}>{item}</li>)}
                     </ul>
                 </div>
                 {pillar.focus && (
                 <div>
-                    <h4 className="font-semibold text-lg text-gray-700">Program Focus</h4>
-                    <ul className="mt-2 list-disc list-inside text-gray-600 space-y-1">
+                    <h4 className="font-semibold text-lg text-amber-700">Program Focus</h4>
+                    <ul className="mt-2 list-disc list-inside text-slate-700 space-y-1">
                         {pillar.focus.map(item => <li key={item}>{item}</li>)}
                     </ul>
                 </div>
                 )}
             </div>
              <div className="mt-6">
-                <h4 className="font-semibold text-lg text-gray-700">Impact Highlights</h4>
-                <ul className="mt-2 list-disc list-inside text-gray-600 space-y-1">
+                <h4 className="font-semibold text-lg text-amber-700">Impact Highlights</h4>
+                <ul className="mt-2 list-disc list-inside text-slate-700 space-y-1">
                     {pillar.impact.map(item => <li key={item}>{item}</li>)}
                 </ul>
             </div>
@@ -72,18 +79,18 @@ const PillarCard: React.FC<{ pillar: typeof pillars[0], index: number }> = ({ pi
 const Programs: React.FC = () => {
     return (
         <div>
-            <section className="bg-white py-20">
+            <section className="cta-gradient text-white py-20">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl font-bold text-indigo-800">Programs & Initiatives</h1>
-                    <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                    <h1 className="text-4xl font-bold">Programs & Initiatives</h1>
+                    <p className="mt-4 text-lg max-w-3xl mx-auto">
                         Empowering Women. Developing Youth. Transforming Children. Strengthening Communities. One life, one village, one dream at a time.
                     </p>
                 </div>
             </section>
             
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-gradient-to-br from-emerald-50 to-teal-50">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Our Core Program Pillars</h2>
+                    <h2 className="text-3xl font-bold text-center text-emerald-700 mb-12">Our Core Program Pillars</h2>
                     {pillars.map((pillar, index) => (
                         <PillarCard key={pillar.title} pillar={pillar} index={index} />
                     ))}

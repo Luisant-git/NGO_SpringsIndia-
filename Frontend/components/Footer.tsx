@@ -4,7 +4,7 @@ import finalLogo from '../assets/final2.png';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="text-white" style={{backgroundColor: 'rgba(17, 24, 39)'}}>
       <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
             <h3 className="text-2xl font-bold">Support Our Mission</h3>

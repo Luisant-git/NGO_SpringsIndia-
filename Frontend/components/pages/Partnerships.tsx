@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const partnershipTypes = [
-    { title: "CSR Funding", description: "Support sustainable social impact projects aligned with CSR mandate." },
-    { title: "Adopt-a-Village Program", description: "Transform a village through integrated development initiatives." },
-    { title: "Adopt-a-School Program", description: "Providing curriculum support and infrastructure facilities." },
-    { title: "Employee Volunteering", description: "Staff mentoring, teaching, workshops, and awareness drives." },
-    { title: "Livelihood & Women Entrepreneurship", description: "Setting up skill units, micro-enterprise support, SHGs." },
-    { title: "Capacity Building Support", description: "Technology, training, research & innovation support." }
+    { title: "CSR Funding", description: "Support sustainable social impact projects aligned with CSR mandate.", icon: "fas fa-hand-holding-usd", color: "bg-blue-500" },
+    { title: "Adopt-a-Village Program", description: "Transform a village through integrated development initiatives.", icon: "fas fa-home", color: "bg-green-500" },
+    { title: "Adopt-a-School Program", description: "Providing curriculum support and infrastructure facilities.", icon: "fas fa-school", color: "bg-purple-500" },
+    { title: "Employee Volunteering", description: "Staff mentoring, teaching, workshops, and awareness drives.", icon: "fas fa-users", color: "bg-orange-500" },
+    { title: "Livelihood & Women Entrepreneurship", description: "Setting up skill units, micro-enterprise support, SHGs.", icon: "fas fa-female", color: "bg-pink-500" },
+    { title: "Capacity Building Support", description: "Technology, training, research & innovation support.", icon: "fas fa-cogs", color: "bg-teal-500" }
 ];
 
 const whyPartner = [
@@ -56,9 +56,12 @@ const Partnerships: React.FC = () => {
                     <p className="text-center text-gray-600 mb-12">We offer multiple partnership pathways to match CSR goals, community needs, and sustainable outcomes.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {partnershipTypes.map(pt => (
-                            <div key={pt.title} className="bg-white p-8 rounded-lg shadow-lg border-t-4 card-hover" style={{borderColor: '#ff6f00'}}>
-                                <h3 className="text-xl font-bold" style={{color: '#00695c'}}>{pt.title}</h3>
-                                <p className="mt-3 text-gray-600">{pt.description}</p>
+                            <div key={pt.title} className="bg-white p-8 rounded-lg shadow-lg card-hover">
+                                <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
+                                    <i className={`${pt.icon} text-3xl`}></i>
+                                </div>
+                                <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">{pt.title}</h3>
+                                <p className="mt-2 text-gray-600 text-center">{pt.description}</p>
                             </div>
                         ))}
                     </div>
@@ -75,7 +78,7 @@ const Partnerships: React.FC = () => {
                         </ul>
                     </div>
                      <div>
-                        <img src="https://picsum.photos/seed/partner/600/450" alt="Partnership meeting" className="rounded-lg shadow-xl" />
+                        <img src="https://img.freepik.com/free-photo/handshake-businessmen_1098-742.jpg?semt=ais_hybrid&w=740&q=80" alt="Partnership meeting" className="rounded-lg shadow-xl" />
                     </div>
                 </div>
             </section>
@@ -95,7 +98,7 @@ const Partnerships: React.FC = () => {
                 </div>
             </section>
             
-            <section className="py-20" style={{backgroundColor: '#e0f2f1'}}>
+            <section className="py-20" style={{backgroundColor: 'rgb(232, 245, 232)'}}>
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold" style={{color: '#00695c'}}>Let's Build Impact Together</h2>
                     <p className="mt-4 text-gray-700 max-w-2xl mx-auto">

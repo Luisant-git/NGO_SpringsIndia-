@@ -95,7 +95,7 @@ const Header: React.FC = () => {
                 </NavLink>
               );
             })}
-            <Link to="/#" className="ml-4 btn-primary text-sm">
+            <Link to="/contact" className="ml-4 btn-primary text-sm">
               Donate Now
             </Link>
           </nav>

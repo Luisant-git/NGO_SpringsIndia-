@@ -24,10 +24,10 @@ const focusAreas = [
 ];
 
 const impactNumbers = [
-    { value: "7000+", label: "Children Reached" },
-    { value: "79", label: "Women Empowered" },
-    { value: "1276", label: "Children Trained" },
-    { value: "250+", label: "Annual Learning Sessions" },
+    { value: "7000+", label: "Children Reached", icon: "fas fa-child" },
+    { value: "79", label: "Women Empowered", icon: "fas fa-female" },
+    { value: "1276", label: "Children Trained", icon: "fas fa-graduation-cap" },
+    { value: "250+", label: "Annual Learning Sessions", icon: "fas fa-chalkboard-teacher" },
 ];
 
 const homeSuccessStories = [
@@ -210,10 +210,10 @@ const Home: React.FC = () => {
                         A community-driven NGO transforming lives through education, skills, livelihood empowerment, health mental care and sustainable development.
                     </p>
                     <div className="mt-8 flex gap-4 animate-fade-in-up">
-                        <Link to="/#" className="px-8 py-3 text-white font-semibold rounded-lg transition-colors" style={{background: 'linear-gradient(135deg, #ff6f00 0%, #d32f2f 100%)'}}>
+                        <Link to="/contact" className="px-8 py-3 text-white font-semibold rounded-lg transition-colors" style={{background: 'linear-gradient(135deg, #ff6f00 0%, #d32f2f 100%)'}}>
                             Donate Now
                         </Link>
-                        <Link to="/#" className="px-8 py-3 bg-white text-teal-700 hover:bg-gray-100 font-semibold rounded-lg transition-colors">
+                        <Link to="/programs" className="px-8 py-3 bg-white text-teal-700 hover:bg-gray-100 font-semibold rounded-lg transition-colors">
                             Our Programs
                         </Link>
                     </div>
@@ -288,17 +288,20 @@ const Home: React.FC = () => {
             </section>
 
                {/* Our Impact in Numbers Section */}
-            <section ref={impactRef} className="py-16 md:py-24 bg-gray-800">
+            <section ref={impactRef} className="py-4 md:py-8" style={{backgroundColor: 'rgba(17, 24, 39)'}}>
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl md:text-4xl font-bold text-center text-white">Our Impact in Numbers</h2>
                     <p className="text-center mt-2 text-gray-300">Every number represents a life touched and a future brightened.</p>
                     <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
                         {impactNumbers.map(metric => (
-                            <div key={metric.label} className="text-center bg-gray-700 p-6 rounded-lg">
-                                <div className="text-4xl md:text-5xl font-bold" style={{color: '#ff6f00'}}>
+                            <div key={metric.label} className="text-center p-8 rounded-lg">
+                                <div className="flex items-center justify-center h-16 w-16 rounded-full mx-auto mb-3" style={{background: 'linear-gradient(135deg, #ff6f00 0%, #d32f2f 100%)'}}>
+                                    <i className={`${metric.icon} text-3xl text-white`}></i>
+                                </div>
+                                <div className="text-3xl md:text-4xl font-bold" style={{color: '#ff6f00'}}>
                                     <AnimatedCounter targetValue={metric.value} startAnimation={isImpactVisible} />
                                 </div>
-                                <p className="text-gray-300 mt-2 font-medium">{metric.label}</p>
+                                <p className="text-white mt-2 font-medium">{metric.label}</p>
                             </div>
                         ))}
                     </div>
@@ -387,7 +390,7 @@ const Home: React.FC = () => {
 
 
             {/* Call to Action Section */}
-            <section className="py-20 cta-gradient text-white">
+            <section className="py-20 text-gray-800" style={{backgroundColor: 'rgb(232, 245, 232)'}}>
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold">Join Hands in Transforming Lives</h2>
                     <p className="mt-4 max-w-2xl mx-auto">Your support creates hope. We welcome discussions, visits, and exploratory calls with CSR teams and foundations.</p>

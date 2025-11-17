@@ -1,4 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
+import st1 from '../../assets/st1.jpg';
+import st2 from '../../assets/st2.jpg';
+import st3 from '../../assets/st3.jpg';
+import st4 from '../../assets/st4.jpg';
 
 const impactMetrics = [
     { icon: "fas fa-child", value: "7000+", label: "Children reached (Awareness + Programs)" },
@@ -16,25 +20,25 @@ const successStories = [
         title: "Women Empowerment — A New Beginning",
         name: "Ms. Menaka",
         story: "A woman who was in crisis trained through our program now earns independently and supports her children's education – gaining respect, confidence, and a new identity.",
-        image: "https://picsum.photos/seed/success1/400/300"
+        image: st1
     },
     {
         title: "Child Education — A Journey of Learning",
         name: "Our Children",
         story: "Children enjoyed the after-school activities and gained confidence and skills, and won prizes in the competition, discovering their potential in a joyful environment.",
-        image: "https://picsum.photos/seed/success2/400/300"
+        image: st2
     },
     {
         title: "Nurturing Talent — The Spell Bee Triumph",
         name: "Rural Students",
         story: "Our first-ever Spell Bee competition wasn't just about words; it was about building confidence. Over 350 children from rural areas participated, discovering a love for language and the courage to stand on a public stage, many for the first time.",
-        image: "https://picsum.photos/seed/success3/400/300"
+        image: st3
     },
     {
         title: "Sparking Curiosity — The Science Expo",
         name: "Young Innovators",
         story: "The Science Expo became a vibrant display of young talent, with children presenting models on water conservation and solar energy. It showed that when rural children are given a platform, they rise and shine, inspiring over 200 visitors.",
-        image: "https://picsum.photos/seed/success4/400/300"
+        image: st4
     }
 ];
 
@@ -105,10 +109,10 @@ const Impact: React.FC = () => {
 
     return (
         <div className="bg-gray-50">
-            <section className="bg-white py-20">
+            <section className="cta-gradient text-white py-20">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl font-bold text-indigo-800">Our Impact & Success Stories</h1>
-                    <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                    <h1 className="text-4xl font-bold">Our Impact & Success Stories</h1>
+                    <p className="mt-4 text-lg max-w-3xl mx-auto">
                         Creating Real Change. Touching Real Lives. Impact is not just measured in numbers—it is seen in smiles, hope, dignity, and renewed confidence in the communities we serve.
                     </p>
                 </div>
@@ -120,7 +124,7 @@ const Impact: React.FC = () => {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {impactMetrics.map(metric => (
                             <div key={metric.label} className="bg-white text-center p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-transform duration-300">
-                                <div className="text-indigo-600 text-4xl mb-4">
+                                <div className="text-teal-600 text-4xl mb-4">
                                     <i className={metric.icon}></i>
                                 </div>
                                 <AnimatedCounter targetValue={metric.value} startAnimation={isVisible} />
@@ -135,14 +139,14 @@ const Impact: React.FC = () => {
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Success Stories That Inspire Us</h2>
                      <p className="text-center text-gray-600 -mt-8 mb-12">Real lives. Real change. Real hope.</p>
-                    <div className="grid md:grid-cols-2 gap-12">
+                    <div className="grid md:grid-cols-2 gap-8">
                         {successStories.map(story => (
                             <div key={story.title} className="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-                                <img src={story.image} alt={story.title} className="w-full h-56 object-cover"/>
-                                <div className="p-8">
-                                    <h3 className="text-xl font-bold text-indigo-700">{story.title}</h3>
-                                    <p className="text-lg font-semibold text-red-600 mt-1">{story.name}</p>
-                                    <p className="mt-4 text-gray-700">{story.story}</p>
+                                <img src={story.image} alt={story.title} className="w-full h-72 object-cover"/>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-teal-700">{story.title}</h3>
+                                    <p className="text-lg font-semibold text-orange-600 mt-1">{story.name}</p>
+                                    <p className="mt-3 text-gray-700">{story.story}</p>
                                 </div>
                             </div>
                         ))}

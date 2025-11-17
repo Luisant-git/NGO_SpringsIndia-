@@ -40,10 +40,10 @@ const Contact: React.FC = () => {
 
     return (
         <div className="bg-gray-50">
-            <section className="bg-white py-20">
+            <section className="cta-gradient text-white py-20">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl font-bold text-indigo-800">Contact Us</h1>
-                    <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                    <h1 className="text-4xl font-bold">Contact Us</h1>
+                    <p className="mt-4 text-lg max-w-3xl mx-auto">
                         We welcome discussions, visits, and exploratory calls. Join hands in transforming lives — your support creates hope.
                     </p>
                 </div>
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
                                     required
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                                    className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500"
                                 />
                             </div>
                             <div>
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
                                     required
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                                    className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500"
                                 />
                             </div>
                             <div>
@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
                                     required
                                     value={formData.subject}
                                     onChange={handleChange}
-                                    className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                                    className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500"
                                 />
                             </div>
                             <div>
@@ -99,11 +99,11 @@ const Contact: React.FC = () => {
                                     rows={5}
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                                    className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500"
                                 ></textarea>
                             </div>
                             <div>
-                                <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-700 hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">
                                     Submit
                                 </button>
                             </div>
@@ -114,8 +114,8 @@ const Contact: React.FC = () => {
                          <p className="text-gray-600 mb-8">We welcome organisations and individuals to build a better future together.</p>
                         <div className="grid grid-cols-2 gap-4">
                             {involvementButtons.map(btn => (
-                                <a href="#" key={btn.label} className="flex flex-col items-center justify-center text-center p-4 bg-indigo-100 rounded-lg hover:bg-indigo-200 hover:shadow-md transition-all">
-                                    <i className={`${btn.icon} text-3xl text-indigo-700`}></i>
+                                <a href="#" key={btn.label} className="flex flex-col items-center justify-center text-center p-4 bg-teal-50 rounded-lg hover:bg-teal-100 hover:shadow-md transition-all">
+                                    <i className={`${btn.icon} text-3xl text-teal-700`}></i>
                                     <span className="mt-2 font-semibold text-gray-800">{btn.label}</span>
                                 </a>
                             ))}
@@ -129,11 +129,11 @@ const Contact: React.FC = () => {
                                 </li>
                                 <li className="flex items-start">
                                     <i className="fas fa-phone w-6 text-center text-lg text-red-500 pt-1"></i>
-                                    <a href="tel:+919150931818" className="ml-3 hover:text-indigo-700">+91 91509 31818</a>
+                                    <a href="tel:+919150931818" className="ml-3 hover:text-teal-700">+91 91509 31818</a>
                                 </li>
                                 <li className="flex items-start">
                                     <i className="fas fa-envelope w-6 text-center text-lg text-red-500 pt-1"></i>
-                                    <a href="mailto:info@springsindiafoundation.ngo" className="ml-3 hover:text-indigo-700">info@springsindiafoundation.ngo</a>
+                                    <a href="mailto:info@springsindiafoundation.ngo" className="ml-3 hover:text-teal-700">info@springsindiafoundation.ngo</a>
                                 </li>
                             </ul>
                         </div>
@@ -150,7 +150,7 @@ const Contact: React.FC = () => {
                 </div>
             </section>
 
-             <section className="py-20">
+             <section className="py-5">
                 <div className="container mx-auto px-4">
                      <div className="w-full h-96 rounded-lg shadow-xl overflow-hidden">
                         <iframe
