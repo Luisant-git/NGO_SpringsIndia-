@@ -49,7 +49,7 @@ const TimelineItem: React.FC<{ year: string; events: string[]; isLeft: boolean }
         <div className="z-20 flex items-center order-1 shadow-xl w-14 h-14 rounded-full flex-shrink-0" style={{background: 'linear-gradient(135deg, #ff6f00 0%, #d32f2f 100%)'}}>
             <h1 className="mx-auto font-semibold text-lg text-white">{year}</h1>
         </div>
-        <div className="order-1 bg-white rounded-lg shadow-xl w-5/12 md:w-5/12 w-full ml-4 md:ml-0 px-6 py-4">
+        <div className="order-1 bg-white rounded-lg shadow-xl w-full md:w-5/12 ml-4 md:ml-0 px-6 py-4">
             <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
                 {events.map((event, index) => <li key={index}>{event}</li>)}
             </ul>
