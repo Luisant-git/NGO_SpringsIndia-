@@ -1,0 +1,47 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ImpactYear {
+  id           Int           @id @default(autoincrement())
+  year         String        @unique
+  fromMonth    Int
+  fromYear     Int
+  toMonth      Int
+  toYear       Int
+  description  String        @db.Text
+  isActive     Boolean       @default(true)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  impactMonths ImpactMonth[]
+}
+
+model ImpactMonth {
+  id                 Int        @id @default(autoincrement())
+  title              String
+  monthNumber        Int
+  images             String[]   @default([])
+  description        String     @db.Text
+  impactTitle        String
+  impactDescription  String     @db.Text
+  isActive           Boolean    @default(true)
+  createdAt          DateTime   @default(now())
+  updatedAt          DateTime   @updatedAt
+  impactYearId       Int
+  impactYear         ImpactYear @relation(fields: [impactYearId], references: [id], onDelete: Cascade)
+}

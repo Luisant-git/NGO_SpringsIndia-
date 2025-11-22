@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 
 const involvementButtons = [
+    { label: "Partner with us-CSR", icon: "fas fa-handshake" },
     { label: "Volunteer", icon: "fas fa-hands-helping" },
     { label: "Intern", icon: "fas fa-user-graduate" },
-    { label: "Collaborate", icon: "fas fa-handshake" },
+    { label: "Collaborate", icon: "fas fa-users" },
     { label: "Donate", icon: "fas fa-donate" },
     { label: "Fund a Project", icon: "fas fa-tasks" },
-    { label: "Be a Mentor", icon: "fas fa-chalkboard-teacher" }
+    { label: "Be a Mentor", icon: "fas fa-chalkboard-teacher" },
+    { label: "Be a Trainer", icon: "fas fa-user-tie" }
 ];
 
 const Contact: React.FC = () => {

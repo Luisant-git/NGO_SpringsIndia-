@@ -1,36 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const timelineEvents = {
     '2022': [
         "October: Launch and Registration of Spell Bee",
-        "Women empowerment workshop",
-        "Conduct of Spell Bee Competition",
-        "Awarding Function of Spell Bee",
-        "Christmas Celebration",
+        "October: Conduct of Spell Bee Competition",
+        "November: Women empowerment workshop",
+        "December: Awarding Function of Spell Bee Competition",
     ],
     '2023': [
-        "January: Cultural Celebration & Weekend Learning Activity",
+        "January: Weekend Learning Activity",
         "February: Science Expo",
         "March: Counselling session",
-        "April-May: Summer Camp Sessions 1 & 2",
+        "April: Summer Camp-Session-1",
+        "May: Summer Camp-Session-2",
         "June: After School Program-Activity",
         "July: Counselling for Children",
-        "August: Independence Day",
         "September: Weekend Activity",
         "October: Cultural Activity",
-        "November: Red Day Celebration",
-        "December: Christmas Celebration",
     ],
     '2024': [
-        "January: Cultural Celebration",
         "February: Weekend Activity",
         "March: Women's Day Award Function",
-        "April-May: Summer Camp Sessions & Award Function",
-        "June: Launch of Teacher Training",
+        "March: Award Function",
+        "April: Summer Camp-Session-1",
+        "May: Summer Camp-Session-2",
+        "May: Summer Camp-Award Function",
+        "June: Launch of Teacher Training Program",
         "July: Launch of Teacher Training in Coimbatore",
-        "August: Independence Day",
-        "September: Teachers Day",
         "October: Orientation Program for Teachers",
+        "November: Award Day for Children",
+    ],
+    '2025': [
+        "February: Learning Activity",
+        "September: Teacher Orientation Program",
+        "November: Teacher Enrichment program",
     ],
 };
 
@@ -73,12 +76,30 @@ const About: React.FC = () => {
             <section className="py-16">
                 <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <img src="https://t3.ftcdn.net/jpg/06/06/47/44/360_F_606474445_KndjSzp1pWoFZM5Jd0kRY67ilfyZeOst.jpg" alt="Community gathering" className="rounded-lg shadow-2xl w-full h-64 object-cover"/>
+                        <img src="https://t3.ftcdn.net/jpg/06/06/47/44/360_F_606474445_KndjSzp1pWoFZM5Jd0kRY67ilfyZeOst.jpg" alt="Community gathering" className="rounded-lg shadow-2xl w-full h-106 object-cover"/>
                     </div>
                     <div>
                         <h2 className="text-3xl font-bold text-gray-800">Who We Are</h2>
                         <p className="mt-4 text-gray-700 leading-relaxed">
-                            Springs India Foundation is a Non-Profit Organisation and an NGO - a social welfare trust that works for bringing in a social change in the community. We are registered with the Government of India and authorized to receive CSR funding under CSR-1 certification. Our mission is simple yet powerful — to empower people, uplift communities, and build a sustainable and inclusive future for all.
+                           We are registered with the Government of India and authorized to receive CSR funding under CSR-1 certification.
+Our mission is simple yet powerful — to empower people, uplift communities, and build a sustainable and inclusive future for all.
+
+<br />
+<br />
+<span className="font-semibold">Springs India Foundation- A Light in someone’s darkest hour, to show the path of <span className="text-green-700">‘HOPE’</span> and <span className="text-orange-700">‘SUCCESS’</span>.</span>
+
+<br />
+<br />
+Springs India Foundation is a Non -Profit Organisation and an NGO - a social welfare trust that works for bringing in a social change in the community.  
+
+<br />
+<br />
+<span className="font-semibold text-gray-800">Springs India Foundation</span> is on a mission to serve the human community by transforming human lives, aiming at the betterment of women empowerment, Youth development, child welfare, general and indigenous community welfare and upliftment
+
+<br />
+<br />
+Springs India Foundation is a value-driven trust and serves towards national developmental goals, that impact the lives of the Women, Youth, Children and general and indigenous community through long-term, sustainable programs. The trust aims to develop the skills of the community and thus helps them to come out of poverty and achieve inclusive growth, development, and success with its main focus on education, mental health, skill development, livelihood and environment. The project and programs of the trust always focus on the Women, Youth and Child Skill development, general and indigenous community welfare that led towards a better, sustainable way of life for the weaker sections of society and enhances their livelihood.
+
                         </p>
                     </div>
                 </div>
@@ -102,7 +123,7 @@ const About: React.FC = () => {
                             </div>
                             <h3 className="text-2xl font-bold text-center text-teal-700 mb-4">Our Mission</h3>
                             <p className="text-center text-gray-600 leading-relaxed">
-                                To save, protect and nurture every woman and child, guide every youth, and support them with care, dignity, and opportunity. We are committed to creating safety and helping each individual to come out of hardships and crisis.
+                                To save, protect and nurture every woman and child, guide every youth, and support them with care, dignity, and opportunity. We are committed to creating safety and helping each individual to come out of hardships and crisis. By providing access to education, wellness, and empowerment, we help general and indigenous communities not only survive—but to succeed.
                             </p>
                         </div>
                     </div>
@@ -121,21 +142,21 @@ const About: React.FC = () => {
                                 <i className="fas fa-shield-alt text-3xl"></i>
                             </div>
                             <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Integrity & Transparency</h3>
-                            <p className="mt-2 text-gray-600 text-center">Upholding ethical practices and ensuring honesty and accountability in all initiatives.</p>
+                            <p className="mt-2 text-gray-600 text-center">In all initiatives, Springs India Foundation upholds the ethical practices and ensures honesty and accountability in decisions, finances, and program implementation and execution.</p>
                         </div>
                         <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
                             <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
                                 <i className="fas fa-balance-scale text-3xl"></i>
                             </div>
                             <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Equity & Inclusion</h3>
-                            <p className="mt-2 text-gray-600 text-center">Ensuring every individual, especially from marginalized communities, deserves access to quality resources.</p>
+                            <p className="mt-2 text-gray-600 text-center">Every individual, specially especially from marginalized and indigenous communities, women, youth and children deserves access to quality education, skill development and livelihood opportunities for growth.</p>
                         </div>
                         <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
                             <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
                                 <i className="fas fa-fist-raised text-3xl"></i>
                             </div>
                             <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Empowerment & Self-Reliance</h3>
-                            <p className="mt-2 text-gray-600 text-center">Supporting women, youth, and children to build their skills, confidence, and economic independence.</p>
+                            <p className="mt-2 text-gray-600 text-center">We support women, youth, children general and indigenous communities to build their skills, confidence, and educate them for economic independence.</p>
                         </div>
                         <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
                             <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
@@ -149,14 +170,42 @@ const About: React.FC = () => {
                                 <i className="fas fa-leaf text-3xl"></i>
                             </div>
                             <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Sustainability & Responsibility</h3>
-                            <p className="mt-2 text-gray-600 text-center">Working towards long-term, meaningful change and community development.</p>
+                            <p className="mt-2 text-gray-600 text-center">Long-term change, we work towards long-term, meaningful community development.</p>
                         </div>
                         <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
                             <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
                                 <i className="fas fa-heart text-3xl"></i>
                             </div>
                             <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Holistic Development</h3>
-                            <p className="mt-2 text-gray-600 text-center">Nurturing intellectual, emotional, physical, and moral growth to create responsible citizens.</p>
+                            <p className="mt-2 text-gray-600 text-center">We nurture intellectual, emotional, physical, and moral growth to create responsible and capable citizens and to have a sustainable life.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
+                            <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
+                                <i className="fas fa-users text-3xl"></i>
+                            </div>
+                            <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Service to Society</h3>
+                            <p className="mt-2 text-gray-600 text-center">We reach people with Compassion and take up the social responsibility to guide our programs, from education to welfare and general and indigenous community development.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
+                            <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
+                                <i className="fas fa-globe text-3xl"></i>
+                            </div>
+                            <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Innovation & Excellence</h3>
+                            <p className="mt-2 text-gray-600 text-center">We take up innovative, sustainable, scalable, replicable and creative approaches to enhance learning and community impact.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
+                            <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
+                                <i className="fas fa-handshake text-3xl"></i>
+                            </div>
+                            <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Collaboration & Partnership</h3>
+                            <p className="mt-2 text-gray-600 text-center">We actively work with governments, NGOs, CSR initiatives, and institutions to reach the deserving people to the maximum with effectiveness.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
+                            <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
+                                <i className="fas fa-hands-helping text-3xl"></i>
+                            </div>
+                            <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Respect & Compassion</h3>
+                            <p className="mt-2 text-gray-600 text-center">We reach every individual with empathy, understanding and with compassion and they are valued.</p>
                         </div>
                     </div>
                 </div>
@@ -166,6 +215,18 @@ const About: React.FC = () => {
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-gray-800">Our Journey</h2>
                     <p className="text-center mt-2 text-gray-600">Reflecting on our hope, resilience, and vision to serve.</p>
+                    
+                    <div className="max-w-4xl mx-auto mb-12 mt-8">
+                        <div className="bg-gradient-to-r from-teal-50 to-emerald-50 p-8 rounded-lg border-l-4" style={{borderColor: '#00695c'}}>
+                            <p className="text-gray-700 leading-relaxed text-lg">
+                                The Springs India Foundation journey started in the year <span className="font-bold" style={{color: '#00695c'}}>2022</span>. 
+                                As it started, the foundation introduced <span className="font-semibold">after-school programs for kids</span>. 
+                                The children were given literacy and numerical activities, reading, and celebrations to have a cultural and community engagement. 
+                                They also had special weekend programs. Along with that <span className="font-semibold" style={{color: '#ff6f00'}}>women empowerment programs</span> like Teacher Training programs were introduced.
+                            </p>
+                        </div>
+                    </div>
+                    
                     <div className="relative wrap overflow-hidden p-10 md:p-10 p-4 h-full">
                         <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border hidden md:block" style={{left: '50%'}}></div>
                         {Object.keys(timelineEvents).map((year, index) => (
@@ -174,6 +235,326 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Our Approach Section */}
+            <section className="py-20 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Our Approach</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-users text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Grassroots engagement with community needs</span>
+                        </div>
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-expand-arrows-alt text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Scalable & replicable development models</span>
+                        </div>
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-handshake text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Collaboration with schools, panchayats, local institutions and Governments</span>
+                        </div>
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-laptop-code text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Digital tools and skill-based programs for future-readiness</span>
+                        </div>
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-chart-line text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Transparent monitoring, reporting & impact measurement</span>
+                        </div>
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-map-marker-alt text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Strong grassroots presence and local leadership</span>
+                        </div>
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-database text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Data-driven decision making</span>
+                        </div>
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-leaf text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Sustainability-focused initiatives</span>
+                        </div>
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-tools text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Capacity building and empowerment</span>
+                        </div>
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-eye text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Holistic development lens</span>
+                        </div>
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-lightbulb text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Innovation and technology integration</span>
+                        </div>
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-building text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Public–private partnerships</span>
+                        </div>
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-sync-alt text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Continuous learning and adaptation</span>
+                        </div>
+                        <div className="flex items-start bg-white p-6 rounded-lg shadow-md">
+                            <i className="fas fa-balance-scale text-2xl mr-4 mt-1" style={{color: '#00695c'}}></i>
+                            <span className="text-gray-700">Equity and inclusion at the core</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Therefore We Exist To Section */}
+            <section className="py-20 bg-white">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Therefore, We Exist To</h2>
+                    <div className="max-w-5xl mx-auto">
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <div className="space-y-4">
+                                <div className="flex items-start">
+                                    <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
+                                    <span className="text-gray-700">Support children with joyful learning and strong values</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
+                                    <span className="text-gray-700">Empower women with skills, confidence, and independence</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
+                                    <span className="text-gray-700">Strengthen families through community-driven programs</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
+                                    <span className="text-gray-700">Build safe, emotional, and social spaces</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
+                                    <span className="text-gray-700">Promote culture, belonging, and unity</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
+                                    <span className="text-gray-700">Foster digital and financial literacy for future readiness</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
+                                    <span className="text-gray-700">Encourage youth leadership and volunteering for community change</span>
+                                </div>
+                            </div>
+                            <div className="space-y-4">
+                                <div className="flex items-start">
+                                    <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
+                                    <span className="text-gray-700">Create platforms for local art, crafts, and traditions to thrive</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
+                                    <span className="text-gray-700">Bridge rural–urban opportunity gaps through awareness and collaboration</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
+                                    <span className="text-gray-700">Cultivate resilience, mental well-being, and emotional strength in every individual</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
+                                    <span className="text-gray-700">Nurture environmental awareness and sustainable living within general and indigenous communities</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
+                                    <span className="text-gray-700">Ensure transparency, accountability, and dignity in every initiative</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mt-12 text-center">
+                            <div className="bg-gradient-to-r from-teal-50 to-emerald-50 p-8 rounded-lg border-l-4" style={{borderColor: '#00695c'}}>
+                                <p className="text-lg font-semibold mb-4" style={{color: '#00695c'}}>
+                                    We exist to ensure every life is valued, every dream has a chance, and every village or community grows with dignity and hope.
+                                </p>
+                                <p className="text-gray-700">
+                                    These not only highlight growth not just in learning and livelihood, but also in mindset, identity, and long-term community resilience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Long-Term Goals Section */}
+            <section className="py-20 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Long-Term Goals</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                            <div className="text-center mb-4">
+                                <i className="fas fa-building text-4xl" style={{color: '#ff6f00'}}></i>
+                            </div>
+                            <h4 className="text-lg font-bold mb-3 text-center" style={{color: '#00695c'}}>Regional Learning Centers</h4>
+                            <p className="text-gray-600 text-center">Establish regional community learning & skill centres</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                            <div className="text-center mb-4">
+                                <i className="fas fa-hands-helping text-4xl" style={{color: '#ff6f00'}}></i>
+                            </div>
+                            <h4 className="text-lg font-bold mb-3 text-center" style={{color: '#00695c'}}>Indigenous Community Support</h4>
+                            <p className="text-gray-600 text-center">Supporting the underprivileged community, especially indigenous communities</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                            <div className="text-center mb-4">
+                                <i className="fas fa-leaf text-4xl" style={{color: '#ff6f00'}}></i>
+                            </div>
+                            <h4 className="text-lg font-bold mb-3 text-center" style={{color: '#00695c'}}>Sustainable Development</h4>
+                            <p className="text-gray-600 text-center">Supporting and educating the community with sustainable development programs</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                            <div className="text-center mb-4">
+                                <i className="fas fa-handshake text-4xl" style={{color: '#ff6f00'}}></i>
+                            </div>
+                            <h4 className="text-lg font-bold mb-3 text-center" style={{color: '#00695c'}}>Corporate Partnerships</h4>
+                            <p className="text-gray-600 text-center">Partner with corporates for sustainable CSR models</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                            <div className="text-center mb-4">
+                                <i className="fas fa-female text-4xl" style={{color: '#ff6f00'}}></i>
+                            </div>
+                            <h4 className="text-lg font-bold mb-3 text-center" style={{color: '#00695c'}}>Women Entrepreneurship</h4>
+                            <p className="text-gray-600 text-center">Expand women entrepreneurship opportunities and networks</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                            <div className="text-center mb-4">
+                                <i className="fas fa-globe text-4xl" style={{color: '#ff6f00'}}></i>
+                            </div>
+                            <h4 className="text-lg font-bold mb-3 text-center" style={{color: '#00695c'}}>Scalable Programs</h4>
+                            <p className="text-gray-600 text-center">Develop scalable programs that can be replicated nationally and internationally</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Leadership Section */}
+            <section className="py-20 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-gray-800 mb-4">Leadership</h2>
+                        <p className="text-lg text-gray-600 mb-2">Driven by purpose. Guided by values. Focused on measurable social impact.</p>
+                        <p className="text-gray-600 max-w-4xl mx-auto">
+                            Our leadership consists of educators, social development professionals, corporate mentors, and community leaders dedicated to building a better tomorrow.
+                        </p>
+                    </div>
+                    
+                    <LeadershipCarousel />
+                </div>
+            </section>
+        </div>
+    );
+};
+
+const LeadershipCarousel: React.FC = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    
+    const leadershipMembers = [
+        {
+            name: "President Name",
+            role: "President",
+            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+            description: "Leading the foundation with vision and dedication."
+        },
+        {
+            name: "Vice President Name",
+            role: "Vice President",
+            image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face",
+            description: "Supporting strategic initiatives and community outreach."
+        },
+        {
+            name: "Senior Advisor",
+            role: "Senior Advisor",
+            image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+            description: "Providing strategic guidance and expertise."
+        },
+        {
+            name: "Education Advisor",
+            role: "Education Advisor",
+            image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+            description: "Overseeing educational programs and initiatives."
+        },
+        {
+            name: "Media Head",
+            role: "Communications Director",
+            image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",
+            description: "Managing communications and media relations."
+        },
+        {
+            name: "Board Trustee 1",
+            role: "Board Trustee",
+            image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face",
+            description: "Ensuring governance and accountability."
+        },
+        {
+            name: "Board Trustee 2",
+            role: "Board Trustee",
+            image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face",
+            description: "Overseeing financial management and compliance."
+        },
+        {
+            name: "Volunteer Coordinator",
+            role: "Lead Volunteer",
+            image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&crop=face",
+            description: "Coordinating volunteer activities and community engagement."
+        }
+    ];
+    
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % leadershipMembers.length);
+    };
+    
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev - 1 + leadershipMembers.length) % leadershipMembers.length);
+    };
+    
+    return (
+        <div className="relative max-w-7xl mx-auto">
+            <div className="overflow-hidden">
+                <div className="flex transition-transform duration-500 ease-in-out md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-6 md:transform-none" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                    {leadershipMembers.map((member, index) => (
+                        <div key={index} className="w-full flex-shrink-0 px-4 md:w-auto md:flex-shrink md:px-0">
+                            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-center">
+                                <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
+                                    <img 
+                                        src={member.image} 
+                                        alt={member.name} 
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <h4 className="text-lg font-bold mb-2" style={{color: '#00695c'}}>{member.name}</h4>
+                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>{member.role}</p>
+                                <p className="text-gray-600 text-sm">{member.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            
+            {/* Navigation Buttons - Only show on mobile */}
+            <button 
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow md:hidden"
+                style={{color: '#00695c'}}
+            >
+                <i className="fas fa-chevron-left text-xl"></i>
+            </button>
+            <button 
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow md:hidden"
+                style={{color: '#00695c'}}
+            >
+                <i className="fas fa-chevron-right text-xl"></i>
+            </button>
+            
+            {/* Dots Indicator - Only show on mobile */}
+            <div className="flex justify-center mt-8 space-x-2 md:hidden">
+                {leadershipMembers.map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => setCurrentSlide(index)}
+                        className="w-3 h-3 rounded-full transition-colors"
+                        style={{backgroundColor: index === currentSlide ? '#ff6f00' : '#d1d5db'}}
+                    />
+                ))}
+            </div>
         </div>
     );
 };

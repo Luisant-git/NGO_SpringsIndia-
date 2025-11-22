@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import { logoutAdmin, checkAuthStatus } from './api/authApi.js';
 import finalLogo from '../assets/final.png';
 
 
@@ -7,13 +9,15 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about' },
   { 
-    name: 'Programs', 
-    path: '/programs',
+    name: 'Flagship Programs', 
+    path: '/steps-academy',
     dropdown: [
-      { name: 'Our Impact', path: '/impact' },
-      { name: 'Gallery', path: '/gallery' },
+      { name: 'Steps Academy', path: '/steps-academy' },
+      { name: 'Research, Learning and Innovation Centre', path: '/research-center' },
     ]
   },
+  { name: 'Programs & Initiatives', path: '/programs-initiatives' },
+  { name: 'Programs & Impacts', path: '/programs-impacts' },
   { name: 'CSR Partnerships', path: '/partnerships' },
   { name: 'Governance', path: '/governance' },
   { name: 'Contact Us', path: '/contact' },
@@ -22,7 +26,28 @@ const navLinks = [
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const checkAuth = async () => {
+      const authStatus = await checkAuthStatus();
+      setIsAuthenticated(authStatus);
+    };
+    checkAuth();
+  }, [location.pathname]);
+
+  const handleLogout = async () => {
+    try {
+      await logoutAdmin();
+      setIsAuthenticated(false);
+      toast.success('Logged out successfully');
+      navigate('/login');
+    } catch (error) {
+      toast.error('Logout failed');
+    }
+  };
 
   const activeLinkStyle = {
     color: '#ff6f00', // Orange accent
@@ -59,25 +84,27 @@ const Header: React.FC = () => {
                   <NavLink
                     to={link.path}
                     style={({ isActive }) => (isActive || isChildActive ? activeLinkStyle : {})}
-                    className="text-gray-600 hover:text-orange-500 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                    className="text-gray-600 hover:text-orange-500 px-2 py-2 rounded-md text-xs font-medium transition-colors flex items-center"
                   >
                     {link.name}
                     <i className="fas fa-chevron-down ml-1 text-xs"></i>
                   </NavLink>
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-48 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
-                    <NavLink
-                      to={link.path}
-                      style={({ isActive }) => (isActive ? activeLinkStyle : {})}
-                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-orange-500"
-                    >
-                      All Programs
-                    </NavLink>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-64 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+                    {link.name !== 'Flagship Programs' && (
+                      <NavLink
+                        to={link.path}
+                        style={({ isActive }) => (isActive ? activeLinkStyle : {})}
+                        className="block w-full text-left px-4 py-2 text-xs text-gray-700 hover:bg-teal-50 hover:text-orange-500"
+                      >
+                        All {link.name}
+                      </NavLink>
+                    )}
                     {link.dropdown.map(item => (
                       <NavLink
                         key={item.name}
                         to={item.path}
                         style={({ isActive }) => (isActive ? activeLinkStyle : {})}
-                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-orange-500"
+                        className="block w-full text-left px-4 py-2 text-xs text-gray-700 hover:bg-teal-50 hover:text-orange-500"
                       >
                         {item.name}
                       </NavLink>
@@ -89,7 +116,7 @@ const Header: React.FC = () => {
                   key={link.name}
                   to={link.path}
                   style={({ isActive }) => (isActive ? activeLinkStyle : {})}
-                  className="text-gray-600 hover:text-orange-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-gray-600 hover:text-orange-500 px-2 py-2 rounded-md text-xs font-medium transition-colors"
                 >
                   {link.name}
                 </NavLink>
@@ -144,9 +171,11 @@ const Header: React.FC = () => {
                   </button>
                   {openDropdown === link.name && (
                     <div className="pl-6 pt-1 pb-2">
-                      <NavLink to={link.path} onClick={closeMobileMenu} style={({ isActive }) => (isActive ? activeLinkStyle : {})} className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-teal-100 hover:text-orange-500">
-                        All Programs
-                      </NavLink>
+                      {link.name !== 'Flagship Programs' && (
+                        <NavLink to={link.path} onClick={closeMobileMenu} style={({ isActive }) => (isActive ? activeLinkStyle : {})} className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-teal-100 hover:text-orange-500">
+                          All {link.name}
+                        </NavLink>
+                      )}
                       {link.dropdown.map(item => (
                         <NavLink key={item.name} to={item.path} onClick={closeMobileMenu} style={({ isActive }) => (isActive ? activeLinkStyle : {})} className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-teal-100 hover:text-orange-500">
                           {item.name}

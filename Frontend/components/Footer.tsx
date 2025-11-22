@@ -66,6 +66,10 @@ const Footer: React.FC = () => {
                 <i className="fas fa-phone mt-1 mr-3 text-red-400"></i>
                 <a href="tel:+919150931818" className="text-gray-300 hover:text-white">+91-9150931818</a>
               </li>
+              <li className="flex items-start">
+                <i className="fas fa-globe mt-1 mr-3 text-red-400"></i>
+                <a href="https://springsindiafoundation.ngo" className="text-gray-300 hover:text-white">springsindiafoundation.ngo</a>
+              </li>
             </ul>
           </div>
         </div>

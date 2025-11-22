@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import st1 from '../../assets/st1.jpg';
 import st2 from '../../assets/st2.jpg';
 import st3 from '../../assets/st3.jpg';
-import st4 from '../../assets/st4.jpg';
+// import st4 from '../../assets/st4.jpg';
 
 const impactMetrics = [
     { icon: "fas fa-child", value: "7000+", label: "Children reached (Awareness + Programs)" },
@@ -34,12 +34,12 @@ const successStories = [
         story: "Our first-ever Spell Bee competition wasn't just about words; it was about building confidence. Over 350 children from rural areas participated, discovering a love for language and the courage to stand on a public stage, many for the first time.",
         image: st3
     },
-    {
-        title: "Sparking Curiosity — The Science Expo",
-        name: "Young Innovators",
-        story: "The Science Expo became a vibrant display of young talent, with children presenting models on water conservation and solar energy. It showed that when rural children are given a platform, they rise and shine, inspiring over 200 visitors.",
-        image: st4
-    }
+    // {
+    //     title: "Sparking Curiosity — The Science Expo",
+    //     name: "Young Innovators",
+    //     story: "The Science Expo became a vibrant display of young talent, with children presenting models on water conservation and solar energy. It showed that when rural children are given a platform, they rise and shine, inspiring over 200 visitors.",
+    //     image: st4
+    // }
 ];
 
 const AnimatedCounter: React.FC<{ targetValue: string; startAnimation: boolean }> = ({ targetValue, startAnimation }) => {
