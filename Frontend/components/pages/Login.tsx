@@ -18,7 +18,8 @@ const Login: React.FC = () => {
     try {
       const data = await loginAdmin(email, password);
       toast.success('Login successful!');
-      navigate('/admin/dashboard');
+      // Use window.location.href for production compatibility
+      window.location.href = '/admin/dashboard';
     } catch (error) {
       toast.error(error.message || 'Network error occurred');
     } finally {
