@@ -18,8 +18,10 @@ const Login: React.FC = () => {
     try {
       const data = await loginAdmin(email, password);
       toast.success('Login successful!');
-      // Use window.location.href for production compatibility
-      window.location.href = '/admin/dashboard';
+      // Small delay to ensure session is set, then redirect
+      setTimeout(() => {
+        window.location.href = '/admin/dashboard';
+      }, 500);
     } catch (error) {
       toast.error(error.message || 'Network error occurred');
     } finally {
