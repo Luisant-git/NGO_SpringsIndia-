@@ -16,10 +16,13 @@ import StepsAcademy from './components/pages/StepsAcademy';
 import ResearchCenter from './components/pages/ResearchCenter';
 import ProgramsInitiatives from './components/pages/ProgramsInitiatives';
 import ProgramsImpacts from './components/pages/ProgramsImpacts';
+import Blog from './components/pages/Blog';
+import BlogPost from './components/pages/BlogPost';
 import Login from './components/pages/Login';
 import AdminDashboard from './components/pages/AdminDashboard';
 import AdminImpactYears from './components/pages/AdminImpactYears';
 import AdminImpactMonths from './components/pages/AdminImpactMonths';
+import AdminBlogs from './components/pages/AdminBlogs';
 import AdminLayout from './components/AdminLayout';
 import ProtectedRoute from './components/ProtectedRoute';
 import BackToTopButton from './components/BackToTopButton';
@@ -43,6 +46,7 @@ const App: React.FC = () => {
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="impact-years" element={<AdminImpactYears />} />
           <Route path="impact-months" element={<AdminImpactMonths />} />
+          <Route path="blogs" element={<AdminBlogs />} />
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={
@@ -150,6 +154,26 @@ const App: React.FC = () => {
             <Header />
             <main className="flex-grow">
               <ProgramsImpacts />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/blog" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <Blog />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/blog/:id" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <BlogPost />
             </main>
             <Footer />
             <BackToTopButton />

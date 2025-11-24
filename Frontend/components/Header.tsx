@@ -20,6 +20,7 @@ const navLinks = [
   { name: 'Programs & Impacts', path: '/programs-impacts' },
   { name: 'CSR Partnerships', path: '/partnerships' },
   { name: 'Governance', path: '/governance' },
+  { name: 'Blog', path: '/blog' },
   { name: 'Contact Us', path: '/contact' },
 ];
 
@@ -75,7 +76,7 @@ const Header: React.FC = () => {
               </div>
             </NavLink>
           </div>
-          <nav className="hidden md:flex items-center space-x-4">
+          <nav className="hidden md:flex items-center space-x-2">
             {navLinks.map((link) => {
               const isChildActive = link.dropdown?.some(item => location.pathname === item.path);
 
@@ -84,7 +85,7 @@ const Header: React.FC = () => {
                   <NavLink
                     to={link.path}
                     style={({ isActive }) => (isActive || isChildActive ? activeLinkStyle : {})}
-                    className="text-gray-600 hover:text-orange-500 px-2 py-2 rounded-md text-sm font-medium transition-colors flex items-center uppercase"
+                    className="text-gray-600 hover:text-orange-500 px-1 py-2 rounded-md text-sm font-medium transition-colors flex items-center uppercase"
                   >
                     {link.name}
                     <i className="fas fa-chevron-down ml-1 text-xs"></i>
@@ -116,7 +117,7 @@ const Header: React.FC = () => {
                   key={link.name}
                   to={link.path}
                   style={({ isActive }) => (isActive ? activeLinkStyle : {})}
-                  className="text-gray-600 hover:text-orange-500 px-2 py-2 rounded-md text-sm font-medium transition-colors uppercase"
+                  className="text-gray-600 hover:text-orange-500 px-1 py-2 rounded-md text-sm font-medium transition-colors uppercase"
                 >
                   {link.name}
                 </NavLink>
