@@ -33,16 +33,20 @@ export const logoutAdmin = async () => {
 
 export const checkAuthStatus = async () => {
   try {
+    console.log('Checking auth status...');
     const response = await fetch(`${API_BASE_URL}/admin/profile`, {
       method: 'GET',
       credentials: 'include',
     });
+    console.log('Profile response status:', response.status);
     if (response.ok) {
       const data = await response.json();
+      console.log('Profile response data:', data);
       return data.id ? true : false;
     }
     return false;
-  } catch {
+  } catch (error) {
+    console.log('Auth check error:', error);
     return false;
   }
 };
