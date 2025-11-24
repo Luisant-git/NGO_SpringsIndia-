@@ -1,9 +1,11 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Session, HttpCode, HttpStatus } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, HttpCode, HttpStatus, Res, Req } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { AdminService } from './admin.service';
 import { CreateAdminDto } from './dto/create-admin.dto';
 import { LoginAdminDto } from './dto/login-admin.dto';
 import { UpdateAdminDto } from './dto/update-admin.dto';
+import type { Response, Request } from 'express';
+import * as jwt from 'jsonwebtoken';
 
 @ApiTags('admin')
 @Controller('admin')
@@ -21,10 +23,22 @@ export class AdminController {
   @HttpCode(HttpStatus.OK)
   @ApiOperation({ summary: 'Login admin' })
   @ApiResponse({ status: 200, description: 'Login successful' })
-  async login(@Body() loginAdminDto: LoginAdminDto, @Session() session: any) {
+  async login(@Body() loginAdminDto: LoginAdminDto, @Res({ passthrough: true }) res: any) {
     const admin = await this.adminService.login(loginAdminDto);
-    session.adminId = admin.id;
-    session.adminEmail = admin.email;
+    
+    const token = jwt.sign(
+      { adminId: admin.id, email: admin.email },
+      process.env.SESSION_SECRET || 'springs-india-secret-key-fallback',
+      { expiresIn: '24h' }
+    );
+    
+    res.cookie('auth-token', token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'none',
+      maxAge: 24 * 60 * 60 * 1000
+    });
+    
     console.log(`Admin logged in: ${admin.email} (ID: ${admin.id})`);
     return { message: 'Login successful', admin };
   }
@@ -33,21 +47,28 @@ export class AdminController {
   @HttpCode(HttpStatus.OK)
   @ApiOperation({ summary: 'Logout admin' })
   @ApiResponse({ status: 200, description: 'Logout successful' })
-  logout(@Session() session: any) {
-    console.log(`Admin logged out: ${session.adminEmail} (ID: ${session.adminId})`);
-    session.destroy();
+  logout(@Res({ passthrough: true }) res: any) {
+    res.clearCookie('auth-token');
     return { message: 'Logout successful' };
   }
 
   @Get('profile')
   @ApiOperation({ summary: 'Get admin profile' })
   @ApiResponse({ status: 200, description: 'Admin profile retrieved' })
-  getProfile(@Session() session: any) {
-    if (!session.adminId) {
+  getProfile(@Req() req: any) {
+    const token = req.cookies['auth-token'];
+    
+    if (!token) {
       return { message: 'Not authenticated' };
     }
-    console.log(`Profile accessed by: ${session.adminEmail} (ID: ${session.adminId})`);
-    return this.adminService.findOne(session.adminId);
+    
+    try {
+      const decoded = jwt.verify(token, process.env.SESSION_SECRET || 'springs-india-secret-key-fallback') as any;
+      console.log(`Profile accessed by: ${decoded.email} (ID: ${decoded.adminId})`);
+      return this.adminService.findOne(decoded.adminId);
+    } catch (error) {
+      return { message: 'Not authenticated' };
+    }
   }
 
   @Get()
