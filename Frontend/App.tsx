@@ -44,6 +44,7 @@ const App: React.FC = () => {
           <Route path="impact-years" element={<AdminImpactYears />} />
           <Route path="impact-months" element={<AdminImpactMonths />} />
         </Route>
+        <Route path="/login" element={<Login />} />
         <Route path="/*" element={
           <div className="flex flex-col min-h-screen bg-white">
             <Header />
@@ -61,7 +62,6 @@ const App: React.FC = () => {
                 <Route path="/research-center" element={<ResearchCenter />} />
                 <Route path="/programs-initiatives" element={<ProgramsInitiatives />} />
                 <Route path="/programs-impacts" element={<ProgramsImpacts />} />
-                <Route path="/login" element={<Login />} />
               </Routes>
             </main>
             <Footer />
