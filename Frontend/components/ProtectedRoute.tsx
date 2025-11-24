@@ -12,6 +12,9 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       console.log('ProtectedRoute: Checking authentication...');
+      const token = localStorage.getItem('auth-token');
+      console.log('ProtectedRoute: Token exists:', !!token);
+      
       const authStatus = await checkAuthStatus();
       console.log('ProtectedRoute: Auth status:', authStatus);
       setIsAuthenticated(authStatus);

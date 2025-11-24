@@ -18,7 +18,14 @@ const Login: React.FC = () => {
     try {
       const data = await loginAdmin(email, password);
       console.log('Login response:', data);
+      
+      // Check if token is stored
+      const storedToken = localStorage.getItem('auth-token');
+      console.log('Token stored:', !!storedToken);
+      
       toast.success('Login successful!');
+      
+      console.log('Redirecting to /admin/dashboard');
       window.location.href = '/admin/dashboard';
     } catch (error) {
       console.error('Login error:', error);
