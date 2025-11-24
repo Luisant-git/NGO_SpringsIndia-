@@ -122,9 +122,6 @@ const Header: React.FC = () => {
                 </NavLink>
               );
             })}
-            <Link to="/contact" className="ml-4 btn-primary text-sm">
-              Donate Now
-            </Link>
           </nav>
           <div className="-mr-2 flex md:hidden">
             <button
