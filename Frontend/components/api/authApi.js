@@ -6,7 +6,6 @@ export const loginAdmin = async (email, password) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    credentials: 'include',
     body: JSON.stringify({ email, password }),
   });
 
@@ -15,13 +14,18 @@ export const loginAdmin = async (email, password) => {
     throw new Error(error.message || 'Login failed');
   }
 
-  return response.json();
+  const data = await response.json();
+  if (data.token) {
+    localStorage.setItem('auth-token', data.token);
+  }
+  return data;
 };
 
 export const logoutAdmin = async () => {
+  localStorage.removeItem('auth-token');
+  
   const response = await fetch(`${API_BASE_URL}/admin/logout`, {
     method: 'POST',
-    credentials: 'include',
   });
 
   if (!response.ok) {
@@ -33,30 +37,42 @@ export const logoutAdmin = async () => {
 
 export const checkAuthStatus = async () => {
   try {
-    console.log('Checking auth status...');
+    const token = localStorage.getItem('auth-token');
+    if (!token) {
+      return false;
+    }
+    
     const response = await fetch(`${API_BASE_URL}/admin/profile`, {
       method: 'GET',
-      credentials: 'include',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
     });
-    console.log('Profile response status:', response.status);
+    
     if (response.ok) {
       const data = await response.json();
-      console.log('Profile response data:', data);
       return data.id ? true : false;
     }
     return false;
   } catch (error) {
-    console.log('Auth check error:', error);
     return false;
   }
 };
 
 export const getAdminProfile = async () => {
   try {
+    const token = localStorage.getItem('auth-token');
+    if (!token) {
+      return null;
+    }
+    
     const response = await fetch(`${API_BASE_URL}/admin/profile`, {
       method: 'GET',
-      credentials: 'include',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
     });
+    
     if (response.ok) {
       return await response.json();
     }

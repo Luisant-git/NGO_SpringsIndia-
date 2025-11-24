@@ -23,7 +23,7 @@ export class AdminController {
   @HttpCode(HttpStatus.OK)
   @ApiOperation({ summary: 'Login admin' })
   @ApiResponse({ status: 200, description: 'Login successful' })
-  async login(@Body() loginAdminDto: LoginAdminDto, @Res({ passthrough: true }) res: any) {
+  async login(@Body() loginAdminDto: LoginAdminDto) {
     const admin = await this.adminService.login(loginAdminDto);
     
     const token = jwt.sign(
@@ -32,23 +32,15 @@ export class AdminController {
       { expiresIn: '24h' }
     );
     
-    res.cookie('auth-token', token, {
-      httpOnly: true,
-      secure: true,
-      sameSite: 'none',
-      maxAge: 24 * 60 * 60 * 1000
-    });
-    
     console.log(`Admin logged in: ${admin.email} (ID: ${admin.id})`);
-    return { message: 'Login successful', admin };
+    return { message: 'Login successful', admin, token };
   }
 
   @Post('logout')
   @HttpCode(HttpStatus.OK)
   @ApiOperation({ summary: 'Logout admin' })
   @ApiResponse({ status: 200, description: 'Logout successful' })
-  logout(@Res({ passthrough: true }) res: any) {
-    res.clearCookie('auth-token');
+  logout() {
     return { message: 'Logout successful' };
   }
 
@@ -56,7 +48,8 @@ export class AdminController {
   @ApiOperation({ summary: 'Get admin profile' })
   @ApiResponse({ status: 200, description: 'Admin profile retrieved' })
   getProfile(@Req() req: any) {
-    const token = req.cookies['auth-token'];
+    const authHeader = req.headers.authorization;
+    const token = authHeader && authHeader.startsWith('Bearer ') ? authHeader.substring(7) : null;
     
     if (!token) {
       return { message: 'Not authenticated' };
