@@ -45,24 +45,111 @@ const App: React.FC = () => {
           <Route path="impact-months" element={<AdminImpactMonths />} />
         </Route>
         <Route path="/login" element={<Login />} />
-        <Route path="/*" element={
+        <Route path="/" element={
           <div className="flex flex-col min-h-screen bg-white">
             <Header />
             <main className="flex-grow">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/programs" element={<Programs />} />
-                {/* <Route path="/impact" element={<Impact />} /> */}
-                <Route path="/partnerships" element={<Partnerships />} />
-                <Route path="/governance" element={<Governance />} />
-                <Route path="/gallery" element={<Gallery />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/steps-academy" element={<StepsAcademy />} />
-                <Route path="/research-center" element={<ResearchCenter />} />
-                <Route path="/programs-initiatives" element={<ProgramsInitiatives />} />
-                <Route path="/programs-impacts" element={<ProgramsImpacts />} />
-              </Routes>
+              <Home />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/about" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <About />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/programs" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <Programs />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/partnerships" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <Partnerships />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/governance" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <Governance />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/gallery" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <Gallery />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/contact" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <Contact />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/steps-academy" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <StepsAcademy />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/research-center" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <ResearchCenter />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/programs-initiatives" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <ProgramsInitiatives />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/programs-impacts" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <ProgramsImpacts />
             </main>
             <Footer />
             <BackToTopButton />
