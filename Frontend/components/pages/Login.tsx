@@ -26,7 +26,7 @@ const Login: React.FC = () => {
       toast.success('Login successful!');
       
       console.log('Redirecting to /admin/dashboard');
-      window.location.href = '/admin/dashboard';
+      navigate('/admin/dashboard');
     } catch (error) {
       console.error('Login error:', error);
       toast.error(error.message || 'Network error occurred');
