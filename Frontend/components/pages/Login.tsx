@@ -19,8 +19,21 @@ const Login: React.FC = () => {
       const data = await loginAdmin(email, password);
       console.log('Login response:', data);
       toast.success('Login successful!');
-      // Direct redirect - session will be checked by ProtectedRoute
-      window.location.href = '/admin/dashboard';
+      
+      // Test auth immediately after login
+      setTimeout(async () => {
+        const { checkAuthStatus } = await import('../api/authApi.js');
+        const isAuth = await checkAuthStatus();
+        console.log('Auth check after login:', isAuth);
+        
+        if (isAuth) {
+          console.log('Auth successful, redirecting to dashboard');
+          window.location.href = '/admin/dashboard';
+        } else {
+          console.log('Auth failed, JWT cookie not working');
+          toast.error('Authentication failed. Please try again.');
+        }
+      }, 1000);
     } catch (error) {
       console.error('Login error:', error);
       toast.error(error.message || 'Network error occurred');
