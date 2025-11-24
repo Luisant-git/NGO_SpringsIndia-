@@ -23,10 +23,21 @@ const Login: React.FC = () => {
       const storedToken = localStorage.getItem('auth-token');
       console.log('Token stored:', !!storedToken);
       
-      toast.success('Login successful!');
-      
-      console.log('Redirecting to /admin/dashboard');
-      navigate('/admin/dashboard');
+      // Test auth status immediately
+      setTimeout(async () => {
+        const { checkAuthStatus } = await import('../api/authApi.js');
+        const isAuth = await checkAuthStatus();
+        console.log('Auth test result:', isAuth);
+        
+        if (isAuth) {
+          toast.success('Login successful!');
+          console.log('Auth verified, redirecting to dashboard');
+          navigate('/admin/dashboard');
+        } else {
+          toast.error('Authentication failed after login');
+          console.log('Auth failed - token not working');
+        }
+      }, 500);
     } catch (error) {
       console.error('Login error:', error);
       toast.error(error.message || 'Network error occurred');
