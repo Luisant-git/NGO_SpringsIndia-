@@ -84,7 +84,7 @@ const Header: React.FC = () => {
                   <NavLink
                     to={link.path}
                     style={({ isActive }) => (isActive || isChildActive ? activeLinkStyle : {})}
-                    className="text-gray-600 hover:text-orange-500 px-2 py-2 rounded-md text-xs font-medium transition-colors flex items-center"
+                    className="text-gray-600 hover:text-orange-500 px-2 py-2 rounded-md text-sm font-medium transition-colors flex items-center uppercase"
                   >
                     {link.name}
                     <i className="fas fa-chevron-down ml-1 text-xs"></i>
@@ -94,7 +94,7 @@ const Header: React.FC = () => {
                       <NavLink
                         to={link.path}
                         style={({ isActive }) => (isActive ? activeLinkStyle : {})}
-                        className="block w-full text-left px-4 py-2 text-xs text-gray-700 hover:bg-teal-50 hover:text-orange-500"
+                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-orange-500 uppercase"
                       >
                         All {link.name}
                       </NavLink>
@@ -104,7 +104,7 @@ const Header: React.FC = () => {
                         key={item.name}
                         to={item.path}
                         style={({ isActive }) => (isActive ? activeLinkStyle : {})}
-                        className="block w-full text-left px-4 py-2 text-xs text-gray-700 hover:bg-teal-50 hover:text-orange-500"
+                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-orange-500 uppercase"
                       >
                         {item.name}
                       </NavLink>
@@ -116,7 +116,7 @@ const Header: React.FC = () => {
                   key={link.name}
                   to={link.path}
                   style={({ isActive }) => (isActive ? activeLinkStyle : {})}
-                  className="text-gray-600 hover:text-orange-500 px-2 py-2 rounded-md text-xs font-medium transition-colors"
+                  className="text-gray-600 hover:text-orange-500 px-2 py-2 rounded-md text-sm font-medium transition-colors uppercase"
                 >
                   {link.name}
                 </NavLink>
@@ -156,25 +156,25 @@ const Header: React.FC = () => {
                   to={link.path}
                   onClick={closeMobileMenu}
                   style={({ isActive }) => (isActive ? activeLinkStyle : {})}
-                  className="text-gray-600 hover:bg-teal-100 hover:text-orange-500 block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-600 hover:bg-teal-100 hover:text-orange-500 block px-3 py-2 rounded-md text-lg font-medium uppercase"
                 >
                   {link.name}
                 </NavLink>
               ) : (
                 <div key={link.name}>
-                  <button onClick={() => handleMobileDropdownToggle(link.name)} className="w-full flex justify-between items-center text-gray-600 hover:bg-teal-100 hover:text-orange-500 px-3 py-2 rounded-md text-base font-medium text-left">
+                  <button onClick={() => handleMobileDropdownToggle(link.name)} className="w-full flex justify-between items-center text-gray-600 hover:bg-teal-100 hover:text-orange-500 px-3 py-2 rounded-md text-lg font-medium text-left uppercase">
                     <span>{link.name}</span>
                     <i className={`fas fa-chevron-down text-xs transition-transform transform ${openDropdown === link.name ? 'rotate-180' : ''}`}></i>
                   </button>
                   {openDropdown === link.name && (
                     <div className="pl-6 pt-1 pb-2">
                       {link.name !== 'Flagship Programs' && (
-                        <NavLink to={link.path} onClick={closeMobileMenu} style={({ isActive }) => (isActive ? activeLinkStyle : {})} className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-teal-100 hover:text-orange-500">
+                        <NavLink to={link.path} onClick={closeMobileMenu} style={({ isActive }) => (isActive ? activeLinkStyle : {})} className="block px-3 py-2 rounded-md text-lg font-medium text-gray-600 hover:bg-teal-100 hover:text-orange-500 uppercase">
                           All {link.name}
                         </NavLink>
                       )}
                       {link.dropdown.map(item => (
-                        <NavLink key={item.name} to={item.path} onClick={closeMobileMenu} style={({ isActive }) => (isActive ? activeLinkStyle : {})} className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-teal-100 hover:text-orange-500">
+                        <NavLink key={item.name} to={item.path} onClick={closeMobileMenu} style={({ isActive }) => (isActive ? activeLinkStyle : {})} className="block px-3 py-2 rounded-md text-lg font-medium text-gray-600 hover:bg-teal-100 hover:text-orange-500 uppercase">
                           {item.name}
                         </NavLink>
                       ))}

@@ -6,16 +6,6 @@ const Footer: React.FC = () => {
   return (
     <footer className="text-white" style={{backgroundColor: 'rgba(17, 24, 39)'}}>
       <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold">Support Our Mission</h3>
-            <p className="text-gray-300 mt-2 max-w-xl mx-auto">Your generous contribution helps us empower lives and build a better future for communities in need.</p>
-            <Link 
-                to="/contact" 
-                className="mt-6 inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">
-                Donate Now
-            </Link>
-        </div>
-        <div className="border-t border-gray-700 mb-12"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">

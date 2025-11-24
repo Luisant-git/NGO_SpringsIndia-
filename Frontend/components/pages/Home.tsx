@@ -279,7 +279,7 @@ const Home: React.FC = () => {
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800">Real Stories of Change</h2>
                     <p className="text-center mt-2 text-gray-600">Real lives, real change, real hope.</p>
-                    <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {homeSuccessStories.map(story => (
                             <div key={story.title} className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
                                 <img src={story.image} alt={story.title} className="w-full h-56 object-cover"/>
