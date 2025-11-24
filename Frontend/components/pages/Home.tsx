@@ -287,7 +287,7 @@ const Home: React.FC = () => {
                                     <h3 className="text-lg font-bold" style={{color: '#00695c'}}>{story.title}</h3>
                                     <p className="text-sm font-semibold mt-1" style={{color: '#ff6f00'}}>{story.name}</p>
                                     <p className="mt-3 text-gray-700 text-sm flex-grow">{story.story}</p>
-                                    <Link to="/impact" className="mt-3 font-semibold self-start text-sm" style={{color: '#00695c'}} onMouseEnter={(e) => e.currentTarget.style.color = '#2d7d32'} onMouseLeave={(e) => e.currentTarget.style.color = '#00695c'}>
+                                    <Link to="/programs-impacts" className="mt-3 font-semibold self-start text-sm" style={{color: '#00695c'}} onMouseEnter={(e) => e.currentTarget.style.color = '#2d7d32'} onMouseLeave={(e) => e.currentTarget.style.color = '#00695c'}>
                                         Read More &rarr;
                                     </Link>
                                 </div>
