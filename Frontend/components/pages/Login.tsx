@@ -17,11 +17,21 @@ const Login: React.FC = () => {
 
     try {
       const data = await loginAdmin(email, password);
-      toast.success('Login successful!');
-      // Small delay to ensure session is set, then redirect
-      setTimeout(() => {
-        window.location.href = '/admin/dashboard';
-      }, 500);
+      console.log('Login successful, checking auth status...');
+      
+      // Wait a moment then check if session works
+      setTimeout(async () => {
+        const { checkAuthStatus } = await import('../api/authApi.js');
+        const isAuth = await checkAuthStatus();
+        console.log('Auth status after login:', isAuth);
+        
+        if (isAuth) {
+          toast.success('Login successful!');
+          window.location.href = '/admin/dashboard';
+        } else {
+          toast.error('Session not created. Please try again.');
+        }
+      }, 1000);
     } catch (error) {
       toast.error(error.message || 'Network error occurred');
     } finally {
