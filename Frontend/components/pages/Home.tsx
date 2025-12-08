@@ -16,6 +16,7 @@ const runningSlides = [
 
 const focusAreas = [
     { icon: "fas fa-users", title: "Community Development: (Women, Children and Youth)", description: "Springs India Foundation works to empower the communities by strengthening the women, fostering the children, and leading the youth by supporting, counselling, and various long-term activities." },
+    { icon: "fas fa-child", title: "Child Education", description: "Initiatives to ensure quality learning for every child through foundational literacy and numeracy support, after-school programs, digital learning access, and guidance for overall academic development.\n\nOutcome: Improved learning levels, stronger academic confidence, reduced dropouts, and better opportunities for children to progress toward a brighter future." },
     { icon: "fas fa-graduation-cap", title: "Education", description: "Expanding the quality education, teacher training, vocational training, and skill development programs, financial literacy, scholarships, and creating equal opportunities for all deprived women and to help them in placements." },
     { icon: "fas fa-laptop-code", title: "Digital Literacy", description: "To provide digital Education in the rural areas and educate them with basic computer skills, coding, online learning and tutoring, e-commerce, digital marketing training and safe online practices for women, youth, and children." },
     { icon: "fas fa-hand-holding-heart", title: "Livelihood Enhancement", description: "Creating sustainability of life by promoting livelihood opportunities, supporting entrepreneurship, vocational training, and sustainable income-generation." },
@@ -23,7 +24,7 @@ const focusAreas = [
     { icon: "fas fa-spa", title: "Horticulture", description: "Encouraging modern horticulture, organic practices, floriculture, and value-added farming to improve livelihoods and community well-being." },
     { icon: "fas fa-tractor", title: "Agriculture", description: "Promoting organic and sustainable agricultural practices, organic farming methods, and supporting and strengthening farmers for food security and rural development." },
     { icon: "fas fa-briefcase-medical", title: "Health Care", description: "Initiatives to provide accessible healthcare through hospitals, medical camps, preventive programs, yoga centres, and traditional systems of healing." },
-    { icon: "fas fa-brain", title: "Mental Health Care", description: "Supporting wellbeing through counselling, rehabilitation, awareness drives, mobile addiction, and Education & Digital Learning School support, digital literacy, after-school learning, scholarships" },
+    { icon: "fas fa-brain", title: "Mental Health Care", description: "Supporting wellbeing through counselling, rehabilitation, awareness drives, mobile deaddiction, and affordable mental health treatment for individuals and families." },
     { icon: "fas fa-people-carry", title: "Indigenous Community Welfare programs", description: "Enhancing the quality of life of indigenous populations via access to health, education, livelihood opportunities, and cultural and traditional preservation initiatives, in partnership with civil society and government programs." },
     { icon: "fas fa-hands-helping", title: "General Welfare programs and projects", description: "Delivering welfare schemes, disaster relief, animal care, housing and infrastructure support in partnership with government and civil society. food security and rural development." },
 ];
@@ -108,25 +109,14 @@ const partners = [
     { name: "Government Partner", icon: "fas fa-landmark" }
 ];
 
-const awards = [
-    {
-        title: "Best NGO Award 2024",
-        organization: "Social Impact Foundation",
-        icon: "fas fa-trophy",
-        color: "#FFD700"
-    },
-    {
-        title: "Excellence in Community Service",
-        organization: "National Welfare Council",
-        icon: "fas fa-award",
-        color: "#C0C0C0"
-    },
-    {
-        title: "Women Empowerment Recognition",
-        organization: "State Government",
-        icon: "fas fa-medal",
-        color: "#CD7F32"
-    }
+const certifications = [
+    { title: "Trust Regn No: 167/2022", icon: "fas fa-certificate" },
+    { title: "12A-Certified", icon: "fas fa-certificate" },
+    { title: "80G Certified", icon: "fas fa-certificate" },
+    { title: "CSR-1 Certified", icon: "fas fa-certificate" },
+    { title: "NGO Darpan-Registered", icon: "fas fa-certificate" },
+    { title: "E-Anudhaan-Registered", icon: "fas fa-certificate" },
+    { title: "Udyam-Registered", icon: "fas fa-certificate" }
 ];
 
 const programHighlights = [
@@ -244,13 +234,22 @@ const Home: React.FC = () => {
 
             {/* Introduction Section */}
             <section className="py-16 md:py-24 bg-white">
-                <div className="container mx-auto px-4 text-center">
-                    <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-                        Springs India Foundation is committed to building an inclusive, sustainable, and empowered society. We work across key areas to design the lives of women, youth, children, and communities through education, skill development, livelihood enhancement, and more.
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">Our Mission</h2>
+                    
+                    {/* Main Text */}
+                    <p className="text-lg md:text-xl text-gray-800 max-w-5xl mx-auto leading-relaxed text-center">
+                        Springs India Foundation is committed to building an <span className="font-bold" style={{color: '#00695c'}}>inclusive, sustainable, and empowered society</span>. We work across key areas to design the lives of women, youth, children, general and indigenous communities through education, skill development, livelihood enhancement, digital literacy, environment, agriculture, healthcare, welfare, and disaster relief.
                     </p>
-                    <p className="mt-6 text-2xl md:text-3xl font-bold max-w-4xl mx-auto" style={{color: '#00695c'}}>
-                        Our mission is to transform lives—ensuring that every individual has dignity, opportunity, and support to thrive and succeed in their life.
-                    </p>
+                    
+                    {/* Highlighted Box */}
+                    <div className="mt-12 max-w-5xl mx-auto">
+                        <div className="rounded-2xl p-8 md:p-12 text-white text-center" style={{backgroundColor: '#00695c'}}>
+                            <p className="text-xl md:text-2xl font-bold leading-relaxed">
+                                Our developmental initiatives empower women, youth, children, indigenous and vulnerable communities by fuelling them with self-confidence, enhancing livelihoods, improving health and wellbeing, filling the gaps of the digital divide, and protecting nature.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
             
@@ -265,7 +264,7 @@ const Home: React.FC = () => {
                                     <i className={`${area.icon} text-3xl`}></i>
                                 </div>
                                 <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">{area.title}</h3>
-                                <p className="mt-2 text-gray-600 text-center">{area.description}</p>
+                                <p className="mt-2 text-gray-600 text-center whitespace-pre-line">{area.description}</p>
                             </div>
                         ))}
                     </div>
@@ -358,19 +357,16 @@ const Home: React.FC = () => {
                 </div>
             </section>
 
-            {/* Awards and Recognition Section */}
+            {/* Certifications and Recognitions Section */}
             <section className="py-16 md:py-24 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800">Awards and Recognition</h2>
-                    <p className="text-center mt-2 text-gray-600">Honored for our commitment to social change.</p>
-                    <div className="mt-12 grid md:grid-cols-3 gap-8">
-                        {awards.map((award, index) => (
-                            <div key={index} className="bg-white rounded-lg shadow-lg p-8 text-center card-hover">
-                                <div className="w-32 h-32 mx-auto rounded-full flex items-center justify-center" style={{backgroundColor: `${award.color}20`}}>
-                                    <i className={`${award.icon} text-6xl`} style={{color: award.color}}></i>
-                                </div>
-                                <h3 className="mt-6 text-xl font-bold" style={{color: '#00695c'}}>{award.title}</h3>
-                                <p className="mt-2 text-gray-600">{award.organization}</p>
+                    <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800">Certifications and Recognitions</h2>
+                    <p className="text-center mt-2 text-gray-600">Officially registered and recognized by Government of India</p>
+                    <div className="mt-12 flex gap-6 overflow-x-auto pb-4">
+                        {certifications.map((cert, index) => (
+                            <div key={index} className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow flex-shrink-0 min-w-[180px]">
+                                <i className={`${cert.icon} text-4xl mb-3`} style={{color: '#00695c'}}></i>
+                                <p className="text-sm font-semibold text-gray-800">{cert.title}</p>
                             </div>
                         ))}
                     </div>
@@ -510,23 +506,47 @@ const Home: React.FC = () => {
                                     <i className="fas fa-hand-holding-usd text-4xl" style={{color: '#ff6f00'}}></i>
                                 </div>
                                 <h4 className="text-lg font-bold mb-2">Program Funding</h4>
-                                <p className="text-sm text-gray-600 mb-3">Support specific initiatives like after-school learning centres, women skill development, digital literacy for rural youth.</p>
+                                <p className="text-sm text-gray-600 mb-2">Support a specific initiative such as:</p>
+                                <ul className="text-sm text-gray-600 mb-3 space-y-1">
+                                    <li>• After-school learning centres</li>
+                                    <li>• Women skill development</li>
+                                    <li>• Digital literacy for rural youth</li>
+                                    <li>• Community wellbeing & culture programs</li>
+                                </ul>
                                 <p className="text-xs font-semibold" style={{color: '#00695c'}}>Outcome: Measurable impact with transparent reporting</p>
                             </div>
                             <div className="bg-white border-2 border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
                                 <div className="text-center mb-4">
                                     <i className="fas fa-home text-4xl" style={{color: '#ff6f00'}}></i>
                                 </div>
-                                <h4 className="text-lg font-bold mb-2">Adopt a Community</h4>
-                                <p className="text-sm text-gray-600 mb-3">Sponsor a specific village or learning hub with full program operations, staff support, and learning materials.</p>
+                                <h4 className="text-lg font-bold mb-2">Adopt a Community or an Indigenous Community/Learning Centre</h4>
+                                <p className="text-sm text-gray-600 mb-2">Sponsor a specific village or indigenous community or learning hub:</p>
+                                <ul className="text-sm text-gray-600 mb-3 space-y-1">
+                                    <li>• Full program operations</li>
+                                    <li>• Staff/teacher support</li>
+                                    <li>• Learning materials & technology</li>
+                                </ul>
                                 <p className="text-xs font-semibold" style={{color: '#00695c'}}>Outcome: Deep, long-term transformation in one community</p>
+                            </div>
+                            <div className="bg-white border-2 border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                                <div className="text-center mb-4">
+                                    <i className="fas fa-school text-4xl" style={{color: '#ff6f00'}}></i>
+                                </div>
+                                <h4 className="text-lg font-bold mb-2">Adopt a School</h4>
+                                <p className="text-sm text-gray-600 mb-3">Support the complete development of a selected school by providing academic programs, teacher training, essential learning resources, and infrastructural enhancement.</p>
+                                <p className="text-xs font-semibold" style={{color: '#00695c'}}>Outcome: Holistic improvement in school quality, stronger learning outcomes, empowered teachers, and a sustained culture of excellence within the school community</p>
                             </div>
                             <div className="bg-white border-2 border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
                                 <div className="text-center mb-4">
                                     <i className="fas fa-graduation-cap text-4xl" style={{color: '#ff6f00'}}></i>
                                 </div>
                                 <h4 className="text-lg font-bold mb-2">Scholarships & Sponsorship</h4>
-                                <p className="text-sm text-gray-600 mb-3">Sponsor children, women trainees, or youth scholars for direct empowerment.</p>
+                                <p className="text-sm text-gray-600 mb-2">Sponsor for direct empowerment:</p>
+                                <ul className="text-sm text-gray-600 mb-3 space-y-1">
+                                    <li>• Children</li>
+                                    <li>• Women trainees</li>
+                                    <li>• Youth scholars</li>
+                                </ul>
                                 <p className="text-xs font-semibold" style={{color: '#00695c'}}>Outcome: Direct empowerment, personal impact stories</p>
                             </div>
                             <div className="bg-white border-2 border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
@@ -534,7 +554,12 @@ const Home: React.FC = () => {
                                     <i className="fas fa-users text-4xl" style={{color: '#ff6f00'}}></i>
                                 </div>
                                 <h4 className="text-lg font-bold mb-2">Employee Volunteering</h4>
-                                <p className="text-sm text-gray-600 mb-3">Engage employees through mentoring, skill sessions, career guidance for youth.</p>
+                                <p className="text-sm text-gray-600 mb-2">Engage employees through:</p>
+                                <ul className="text-sm text-gray-600 mb-3 space-y-1">
+                                    <li>• Mentoring & skill-sessions</li>
+                                    <li>• Career guidance for youth</li>
+                                    <li>• Community event participation</li>
+                                </ul>
                                 <p className="text-xs font-semibold" style={{color: '#00695c'}}>Outcome: Skill-based & time-based volunteering programs</p>
                             </div>
                             <div className="bg-white border-2 border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
@@ -542,7 +567,12 @@ const Home: React.FC = () => {
                                     <i className="fas fa-gift text-4xl" style={{color: '#ff6f00'}}></i>
                                 </div>
                                 <h4 className="text-lg font-bold mb-2">In-Kind Support</h4>
-                                <p className="text-sm text-gray-600 mb-3">Provide resources like computers, books, sewing machines, and basic infrastructure.</p>
+                                <p className="text-sm text-gray-600 mb-2">Provide resources such as:</p>
+                                <ul className="text-sm text-gray-600 mb-3 space-y-1">
+                                    <li>• Computers, books & learning tools</li>
+                                    <li>• Sewing machines & vocational support</li>
+                                    <li>• Basic infrastructure / furniture</li>
+                                </ul>
                                 <p className="text-xs font-semibold" style={{color: '#00695c'}}>Outcome: Strengthening grassroots capabilities</p>
                             </div>
                             <div className="bg-white border-2 border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
@@ -550,7 +580,12 @@ const Home: React.FC = () => {
                                     <i className="fas fa-chart-line text-4xl" style={{color: '#ff6f00'}}></i>
                                 </div>
                                 <h4 className="text-lg font-bold mb-2">Impact Reporting</h4>
-                                <p className="text-sm text-gray-600 mb-3">Quarterly/Annual reports, photos, stories, video documentation, and branding opportunities.</p>
+                                <ul className="text-sm text-gray-600 mb-3 space-y-1">
+                                    <li>• Quarterly/Annual reports</li>
+                                    <li>• Photos, stories</li>
+                                    <li>• Video documentation</li>
+                                    <li>• Branding opportunities</li>
+                                </ul>
                                 <p className="text-xs font-semibold" style={{color: '#00695c'}}>Outcome: Compliance + Visibility + Real Social Impact</p>
                             </div>
                             <div className="bg-white border-2 border-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow">
@@ -558,9 +593,59 @@ const Home: React.FC = () => {
                                     <i className="fas fa-handshake text-4xl" style={{color: '#ff6f00'}}></i>
                                 </div>
                                 <h4 className="text-lg font-bold mb-2">Co-Branded Impact Initiatives</h4>
-                                <p className="text-sm text-gray-600 mb-3">Partner for awareness campaigns & thematic programs: Education for all, Women empowerment, Environment & wellness, Values & culture initiatives.</p>
+                                <p className="text-sm text-gray-600 mb-2">Partner for awareness campaigns & thematic programs:</p>
+                                <ul className="text-sm text-gray-600 mb-3 space-y-1">
+                                    <li>• Education for all</li>
+                                    <li>• Women empowerment</li>
+                                    <li>• Environment & wellness</li>
+                                    <li>• Values & culture initiatives</li>
+                                </ul>
                                 <p className="text-xs font-semibold" style={{color: '#00695c'}}>Outcome: Shared mission, shared voice</p>
                             </div>
+                        </div>
+                    </div>
+
+                    {/* Why Partner with Us */}
+                    <div className="mb-16">
+                        <h3 className="text-2xl font-bold text-center mb-8" style={{color: '#00695c'}}>Why Partner with Us?</h3>
+                        <div className="bg-white border-2 border-gray-200 p-8 rounded-lg">
+                            <ul className="grid md:grid-cols-2 gap-4">
+                                <li className="flex items-start">
+                                    <i className="fas fa-check-circle mt-1 mr-3" style={{color: '#ff6f00'}}></i>
+                                    <span>Deep grassroots presence & community trust</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <i className="fas fa-check-circle mt-1 mr-3" style={{color: '#ff6f00'}}></i>
+                                    <span>Sustainable, scalable programs</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <i className="fas fa-check-circle mt-1 mr-3" style={{color: '#ff6f00'}}></i>
+                                    <span>Dedicated project monitoring & field team</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <i className="fas fa-check-circle mt-1 mr-3" style={{color: '#ff6f00'}}></i>
+                                    <span>Proven grassroots impact</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <i className="fas fa-check-circle mt-1 mr-3" style={{color: '#ff6f00'}}></i>
+                                    <span>Community-driven, values-centred approach</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <i className="fas fa-check-circle mt-1 mr-3" style={{color: '#ff6f00'}}></i>
+                                    <span>SDG-aligned programs & global development vision</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <i className="fas fa-check-circle mt-1 mr-3" style={{color: '#ff6f00'}}></i>
+                                    <span>Strong governance, documentation & ethics</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <i className="fas fa-check-circle mt-1 mr-3" style={{color: '#ff6f00'}}></i>
+                                    <span>Impact reports, stories & visibility for partners</span>
+                                </li>
+                            </ul>
+                            <p className="text-center mt-6 text-lg font-semibold" style={{color: '#00695c'}}>
+                                Together, we can create sustainable change with dignity and love.
+                            </p>
                         </div>
                     </div>
 

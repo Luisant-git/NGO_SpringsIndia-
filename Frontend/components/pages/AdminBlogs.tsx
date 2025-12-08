@@ -22,6 +22,7 @@ const AdminBlogs: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
   const [editingBlog, setEditingBlog] = useState<Blog | null>(null);
+  const contentRef = React.useRef<HTMLDivElement>(null);
   const [formData, setFormData] = useState({
     title: '',
     content: '',
@@ -32,6 +33,13 @@ const AdminBlogs: React.FC = () => {
     published: false,
     image: null as File | null
   });
+
+  const execCommand = (command: string, value?: string) => {
+    if (contentRef.current) {
+      contentRef.current.focus();
+      document.execCommand(command, false, value);
+    }
+  };
 
   const categories = ['Education', 'Women Empowerment', 'Digital Literacy', 'Community Development', 'Health Care', 'Environment', 'General'];
 
@@ -166,12 +174,29 @@ const AdminBlogs: React.FC = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium mb-1">Content</label>
-                <textarea
-                  value={formData.content}
-                  onChange={(e) => setFormData({...formData, content: e.target.value})}
-                  className="w-full border rounded px-3 py-2 h-40"
-                  required
-                />
+                <div className="border border-gray-300 rounded-lg">
+                  <div className="flex gap-1 p-2 border-b border-gray-300 bg-gray-50 flex-wrap">
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('formatBlock', '<h1>'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 text-sm font-bold">H1</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('formatBlock', '<h2>'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 text-sm font-semibold">H2</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('formatBlock', '<h3>'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 text-sm font-medium">H3</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('formatBlock', '<p>'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 text-sm">Normal</button>
+                    <div className="w-px bg-gray-300 mx-1"></div>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('bold'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 font-bold">B</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('italic'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 italic">I</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('underline'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 underline">U</button>
+                    <div className="w-px bg-gray-300 mx-1"></div>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('insertUnorderedList'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200">• List</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('insertOrderedList'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200">1. List</button>
+                  </div>
+                  <div
+                    ref={contentRef}
+                    contentEditable
+                    onInput={(e) => setFormData({...formData, content: e.currentTarget.innerHTML})}
+                    dangerouslySetInnerHTML={{ __html: formData.content }}
+                    className="min-h-[160px] p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-b-lg [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:my-2 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:my-2 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:my-1 [&_ul]:list-disc [&_ul]:ml-6 [&_ol]:list-decimal [&_ol]:ml-6 [&_li]:my-1"
+                    style={{ maxHeight: '400px', overflowY: 'auto' }}
+                  />
+                </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>

@@ -11,12 +11,14 @@ export class BlogService {
 
   async create(createBlogDto: CreateBlogDto, file: Express.Multer.File) {
     const imageUrl = file ? `/uploads/${file.filename}` : '';
+    const published = createBlogDto.published === true || (createBlogDto.published as any) === 'true';
     
     return this.prisma.blog.create({
       data: {
         ...createBlogDto,
+        published,
         image: imageUrl,
-        publishedAt: createBlogDto.published ? new Date() : null,
+        publishedAt: published ? new Date() : null,
       },
     });
   }
@@ -54,12 +56,15 @@ export class BlogService {
       imageUrl = `/uploads/${file.filename}`;
     }
 
+    const published = updateBlogDto.published === true || (updateBlogDto.published as any) === 'true';
+
     return this.prisma.blog.update({
       where: { id },
       data: {
         ...updateBlogDto,
+        published,
         image: imageUrl,
-        publishedAt: updateBlogDto.published ? (existingBlog.publishedAt || new Date()) : null,
+        publishedAt: published ? (existingBlog.publishedAt || new Date()) : null,
       },
     });
   }

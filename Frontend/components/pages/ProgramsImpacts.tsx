@@ -51,7 +51,7 @@ const ProgramsImpacts: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="bg-gradient-to-r from-teal-600 to-orange-500 text-white py-16">
+      <div className="cta-gradient text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Programs and Impacts</h1>
           <p className="text-xl opacity-90">Transforming Lives Through Education and Empowerment</p>
@@ -63,7 +63,10 @@ const ProgramsImpacts: React.FC = () => {
           {impactYears.map((year) => (
             <div key={year.id} className="bg-white rounded-lg shadow-lg p-8">
               <h2 className="text-3xl font-bold text-teal-700 mb-4">{year.year}</h2>
-              <p className="text-gray-700 leading-relaxed mb-8">{year.description}</p>
+              <div 
+                className="text-gray-700 leading-relaxed mb-8 [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:my-4 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:my-3 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:my-2 [&_ul]:list-disc [&_ul]:ml-6 [&_ul]:my-2 [&_ol]:list-decimal [&_ol]:ml-6 [&_ol]:my-2 [&_li]:my-1 [&_p]:my-2"
+                dangerouslySetInnerHTML={{ __html: year.description }}
+              />
               
               <div className="grid gap-6">
                 {year.impactMonths.map((month) => (
@@ -89,11 +92,17 @@ const ProgramsImpacts: React.FC = () => {
                       
                       <div className="lg:w-1/2 p-6">
                         <h3 className="text-xl font-bold text-gray-800 mb-4">{month.title}</h3>
-                        <p className="text-gray-600 mb-6 leading-relaxed">{month.description}</p>
+                        <div 
+                          className="text-gray-600 mb-6 leading-relaxed [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:my-4 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:my-3 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:my-2 [&_ul]:list-disc [&_ul]:ml-6 [&_ul]:my-2 [&_ol]:list-decimal [&_ol]:ml-6 [&_ol]:my-2 [&_li]:my-1 [&_p]:my-2"
+                          dangerouslySetInnerHTML={{ __html: month.description }}
+                        />
                         
                         <div className="bg-orange-50 rounded-lg p-4">
                           <h4 className="text-lg font-semibold text-orange-600 mb-2">{month.impactTitle}</h4>
-                          <div className="text-gray-700 whitespace-pre-line">{month.impactDescription}</div>
+                          <div 
+                            className="text-gray-700 [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:my-4 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:my-3 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:my-2 [&_ul]:list-disc [&_ul]:ml-6 [&_ul]:my-2 [&_ol]:list-decimal [&_ol]:ml-6 [&_ol]:my-2 [&_li]:my-1 [&_p]:my-2"
+                            dangerouslySetInnerHTML={{ __html: month.impactDescription }}
+                          />
                         </div>
                       </div>
                     </div>

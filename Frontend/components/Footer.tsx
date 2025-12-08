@@ -63,8 +63,14 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-        <div className="mt-12 border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Springs India Foundation. All Rights Reserved.</p>
+        <div className="mt-12 border-t border-gray-700 pt-8">
+          <div className="text-center mb-6">
+            <h4 className="text-sm font-semibold text-gray-300 mb-2">LEGAL DISCLOSURE</h4>
+            <p className="text-xs text-gray-400 max-w-3xl mx-auto">
+              "SPRINGS INDIA FOUNDATION" is the outreach name of Springs Educational and Charitable Trust, a registered public Charitable Trust (Reg No: 167/2022, Coimbatore, Tamil Nadu, India)
+            </p>
+          </div>
+          <p className="text-center text-sm text-gray-400">&copy; {new Date().getFullYear()} Springs India Foundation. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
