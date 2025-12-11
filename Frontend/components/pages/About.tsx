@@ -2,38 +2,38 @@ import React, { useState } from 'react';
 
 const timelineEvents = {
     '2022': [
-        "October: Launch and Registration of Spell Bee",
-        "October: Conduct of Spell Bee Competition",
-        "November: Women empowerment workshop",
-        "December: Awarding Function of Spell Bee Competition",
+        "December: Christmas Celebration - Community gathering",
+        "December: Awarding Ceremony of Spell Bee Competition - Child Education",
+        "November: Women Empowerment Workshop - Women Empowerment",
+        "October: Conduct of Spell Bee Competition - Child Education",
+        "October: Launch of Spell Bee Competition - Child Education",
     ],
     '2023': [
-        "January: Weekend Learning Activity",
-        "February: Science Expo",
-        "March: Counselling session",
-        "April: Summer Camp-Session-1",
-        "May: Summer Camp-Session-2",
-        "June: After School Program-Activity",
-        "July: Counselling for Children",
-        "September: Weekend Activity",
-        "October: Cultural Activity",
+        "October: Cultural Activity - Child Education",
+        "September: Weekend Activity - Child Education",
+        "July: Counselling for Children - Mental Health Care",
+        "June: After School Program-Activity - Child Education",
+        "May: Summer Camp-Session-2 - Child Education",
+        "April: Summer Camp-Session-1 - Child Education",
+        "March: Counselling Session - Mental Health Care",
+        "February: Science Expo - Child Education",
+        "January: Weekend Learning Activity - Child Education",
     ],
     '2024': [
-        "February: Weekend Activity",
-        "March: Women's Day Award Function",
-        "March: Award Function",
-        "April: Summer Camp-Session-1",
-        "May: Summer Camp-Session-2",
-        "May: Summer Camp-Award Function",
-        "June: Launch of Teacher Training Program",
-        "July: Launch of Teacher Training in Coimbatore",
-        "October: Orientation Program for Teachers",
-        "November: Award Day for Children",
+        "November: Science Expo and Award Day for Children",
+        "October: Orientation Program for Teachers - Women Empowerment",
+        "June: Launch of Teacher Training Program - Women Empowerment",
+        "May: Summer Camp (Session 2) & Award Function - Child Education",
+        "April: Summer Camp (Session 1) - Child Education",
+        "March: Award Function - Women Empowerment",
+        "February: Weekend Activity - Child Education",
     ],
     '2025': [
-        "February: Learning Activity",
-        "September: Teacher Orientation Program",
-        "November: Teacher Enrichment program",
+        "March: Teacher Training Certification for Candidates - Women Empowerment",
+        "March: Award Day for Students - Child Education",
+        "March: Sports Day - Child Education",
+        "February: Learning Activity Program - Child Education",
+        "January: Pongal & Republic Day Celebrations - Community Involvement and Bonding",
     ],
 };
 
@@ -149,7 +149,7 @@ Springs India Foundation is a value-driven trust and serves towards national dev
                                 <i className="fas fa-balance-scale text-3xl"></i>
                             </div>
                             <h3 className="mt-6 text-xl font-semibold text-center text-gray-900">Equity & Inclusion</h3>
-                            <p className="mt-2 text-gray-600 text-center">Every individual, specially especially from marginalized and indigenous communities, women, youth and children deserves access to quality education, skill development and livelihood opportunities for growth.</p>
+                            <p className="mt-2 text-gray-600 text-center">Every individual,especially from marginalized and indigenous communities, women, youth and children deserves access to quality education, skill development and livelihood opportunities for growth.</p>
                         </div>
                         <div className="bg-white p-8 rounded-lg shadow-lg card-hover">
                             <div className="flex items-center justify-center h-16 w-16 rounded-full icon-container mx-auto">
@@ -229,7 +229,7 @@ Springs India Foundation is a value-driven trust and serves towards national dev
                     
                     <div className="relative wrap overflow-hidden p-10 md:p-10 p-4 h-full">
                         <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border hidden md:block" style={{left: '50%'}}></div>
-                        {Object.keys(timelineEvents).map((year, index) => (
+                        {Object.keys(timelineEvents).reverse().map((year, index) => (
                             <TimelineItem key={year} year={year} events={timelineEvents[year as keyof typeof timelineEvents]} isLeft={index % 2 === 0} />
                         ))}
                     </div>
@@ -310,63 +310,63 @@ Springs India Foundation is a value-driven trust and serves towards national dev
                             <div className="space-y-4">
                                 <div className="flex items-start">
                                     <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
-                                    <span className="text-gray-700">Support children with joyful learning and strong values</span>
+                                    <span className="text-gray-700">Support children with <strong>joyful learning and strong values</strong></span>
                                 </div>
                                 <div className="flex items-start">
                                     <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
-                                    <span className="text-gray-700">Empower women with skills, confidence, and independence</span>
+                                    <span className="text-gray-700">Empower women with <strong>skills, confidence, and independence</strong></span>
                                 </div>
                                 <div className="flex items-start">
                                     <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
-                                    <span className="text-gray-700">Strengthen families through community-driven programs</span>
+                                    <span className="text-gray-700">Strengthen families through <strong>community-driven programs</strong></span>
                                 </div>
                                 <div className="flex items-start">
                                     <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
-                                    <span className="text-gray-700">Build safe, emotional, and social spaces</span>
+                                    <span className="text-gray-700">Build <strong>safe, emotional, and social spaces</strong></span>
                                 </div>
                                 <div className="flex items-start">
                                     <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
-                                    <span className="text-gray-700">Promote culture, belonging, and unity</span>
+                                    <span className="text-gray-700">Promote <strong>culture, belonging, and unity</strong></span>
                                 </div>
                                 <div className="flex items-start">
                                     <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
-                                    <span className="text-gray-700">Foster digital and financial literacy for future readiness</span>
+                                    <span className="text-gray-700">Foster <strong>digital and financial literacy</strong> for future readiness</span>
                                 </div>
                                 <div className="flex items-start">
                                     <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
-                                    <span className="text-gray-700">Encourage youth leadership and volunteering for community change</span>
+                                    <span className="text-gray-700">Encourage <strong>youth leadership and volunteering</strong> for community change</span>
                                 </div>
                             </div>
                             <div className="space-y-4">
                                 <div className="flex items-start">
                                     <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
-                                    <span className="text-gray-700">Create platforms for local art, crafts, and traditions to thrive</span>
+                                    <span className="text-gray-700">Create <strong>platforms for local art, crafts, and traditions</strong> to thrive</span>
                                 </div>
                                 <div className="flex items-start">
                                     <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
-                                    <span className="text-gray-700">Bridge rural–urban opportunity gaps through awareness and collaboration</span>
+                                    <span className="text-gray-700">Bridge <strong>rural–urban opportunity gaps</strong> through awareness and collaboration</span>
                                 </div>
                                 <div className="flex items-start">
                                     <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
-                                    <span className="text-gray-700">Cultivate resilience, mental well-being, and emotional strength in every individual</span>
+                                    <span className="text-gray-700">Cultivate <strong>resilience, mental well-being, and emotional strength</strong> in every individual</span>
                                 </div>
                                 <div className="flex items-start">
                                     <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
-                                    <span className="text-gray-700">Nurture environmental awareness and sustainable living within general and indigenous communities</span>
+                                    <span className="text-gray-700">Nurture <strong>environmental awareness and sustainable living</strong> within general and indigenous communities</span>
                                 </div>
                                 <div className="flex items-start">
                                     <i className="fas fa-check-circle text-xl mr-3 mt-1" style={{color: '#ff6f00'}}></i>
-                                    <span className="text-gray-700">Ensure transparency, accountability, and dignity in every initiative</span>
+                                    <span className="text-gray-700">Ensure <strong>transparency, accountability, and dignity</strong> in every initiative</span>
                                 </div>
                             </div>
                         </div>
                         <div className="mt-12 text-center">
                             <div className="bg-gradient-to-r from-teal-50 to-emerald-50 p-8 rounded-lg border-l-4" style={{borderColor: '#00695c'}}>
                                 <p className="text-lg font-semibold mb-4" style={{color: '#00695c'}}>
-                                    We exist to ensure every life is valued, every dream has a chance, and every village or community grows with dignity and hope.
+                                    We exist to ensure <strong>every life is valued, every dream has a chance, and every village or community grows with dignity and hope.</strong>
                                 </p>
                                 <p className="text-gray-700">
-                                    These not only highlight growth not just in learning and livelihood, but also in mindset, identity, and long-term community resilience.
+                                    These not only highlight growth not just in learning and livelihood, but also in <strong>mindset, identity, and long-term community resilience.</strong>
                                 </p>
                             </div>
                         </div>
@@ -437,6 +437,72 @@ Springs India Foundation is a value-driven trust and serves towards national dev
                     </div>
                     
                     <LeadershipCarousel />
+                </div>
+            </section>
+
+            {/* Join Our Movement Section */}
+            <section className="py-20 bg-gradient-to-br from-teal-50 to-emerald-50">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-3xl font-bold text-gray-800 mb-6">Join Our Movement</h2>
+                        <p className="text-lg text-gray-700 mb-8">
+                            Whether you are an individual, corporate, volunteer, academic institution, or government body, we welcome you to collaborate and create impact.
+                        </p>
+                        
+                        <div className="grid md:grid-cols-2 gap-6 mb-8">
+                            <div className="bg-white p-6 rounded-lg shadow-md">
+                                <i className="fas fa-handshake text-3xl mb-3" style={{color: '#ff6f00'}}></i>
+                                <h4 className="font-semibold text-lg mb-2">CSR Partnerships</h4>
+                            </div>
+                            <div className="bg-white p-6 rounded-lg shadow-md">
+                                <i className="fas fa-users text-3xl mb-3" style={{color: '#ff6f00'}}></i>
+                                <h4 className="font-semibold text-lg mb-2">Volunteer Programs</h4>
+                            </div>
+                            <div className="bg-white p-6 rounded-lg shadow-md">
+                                <i className="fas fa-graduation-cap text-3xl mb-3" style={{color: '#ff6f00'}}></i>
+                                <h4 className="font-semibold text-lg mb-2">Skill Development Alliances</h4>
+                            </div>
+                            <div className="bg-white p-6 rounded-lg shadow-md">
+                                <i className="fas fa-school text-3xl mb-3" style={{color: '#ff6f00'}}></i>
+                                <h4 className="font-semibold text-lg mb-2">School & Community Collaborations</h4>
+                            </div>
+                        </div>
+
+                        <div className="bg-white p-8 rounded-lg shadow-lg mb-8">
+                            <p className="text-gray-700 text-lg mb-4">
+                                Let's work together to create measurable, sustainable impact in rural education and general and indigenous community empowerment.
+                            </p>
+                            <p className="text-gray-700 mb-4">
+                                We invite CSR leaders, foundations, and institutional partners for strategic discussions, site visits, and project planning.
+                            </p>
+                            <p className="text-gray-700 font-semibold">
+                                Your partnership can transform lives and strengthen communities.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <a href="#" className="bg-white hover:bg-teal-50 p-4 rounded-lg shadow-md transition-all">
+                                <i className="fas fa-briefcase text-2xl mb-2" style={{color: '#00695c'}}></i>
+                                <p className="font-semibold">Partner with us (CSR)</p>
+                                <p className="text-sm text-gray-600">APPLY</p>
+                            </a>
+                            <a href="#" className="bg-white hover:bg-teal-50 p-4 rounded-lg shadow-md transition-all">
+                                <i className="fas fa-hands-helping text-2xl mb-2" style={{color: '#00695c'}}></i>
+                                <p className="font-semibold">Volunteer / Intern</p>
+                                <p className="text-sm text-gray-600">APPLY</p>
+                            </a>
+                            <a href="#" className="bg-white hover:bg-teal-50 p-4 rounded-lg shadow-md transition-all">
+                                <i className="fas fa-donate text-2xl mb-2" style={{color: '#00695c'}}></i>
+                                <p className="font-semibold">Fund a program</p>
+                                <p className="text-sm text-gray-600">DONATE NOW</p>
+                            </a>
+                            <a href="#" className="bg-white hover:bg-teal-50 p-4 rounded-lg shadow-md transition-all">
+                                <i className="fas fa-share-alt text-2xl mb-2" style={{color: '#00695c'}}></i>
+                                <p className="font-semibold">Community referrals</p>
+                                <p className="text-sm text-gray-600">REFER</p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

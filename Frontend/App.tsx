@@ -23,6 +23,7 @@ import AdminDashboard from './components/pages/AdminDashboard';
 import AdminImpactYears from './components/pages/AdminImpactYears';
 import AdminImpactMonths from './components/pages/AdminImpactMonths';
 import AdminBlogs from './components/pages/AdminBlogs';
+import AdminReports from './components/pages/AdminReports';
 import AdminLayout from './components/AdminLayout';
 import ProtectedRoute from './components/ProtectedRoute';
 import BackToTopButton from './components/BackToTopButton';
@@ -47,6 +48,7 @@ const App: React.FC = () => {
           <Route path="impact-years" element={<AdminImpactYears />} />
           <Route path="impact-months" element={<AdminImpactMonths />} />
           <Route path="blogs" element={<AdminBlogs />} />
+          <Route path="reports" element={<AdminReports />} />
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={

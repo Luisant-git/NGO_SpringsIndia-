@@ -64,6 +64,16 @@ const AdminSidebar: React.FC = () => {
             >
               Blog Management
             </NavLink>
+            <NavLink
+              to="/admin/reports"
+              className={({ isActive }) =>
+                `block px-4 py-2 rounded transition-colors ${
+                  isActive ? 'bg-gray-700 text-white' : 'hover:bg-gray-700'
+                }`
+              }
+            >
+              Reports
+            </NavLink>
           </nav>
         </div>
         <div className="p-4">
