@@ -13,6 +13,7 @@ import Governance from './components/pages/Governance';
 import Contact from './components/pages/Contact';
 import Gallery from './components/pages/Gallery';
 import StepsAcademy from './components/pages/StepsAcademy';
+import RWEDP from './components/pages/RWEDP';
 import ResearchCenter from './components/pages/ResearchCenter';
 import ProgramsInitiatives from './components/pages/ProgramsInitiatives';
 import ProgramsImpacts from './components/pages/ProgramsImpacts';
@@ -124,6 +125,16 @@ const App: React.FC = () => {
             <Header />
             <main className="flex-grow">
               <StepsAcademy />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/rwedp" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <RWEDP />
             </main>
             <Footer />
             <BackToTopButton />

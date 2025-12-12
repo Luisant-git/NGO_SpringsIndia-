@@ -10,10 +10,10 @@ const navLinks = [
   { name: 'About Us', path: '/about' },
   { 
     name: 'Flagship Programs', 
-    path: '/steps-academy',
+    path: '/rwedp',
     dropdown: [
-      { name: 'Steps Academy', path: '/steps-academy' },
-      { name: 'Research, Learning and Innovation Centre', path: '/research-center' },
+      { name: 'Rural Women Educator Development Program –(RWEDP)', path: '/rwedp' },
+      { name: 'Research, Learning and Innovation Centre-(RLIC)', path: '/research-center' },
     ]
   },
   { name: 'Programs & Initiatives', path: '/programs-initiatives' },
