@@ -22,6 +22,9 @@ const AdminBlogs: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
   const [editingBlog, setEditingBlog] = useState<Blog | null>(null);
+  const contentRef = React.useRef<HTMLDivElement>(null);
+  const [currentFontSize, setCurrentFontSize] = useState('3');
+  const isInitialMount = React.useRef(true);
   const [formData, setFormData] = useState({
     title: '',
     content: '',
@@ -33,11 +36,28 @@ const AdminBlogs: React.FC = () => {
     image: null as File | null
   });
 
+  const execCommand = (command: string, value?: string) => {
+    if (contentRef.current) {
+      contentRef.current.focus();
+      document.execCommand(command, false, value);
+    }
+  };
+
   const categories = ['Education', 'Women Empowerment', 'Digital Literacy', 'Community Development', 'Health Care', 'Environment', 'General'];
 
   useEffect(() => {
     fetchBlogs();
   }, []);
+
+  useEffect(() => {
+    if (showForm && contentRef.current) {
+      contentRef.current.innerHTML = formData.content;
+      if (!editingBlog) {
+        contentRef.current.focus();
+        document.execCommand('fontSize', false, '3');
+      }
+    }
+  }, [showForm, editingBlog]);
 
   const fetchBlogs = async () => {
     try {
@@ -111,6 +131,7 @@ const AdminBlogs: React.FC = () => {
     });
     setEditingBlog(null);
     setShowForm(false);
+    isInitialMount.current = true;
   };
 
   if (loading) {
@@ -166,12 +187,43 @@ const AdminBlogs: React.FC = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium mb-1">Content</label>
-                <textarea
-                  value={formData.content}
-                  onChange={(e) => setFormData({...formData, content: e.target.value})}
-                  className="w-full border rounded px-3 py-2 h-40"
-                  required
-                />
+                <div className="border border-gray-300 rounded-lg">
+                  <div className="flex gap-1 p-2 border-b border-gray-300 bg-gray-50 flex-wrap">
+                    <select value={currentFontSize} onChange={(e) => { setCurrentFontSize(e.target.value); execCommand('fontSize', e.target.value); }} className="px-2 py-1 border border-gray-300 rounded hover:bg-gray-200 text-sm">
+                      <option value="1">8</option>
+                      <option value="2">10</option>
+                      <option value="3">12</option>
+                      <option value="4">14</option>
+                      <option value="5">18</option>
+                      <option value="6">24</option>
+                      <option value="7">36</option>
+                    </select>
+                    <div className="w-px bg-gray-300 mx-1"></div>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('formatBlock', '<h1>'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 text-sm font-bold">H1</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('formatBlock', '<h2>'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 text-sm font-semibold">H2</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('formatBlock', '<h3>'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 text-sm font-medium">H3</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('formatBlock', '<p>'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 text-sm">Normal</button>
+                    <div className="w-px bg-gray-300 mx-1"></div>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('bold'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 font-bold">B</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('italic'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 italic">I</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('underline'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200 underline">U</button>
+                    <div className="w-px bg-gray-300 mx-1"></div>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('justifyLeft'); }} className="px-2 py-1 border border-gray-300 rounded hover:bg-gray-200" title="Align Left"><svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor"><path d="M0 2h16v2H0V2zm0 4h10v2H0V6zm0 4h16v2H0v-2zm0 4h10v2H0v-2z"/></svg></button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('justifyCenter'); }} className="px-2 py-1 border border-gray-300 rounded hover:bg-gray-200" title="Align Center"><svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor"><path d="M0 2h16v2H0V2zm3 4h10v2H3V6zm-3 4h16v2H0v-2zm3 4h10v2H3v-2z"/></svg></button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('justifyRight'); }} className="px-2 py-1 border border-gray-300 rounded hover:bg-gray-200" title="Align Right"><svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor"><path d="M0 2h16v2H0V2zm6 4h10v2H6V6zm-6 4h16v2H0v-2zm6 4h10v2H6v-2z"/></svg></button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('justifyFull'); }} className="px-2 py-1 border border-gray-300 rounded hover:bg-gray-200" title="Justify"><svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor"><path d="M0 2h16v2H0V2zm0 4h16v2H0V6zm0 4h16v2H0v-2zm0 4h16v2H0v-2z"/></svg></button>
+                    <div className="w-px bg-gray-300 mx-1"></div>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('insertUnorderedList'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200">• List</button>
+                    <button type="button" onMouseDown={(e) => { e.preventDefault(); execCommand('insertOrderedList'); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-200">1. List</button>
+                  </div>
+                  <div
+                    ref={contentRef}
+                    contentEditable
+                    suppressContentEditableWarning
+                    onInput={(e) => setFormData({...formData, content: e.currentTarget.innerHTML})}
+                    className="min-h-[160px] max-h-[400px] p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-b-lg overflow-y-auto [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:my-2 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:my-2 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:my-1 [&_ul]:list-disc [&_ul]:ml-6 [&_ol]:list-decimal [&_ol]:ml-6 [&_li]:my-1"
+                  />
+                </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>

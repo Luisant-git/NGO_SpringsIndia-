@@ -67,14 +67,15 @@ const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex-shrink-0">
+        <div className="flex items-center justify-between py-3">
+          <div className="flex-shrink-0 flex flex-col items-center">
             <NavLink to="/" className="logo-container">
               <img src={finalLogo} alt="Springs India Foundation Logo" className="logo-image" />
               <div className="logo-text">
                 {/* Springs India <span className="logo-highlight">Foundation</span> */}
               </div>
             </NavLink>
+            <div className="text-xs font-semibold text-center mt-1 whitespace-nowrap" style={{color: '#ff6f00'}}>80G, 12A, CSR-1-Certified</div>
           </div>
           <nav className="hidden md:flex items-center space-x-2">
             {navLinks.map((link) => {

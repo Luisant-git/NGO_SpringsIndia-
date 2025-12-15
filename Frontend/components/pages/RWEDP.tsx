@@ -20,16 +20,16 @@ const RWEDP: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <p className="text-lg leading-relaxed mb-6">
-              Springs India Foundation's Rural Women Educator Development Program is a transformative initiative through STEPS ACADEMY dedicated to empowering women from rural and indigenous communities to become effective, confident, and professionally trained educators. Built on the philosophy of accessible, high-quality education, the program nurtures modern teaching professionals equipped with 21st-century skills, NEP 2020-aligned practices, and practical classroom competencies.
+              <span className="font-bold">Springs India Foundation's Rural Women Educator Development Program</span> is a transformative initiative through <span className="font-bold">STEPS ACADEMY</span> dedicated to empowering women from rural and indigenous communities to become effective, confident, and professionally trained educators. Built on the philosophy of accessible, high-quality education, the program nurtures modern teaching professionals equipped with <span className="font-bold">21st-century skills, NEP 2020-aligned practices, and practical classroom competencies.</span>
             </p>
             <p className="text-lg leading-relaxed mb-6">
-              The program offers comprehensive teacher education designed to meet current educational demands while addressing the unique needs of rural learners. Through innovative pedagogies, technology-enabled learning, and hands-on training experiences, participants are prepared to manage classrooms confidently, support foundational learning, and contribute meaningfully to their communities.
+              The program offers comprehensive teacher education designed to meet current educational demands while addressing the unique needs of rural learners. Through <span className="font-bold">innovative pedagogies, technology-enabled learning, and hands-on training experiences,</span> participants are prepared to manage classrooms confidently, support foundational learning, and contribute meaningfully to their communities.
             </p>
             <p className="text-lg leading-relaxed mb-6">
-              This program stands as a commitment to building a future where rural women are empowered change-makers, capable of inspiring learning, shaping young minds, and contributing to the holistic development of their communities.
+              This program stands as a commitment to building a future where <span className="font-bold">rural women are empowered change-makers,</span> capable of inspiring learning, shaping young minds, and contributing to the holistic development of their communities.
             </p>
             <p className="text-lg leading-relaxed mb-6">
-              The training focuses on building strong foundations in child development, activity-based learning, Montessori and play-way methods, classroom management, and inclusive education. Trainees receive practical, hands-on exposure through model classrooms, teaching demonstrations, micro-teaching sessions, and guided internships to ensure real-world classroom readiness.
+              The training focuses on building strong foundations in <span className="font-bold">child development, activity-based learning, Montessori and play-way methods, classroom management, and inclusive education.</span> Trainees receive practical, hands-on exposure through model classrooms, teaching demonstrations, micro-teaching sessions, and guided internships to ensure real-world classroom readiness.
             </p>
             <p className="text-lg leading-relaxed">
               Technology integration, creative teaching aids, storytelling, phonics, assessment techniques, and FLN (Foundational Literacy and Numeracy) methodologies form essential components of the curriculum—enabling trainees to confidently plan, deliver, and assess meaningful learning for the GenZ Kids
@@ -123,6 +123,44 @@ const RWEDP: React.FC = () => {
                   <p className="text-gray-700">{feature}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CSR & Government Alignment */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12" style={{color: '#00695c'}}>CSR & Government Alignment</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gray-50 p-8 rounded-lg mb-8">
+              <h3 className="text-xl font-bold mb-6" style={{color: '#ff6f00'}}>CSR Schedule and Categories Supported</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  { icon: 'fas fa-graduation-cap', title: 'Education' },
+                  { icon: 'fas fa-female', title: 'Women Empowerment' },
+                  { icon: 'fas fa-tools', title: 'Skill Development' },
+                  { icon: 'fas fa-users', title: 'Indigenous Welfare' }
+                ].map((category, index) => (
+                  <div key={index} className="flex items-center">
+                    <i className={`${category.icon} text-2xl mr-4`} style={{color: '#00695c'}}></i>
+                    <span className="text-gray-700 font-medium">{category.title}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <h3 className="text-xl font-bold mb-6" style={{color: '#ff6f00'}}>SDG Alignment</h3>
+              <div className="grid grid-cols-4 md:grid-cols-7 gap-4">
+                {['4', '5', '8', '10', '1', '13', '17'].map((sdg, index) => (
+                  <div key={index} className="bg-white rounded-lg p-4 text-center shadow-sm">
+                    <div className="w-12 h-12 mx-auto rounded-full flex items-center justify-center text-white font-bold" style={{backgroundColor: '#00695c'}}>
+                      {sdg}
+                    </div>
+                    <p className="text-xs mt-2 text-gray-600">SDG {sdg}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

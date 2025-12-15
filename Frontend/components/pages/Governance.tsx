@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaCertificate, FaIdCard, FaCheckCircle, FaShieldAlt, FaBuilding, FaChartLine, FaUniversity, FaChild, FaGavel, FaCalculator, FaLock, FaUsersCog, FaBullhorn, FaBalanceScale, FaUsers, FaHeart, FaCog, FaFileAlt, FaDownload, FaHandshake, FaChalkboardTeacher, FaHandsHelping, FaShareAlt } from 'react-icons/fa';
 
@@ -55,13 +55,42 @@ const boardOversight = [
     "Safeguarding & ethics"
 ];
 
-const annualReports = [
-    "2022-2023.pdf",
-    "2023-2024.pdf",
-    "2024-2025.pdf"
-];
+
 
 const Governance: React.FC = () => {
+    const [reports, setReports] = useState<any[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetchReports();
+    }, []);
+
+    const fetchReports = async () => {
+        try {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/reports/published`);
+            if (response.ok) {
+                const data = await response.json();
+                setReports(Array.isArray(data) ? data : []);
+            }
+        } catch (error) {
+            console.error('Error fetching reports:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleDownload = async (reportId: string, title: string) => {
+        const sanitizedTitle = title.replace(/[^a-zA-Z0-9\s-]/g, '').replace(/\s+/g, '_');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/reports/${reportId}/download`);
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${sanitizedTitle}.pdf`;
+        link.click();
+        window.URL.revokeObjectURL(url);
+    };
+
     return (
         <div className="bg-gray-50">
             <section className="cta-gradient text-white py-20">
@@ -236,17 +265,33 @@ const Governance: React.FC = () => {
                             </div>
                             <h3 className="text-xl font-bold text-center mb-6" style={{color: '#00695c'}}>Download Our Reports</h3>
                             <div className="space-y-4">
-                                {annualReports.map((report, index) => (
-                                    <div key={index} className="flex items-center justify-between bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                                        <div className="flex items-center">
-                                            <FaDownload className="text-lg mr-3" style={{color: '#00695c'}} />
-                                            <span className="font-medium text-gray-800">{report}</span>
-                                        </div>
-                                        <button className="px-4 py-2 text-white rounded-lg hover:opacity-90 transition-opacity" style={{backgroundColor: '#ff6f00'}}>
-                                            Download
-                                        </button>
+                                {loading ? (
+                                    <div className="text-center py-8">
+                                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto"></div>
+                                        <p className="mt-2 text-gray-600">Loading reports...</p>
                                     </div>
-                                ))}
+                                ) : reports.length > 0 ? (
+                                    reports.map((report) => (
+                                        <div key={report.id} className="flex items-center justify-between bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                                            <div className="flex items-center">
+                                                <FaDownload className="text-lg mr-3" style={{color: '#00695c'}} />
+                                                <span className="font-medium text-gray-800">{report.title}</span>
+                                            </div>
+                                            <button 
+                                                onClick={() => handleDownload(report.id, report.title)}
+                                                className="px-4 py-2 text-white rounded-lg hover:opacity-90 transition-opacity" 
+                                                style={{backgroundColor: '#ff6f00'}}
+                                            >
+                                                Download
+                                            </button>
+                                        </div>
+                                    ))
+                                ) : (
+                                    <div className="text-center py-8">
+                                        <FaFileAlt className="text-3xl mx-auto mb-4 text-gray-400" />
+                                        <p className="text-gray-600">No reports available at the moment.</p>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

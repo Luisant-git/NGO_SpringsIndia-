@@ -61,9 +61,10 @@ const BlogPost = () => {
                    
                     <img src={`${API_BASE_URL}${post.image}`} alt={post.title} className="w-full mb-8"/>
                    
-                    <div className="text-gray-700 leading-relaxed whitespace-pre-wrap">
-                        {post.content}
-                    </div>
+                    <div 
+                        className="text-gray-700 leading-relaxed [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:my-4 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:my-3 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:my-2 [&_ul]:list-disc [&_ul]:ml-6 [&_ul]:my-2 [&_ol]:list-decimal [&_ol]:ml-6 [&_ol]:my-2 [&_li]:my-1 [&_p]:my-2"
+                        dangerouslySetInnerHTML={{ __html: post.content }}
+                    />
                 </div>
             </div>
 
