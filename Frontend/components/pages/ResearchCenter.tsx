@@ -115,7 +115,7 @@ const ResearchCenter: React.FC = () => {
                         <h2 className="text-3xl font-bold text-gray-800 mb-8">Vision</h2>
                         <div className="bg-white p-8 rounded-lg shadow-lg">
                             <p className="text-xl text-gray-700 italic leading-relaxed">
-                                To create a forward-looking ecosystem where education, innovation, and community-driven solutions uplift marginalized communities and promote inclusive development.
+                                To create a forward-looking ecosystem where education, innovation, and community-driven solutions uplift general and indigenous communities and promote inclusive development.
                             </p>
                         </div>
                     </div>
@@ -231,7 +231,7 @@ const ResearchCenter: React.FC = () => {
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-3xl font-bold text-gray-800 mb-8">Request for Partnership</h2>
                         <p className="text-lg text-gray-700 mb-8">
-                            Springs India Foundation seeks CSR partnerships, philanthropic funding, and government collaborations to establish and operate Springs Academy and the RLIC Centres. Corporate Partners will gain measurable impact, visibility, community transformation, and alignment with national and global development goals.
+                            Springs India Foundation seeks CSR partnerships, philanthropic funding, and government collaborations to establish and operate RLIC Centres. Corporate Partners will gain measurable impact, visibility, community transformation, and alignment with national and global development goals.
                         </p>
                         
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -260,9 +260,9 @@ const ResearchCenter: React.FC = () => {
                             </Link>
                             
                             <Link to="/contact" className="flex items-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow group border-2 border-gray-200 hover:border-orange-300">
-                                <i className="fas fa-heart text-2xl mr-4" style={{color: '#ff6f00'}}></i>
+                                <i className="fas fa-heart text-2xl mr-4" style={{color: '#00695c'}}></i>
                                 <div className="text-left">
-                                    <h4 className="font-bold" style={{color: '#ff6f00'}}>Fund / Support a Program</h4>
+                                    <h4 className="font-bold" style={{color: '#00695c'}}>Fund / Support a Program</h4>
                                     <p className="text-sm text-gray-600">DONATE NOW</p>
                                 </div>
                             </Link>

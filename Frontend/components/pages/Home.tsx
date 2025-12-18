@@ -705,8 +705,8 @@ const Home: React.FC = () => {
                   className="text-xl font-bold mb-4"
                   style={{ color: "#ff6f00" }}
                 >
-                  We Partner with corporates to co-create sustainable community
-                  programs Through:
+                  We partner with corporates to co-create sustainable community
+                  programs through:
                 </h4>
                 <ul className="space-y-2">
                   <li className="flex items-start">
@@ -1141,9 +1141,7 @@ const Home: React.FC = () => {
                   </li>
                 </ul>
                 <p className="mt-6 text-gray-700 font-medium">
-                  We welcome partnerships with NGOs, corporates, schools,
-                  institutions & government departments to create scalable
-                  social impact.
+                  Our work is rooted in values, dignity, and measurable impact.
                 </p>
               </div>
               <div>
@@ -1340,10 +1338,10 @@ const Home: React.FC = () => {
             >
               <i
                 className="fas fa-heart text-2xl mr-4"
-                style={{ color: "#ff6f00" }}
+                style={{ color: "#00695c" }}
               ></i>
               <div className="text-left">
-                <h4 className="font-bold" style={{ color: "#ff6f00" }}>
+                <h4 className="font-bold" style={{ color: "#00695c" }}>
                   Fund / Support a Program
                 </h4>
                 <p className="text-sm text-gray-600">DONATE NOW</p>

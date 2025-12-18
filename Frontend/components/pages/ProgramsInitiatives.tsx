@@ -16,7 +16,7 @@ const ProgramsInitiatives: React.FC = () => {
                 "Summer camps",
                 "Science expos & creative exhibitions",
                 "Cultural learning events",
-                "Spell Bee & academic celebrations"
+                "Spell Bee & academic competitions"
             ],
             focus: [
                 "Foundational literacy & numeracy",
@@ -43,8 +43,8 @@ const ProgramsInitiatives: React.FC = () => {
             subtitle: "When a woman rises, a family rises.",
             icon: "fas fa-female",
             programs: [
-                "Skill development programs",
-                "Teacher-training (Montessori / Primary)",
+                "Skill development programs through the Research, Learning and Innovation Centre ",
+                "Teacher-training (Montessori / Primary) through Rural Educator Development Program",
                 "Workshops & entrepreneurship support",
                 "Confidence-building, leadership & community service roles",
                 "Artisans Support",
@@ -107,7 +107,7 @@ const ProgramsInitiatives: React.FC = () => {
         {
             number: "5",
             title: "Teacher Training & Capacity Building",
-            subtitle: "We equip aspiring women educators to pursue meaningful careers in early childhood education.",
+            subtitle: "We equip aspiring women educators to pursue meaningful careers in early childhood education. We especially focus on rural women to have Teacher training to build better communities.",
             icon: "fas fa-chalkboard-teacher",
             programs: [
                 "Montessori & primary teaching courses",
@@ -127,7 +127,7 @@ const ProgramsInitiatives: React.FC = () => {
         {
             number: "6",
             title: "Indigenous Community Welfare Programs",
-            subtitle: "Uplifting indigenous voices through respect, opportunity, and inclusion.",
+            subtitle: "Uplifting indigenous voices through respect, opportunity, and inclusion. We work closely with indigenous communities to improve their quality of life while preserving their culture and identity. Our programs blend education, livelihood support, and cultural preservation to ensure sustainable community progress.",
             icon: "fas fa-people-carry",
             programs: [
                 "Community-based education and literacy programs for children and youth",
@@ -215,7 +215,7 @@ const ProgramsInitiatives: React.FC = () => {
                                     
                                     {pillar.programs.length > 0 && (
                                         <div className="mb-6">
-                                            <h4 className="font-bold mb-3" style={{color: '#ff6f00'}}>We provide:</h4>
+                                            <h4 className="font-bold mb-3" style={{color: '#ff6f00'}}>{pillar.number === "6" ? "We support indigenous families through:" : "We provide joyful learning environments through:"} </h4>
                                             <ul className="space-y-2">
                                                 {pillar.programs.map((program, pIndex) => (
                                                     <li key={pIndex} className="flex items-start">
@@ -250,7 +250,7 @@ const ProgramsInitiatives: React.FC = () => {
 
                                 <div className={index % 2 === 1 ? 'md:col-start-1' : ''}>
                                     <div className="bg-gray-50 p-6 rounded-lg">
-                                        <h4 className="font-bold mb-4" style={{color: '#00695c'}}>Impact Snapshot:</h4>
+                                        <h4 className="font-bold mb-4" style={{color: '#00695c'}}>Impact Snapshot (2022–2025) :</h4>
                                         <ul className="space-y-3">
                                             {pillar.impact.map((impact, iIndex) => (
                                                 <li key={iIndex} className="flex items-start">
@@ -292,7 +292,14 @@ const ProgramsInitiatives: React.FC = () => {
             {/* What Our Impact Means */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">What Our Impact Means</h2>
+                    <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">What Our Impact Means</h2>
+                    <p className="text-center text-xl font-semibold mb-2" style={{color: '#ff6f00'}}>Creating Real Change. Touching Real Lives.</p>
+                    <p className="text-center text-gray-700 mb-8 max-w-3xl mx-auto">
+                        At Springs India Foundation, impact is not just measured in numbers — it is seen in smiles, hope, dignity, and renewed confidence in communities we serve.
+                    </p>
+                    <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+                        We focus on meaningful and measurable transformation across education, skills, livelihood, women's empowerment, and rural community development.
+                    </p>
                     <div className="max-w-4xl mx-auto">
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="space-y-4">
@@ -335,8 +342,8 @@ const ProgramsInitiatives: React.FC = () => {
             <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">How We Track Impact</h2>
-                    <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                        We follow a structured model: Every initiative is designed with accountability, monitoring, and continuous improvement.
+                    <p className="text-center text-gray-600 mb-4 max-w-3xl mx-auto">
+                        We follow a structured model:
                     </p>
                     <div className="max-w-4xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {trackingMethods.map((method, index) => (
@@ -348,6 +355,9 @@ const ProgramsInitiatives: React.FC = () => {
                             </div>
                         ))}
                     </div>
+                    <p className="text-center text-gray-700 mt-8 max-w-3xl mx-auto">
+                        Every initiative is designed with accountability, monitoring, and continuous improvement.
+                    </p>
                 </div>
             </section>
 
@@ -405,9 +415,9 @@ const ProgramsInitiatives: React.FC = () => {
                         </Link>
                         
                         <Link to="/contact" className="flex items-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow group">
-                            <i className="fas fa-heart text-2xl mr-4" style={{color: '#ff6f00'}}></i>
+                            <i className="fas fa-heart text-2xl mr-4" style={{color: '#00695c'}}></i>
                             <div className="text-left">
-                                <h4 className="font-bold" style={{color: '#ff6f00'}}>Fund / Support a Program</h4>
+                                <h4 className="font-bold" style={{color: '#00695c'}}>Fund / Support a Program</h4>
                                 <p className="text-sm text-gray-600">DONATE NOW</p>
                             </div>
                         </Link>

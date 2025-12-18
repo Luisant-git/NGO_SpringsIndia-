@@ -332,9 +332,9 @@ const Governance: React.FC = () => {
                         </Link>
                         
                         <Link to="/contact" className="flex items-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow group">
-                            <FaHeart className="text-2xl mr-4" style={{color: '#ff6f00'}} />
+                            <FaHeart className="text-2xl mr-4" style={{color: '#00695c'}} />
                             <div className="text-left">
-                                <h4 className="font-bold" style={{color: '#ff6f00'}}>Fund / Support a Program</h4>
+                                <h4 className="font-bold" style={{color: '#00695c'}}>Fund / Support a Program</h4>
                                 <p className="text-sm text-gray-600">DONATE NOW</p>
                             </div>
                         </Link>

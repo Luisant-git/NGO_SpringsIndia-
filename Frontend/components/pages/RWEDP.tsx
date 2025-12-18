@@ -31,8 +31,11 @@ const RWEDP: React.FC = () => {
             <p className="text-lg leading-relaxed mb-6">
               The training focuses on building strong foundations in <span className="font-bold">child development, activity-based learning, Montessori and play-way methods, classroom management, and inclusive education.</span> Trainees receive practical, hands-on exposure through model classrooms, teaching demonstrations, micro-teaching sessions, and guided internships to ensure real-world classroom readiness.
             </p>
-            <p className="text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed mb-6">
               Technology integration, creative teaching aids, storytelling, phonics, assessment techniques, and FLN (Foundational Literacy and Numeracy) methodologies form essential components of the curriculum—enabling trainees to confidently plan, deliver, and assess meaningful learning for the GenZ Kids
+            </p>
+            <p className="text-lg leading-relaxed">
+              The program is committed to uplifting rural women by providing accessible, structured teacher education that enhances professional competence, builds self-confidence, and opens pathways to employment in schools, learning centres, and community education programs. By nurturing skilled women educators, Springs India Foundation aims to strengthen early education in rural communities and create a generation of teachers who inspire learning, support children's growth, and bring lasting educational change.
             </p>
           </div>
         </div>
@@ -161,6 +164,112 @@ const RWEDP: React.FC = () => {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Request for Partnership */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8" style={{color: '#00695c'}}>REQUEST FOR PARTNERSHIP-RWEDP</h2>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg leading-relaxed mb-6">
+              Springs India Foundation invites CSR partners, philanthropic organizations, and government agencies to join us in supporting and strengthening teacher education initiatives across rural communities.
+            </p>
+            <p className="text-lg leading-relaxed mb-6">
+              This partnership will support the establishment and execution of teacher education programs, particularly focused on Primary and Montessori Education, along with skill development and livelihood enhancement initiatives for rural women and aspiring educators.
+            </p>
+            
+            <div className="bg-white p-8 rounded-lg shadow-lg mb-8">
+              <h3 className="text-xl font-bold mb-6" style={{color: '#ff6f00'}}>Through this collaboration, corporate partners will:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <i className="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                  <span className="text-gray-700">Contribute to education transformation and rural capacity building</span>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                  <span className="text-gray-700">Enable women from underprivileged communities to become certified educators and skilled professionals</span>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                  <span className="text-gray-700">Create sustainable livelihood opportunities and promote self-reliance</span>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                  <span className="text-gray-700">Gain high CSR visibility through impactful field initiatives</span>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                  <span className="text-gray-700">Align with Government priorities (NEP 2020, NSQF, Skill India, Samagra Shiksha)</span>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                  <span className="text-gray-700">Support progress toward UN Sustainable Development Goals – SDG 4 (Quality Education), SDG 5 (Gender Equality), SDG 8 (Decent Work & Economic Growth), and SDG 10 (Reduced Inequalities)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-lg mb-8">
+              <h3 className="text-xl font-bold mb-6" style={{color: '#ff6f00'}}>We invite partners to support:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <i className="fas fa-check mr-3 mt-1 flex-shrink-0" style={{color: '#00695c'}}></i>
+                  <span className="text-gray-700">Scholarships for women and youth in teacher education</span>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-check mr-3 mt-1 flex-shrink-0" style={{color: '#00695c'}}></i>
+                  <span className="text-gray-700">Infrastructure and resource support for training centres</span>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-check mr-3 mt-1 flex-shrink-0" style={{color: '#00695c'}}></i>
+                  <span className="text-gray-700">Digital learning tools and technology integration</span>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-check mr-3 mt-1 flex-shrink-0" style={{color: '#00695c'}}></i>
+                  <span className="text-gray-700">Vocational and livelihood-linked training programs</span>
+                </li>
+                <li className="flex items-start">
+                  <i className="fas fa-check mr-3 mt-1 flex-shrink-0" style={{color: '#00695c'}}></i>
+                  <span className="text-gray-700">Community educator development under the Rural Women Educator Development Program</span>
+                </li>
+              </ul>
+            </div>
+
+            <p className="text-lg leading-relaxed mb-8 text-center">
+              By partnering with Springs India Foundation, organisations can make a meaningful difference in education, empowerment, and sustainable rural development while achieving measurable CSR impact.
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <a href="/partnerships" className="flex items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <i className="fas fa-handshake text-2xl mr-3" style={{color: '#00695c'}}></i>
+                <div className="text-left">
+                  <h4 className="font-bold" style={{color: '#00695c'}}>Partner with us (CSR)</h4>
+                  <p className="text-sm text-gray-600">APPLY</p>
+                </div>
+              </a>
+              <a href="/contact" className="flex items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <i className="fas fa-hands-helping text-2xl mr-3" style={{color: '#00695c'}}></i>
+                <div className="text-left">
+                  <h4 className="font-bold" style={{color: '#00695c'}}>Volunteer / Intern</h4>
+                  <p className="text-sm text-gray-600">APPLY</p>
+                </div>
+              </a>
+              <a href="/contact" className="flex items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <i className="fas fa-heart text-2xl mr-3" style={{color: '#00695c'}}></i>
+                <div className="text-left">
+                  <h4 className="font-bold" style={{color: '#00695c'}}>Fund a program</h4>
+                  <p className="text-sm text-gray-600">DONATE NOW</p>
+                </div>
+              </a>
+              <a href="/contact" className="flex items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <i className="fas fa-share-alt text-2xl mr-3" style={{color: '#00695c'}}></i>
+                <div className="text-left">
+                  <h4 className="font-bold" style={{color: '#00695c'}}>Community referrals / collaboration</h4>
+                  <p className="text-sm text-gray-600">REFER</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
