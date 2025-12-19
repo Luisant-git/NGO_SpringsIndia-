@@ -54,7 +54,7 @@ const ProgramsImpacts: React.FC = () => {
       <div className="cta-gradient text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Programs and Impacts</h1>
-          <p className="text-xl opacity-90">Transforming Lives Through Education and Empowerment</p>
+          <p className="text-xl opacity-90">Creating a Future-Ready Society through Women Empowerment and Child Education, and building an inclusive, empowered, and sustainable Society.</p>
         </div>
       </div>
 

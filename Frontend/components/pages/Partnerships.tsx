@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const csrFocusAreas = [
-    { area: "Education & Digital Learning", programs: "School support, digital literacy, after-school learning, and scholarships", icon: "fas fa-graduation-cap" },
-    { area: "Skill Development & Livelihoods", programs: "Vocational training, women skill centres, entrepreneurship support", icon: "fas fa-tools" },
+    { area: "Education & Digital Learning", programs: "School support, digital literacy, after-school learning,teacher training and scholarships", icon: "fas fa-graduation-cap" },
+    { area: "Skill Development & Livelihoods", programs: "Vocational training, women skill centres, Learning hubs for kids,entrepreneurship support", icon: "fas fa-tools" },
     { area: "Women Empowerment", programs: "Self-help group support, leadership & life skills, income generation programs", icon: "fas fa-female" },
     { area: "Rural Development", programs: "Village transformation, water & sanitation, health awareness & nutrition support", icon: "fas fa-tractor" },
     { area: "Environment & Sustainability", programs: "Tree plantation, climate awareness, waste management & eco-initiatives", icon: "fas fa-leaf" },
@@ -69,7 +69,7 @@ const Partnerships: React.FC = () => {
         <div className="bg-gray-50">
             <section className="cta-gradient text-white py-20">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl font-bold">CSR Partnership</h1>
+                    <h1 className="text-4xl font-bold">CSR Partnerships</h1>
                     <p className="mt-4 text-lg max-w-4xl mx-auto">
                         Partner with Us to Build Sustainable Social Impact
                     </p>
