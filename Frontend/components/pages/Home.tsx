@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import slider1 from "../../assets/slider1.jpg";
-import slider2 from "../../assets/slider2.jpg";
-import slider3 from "../../assets/slider3.jpg";
+import slider1 from "../../assets/home.jpg";
+import slider2 from "../../assets/home.jpg";
+import slider3 from "../../assets/home.jpg";
 import st1 from "../../assets/st1.jpg";
 import st2 from "../../assets/st2.jpg";
 import st3 from "../../assets/st3.jpg";
