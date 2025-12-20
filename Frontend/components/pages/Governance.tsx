@@ -222,7 +222,7 @@ const Governance: React.FC = () => {
             </section>
 
             {/* Annual and Financial Reports */}
-            <section className="py-20 bg-white">
+            {/* <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Annual and Financial Reports</h2>
                     <div className="max-w-2xl mx-auto text-center">
@@ -241,7 +241,7 @@ const Governance: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Contact Governance Cell */}
             <section className="py-20 text-gray-800" style={{backgroundColor: 'rgb(232, 245, 232)'}}>

@@ -215,7 +215,7 @@ const ProgramsInitiatives: React.FC = () => {
                                     
                                     {pillar.programs.length > 0 && (
                                         <div className="mb-6">
-                                            <h4 className="font-bold mb-3" style={{color: '#ff6f00'}}>{pillar.number === "6" ? "We support indigenous families through:" : "We provide joyful learning environments through:"} </h4>
+                                            <h4 className="font-bold mb-3" style={{color: '#ff6f00'}}>{pillar.number === "6" ? "We support indigenous families through:" : "Our community programs build unity, empathy & cultural pride:"} </h4>
                                             <ul className="space-y-2">
                                                 {pillar.programs.map((program, pIndex) => (
                                                     <li key={pIndex} className="flex items-start">
@@ -248,7 +248,7 @@ const ProgramsInitiatives: React.FC = () => {
                                     </div>
                                 </div>
 
-                                <div className={index % 2 === 1 ? 'md:col-start-1' : ''}>
+                                {/* <div className={index % 2 === 1 ? 'md:col-start-1' : ''}>
                                     <div className="bg-gray-50 p-6 rounded-lg">
                                         <h4 className="font-bold mb-4" style={{color: '#00695c'}}>Impact Snapshot (2022–2025) :</h4>
                                         <ul className="space-y-3">
@@ -260,7 +260,7 @@ const ProgramsInitiatives: React.FC = () => {
                                             ))}
                                         </ul>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         ))}
                     </div>

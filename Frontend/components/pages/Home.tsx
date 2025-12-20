@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import homeImg from "../../assets/home.jpg";
+import slider1 from "../../assets/slider1.jpg";
+import slider2 from "../../assets/slider1.jpg";
+import slider3 from "../../assets/slider1.jpg";
 import st1 from "../../assets/st1.jpg";
 import st2 from "../../assets/st2.jpg";
 import st3 from "../../assets/st3.jpg";
@@ -9,8 +11,10 @@ import ph2 from "../../assets/ph2.png";
 import ph3 from "../../assets/ph3.png";
 import styles from "./Home.module.css";
 
+const sliderImages = [slider1, slider2, slider3];
+
 const runningSlides = [
-  "Impacting Women, Youth, and Children through Women Empowerment, Youth Development, and Child Welfare through long-term sustainable programs",
+  "Impacting Women, Youth, Children, general and Indigenous Community through Women Empowerment, Youth Development, and Child, General and Indigenous Community Welfare through long-term sustainable programs",
   "Creating a future-ready society where every woman ‘LEADS’, every child 'THRIVES', every youth 'RISES', and every community 'SHINES' with a purpose.",
 ];
 
@@ -249,12 +253,14 @@ const AnimatedCounter: React.FC<{
 
 const Home: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentImageSlide, setCurrentImageSlide] = useState(0);
   const impactRef = useRef<HTMLDivElement>(null);
   const [isImpactVisible, setIsImpactVisible] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % runningSlides.length);
+      setCurrentImageSlide((prev) => (prev + 1) % sliderImages.length);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
@@ -285,19 +291,23 @@ const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section
-        className="relative h-[60vh] md:h-[80vh] bg-cover bg-center"
-        style={{ backgroundImage: `url(${homeImg})` }}
-      >
+      <section className="relative h-[60vh] md:h-[80vh] overflow-hidden">
+        {sliderImages.map((img, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+              index === currentImageSlide ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ backgroundImage: `url(${img})` }}
+          />
+        ))}
         <div className="hero-overlay absolute inset-0"></div>
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight animate-fade-in-down px-2 sm:px-4">
             Empowering Lives. <br /> Building Futures. Creating Impact.
           </h1>
           <p className="mt-3 sm:mt-4 md:mt-6 text-sm sm:text-base md:text-lg lg:text-xl max-w-xs sm:max-w-2xl md:max-w-3xl text-orange-200 animate-fade-in-up px-2 sm:px-4">
-            A community-driven NGO transforming lives through education, skills,
-            livelihood empowerment, health mental care and sustainable
-            development.
+            {runningSlides[currentSlide]}
           </p>
           <div className="mt-4 sm:mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up px-2 sm:px-4">
             <Link
@@ -322,10 +332,6 @@ const Home: React.FC = () => {
       {/* Introduction Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">
-            Our Mission
-          </h2>
-
           {/* Main Text */}
           <p className="text-lg md:text-xl text-gray-800 max-w-5xl mx-auto leading-relaxed text-center">
             Springs India Foundation is committed to building an{" "}
