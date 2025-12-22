@@ -20,7 +20,7 @@ const navLinks = [
   { name: 'Programs & Impacts', path: '/programs-impacts' },
   { name: 'CSR Partnerships', path: '/partnerships' },
   { name: 'Governance', path: '/governance' },
-  { name: 'Reports', path: '/reports' },
+  { name: 'ANNUAL REPORTS', path: '/reports' },
   { name: 'Blog', path: '/blog' },
   { name: 'Contact Us', path: '/contact' },
 ];
@@ -87,7 +87,7 @@ const Header: React.FC = () => {
                   <NavLink
                     to={link.path}
                     style={({ isActive }) => (isActive || isChildActive ? activeLinkStyle : {})}
-                    className="text-gray-600 hover:text-orange-500 px-1 py-2 rounded-md text-sm font-medium transition-colors flex items-center uppercase"
+                    className="text-gray-600 hover:text-orange-500 px-1 py-2 rounded-md text-[0.84375rem] font-medium transition-colors flex items-center uppercase"
                   >
                     {link.name}
                     <i className="fas fa-chevron-down ml-1 text-xs"></i>
@@ -97,7 +97,7 @@ const Header: React.FC = () => {
                       <NavLink
                         to={link.path}
                         style={({ isActive }) => (isActive ? activeLinkStyle : {})}
-                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-orange-500 uppercase"
+                        className="block w-full text-left px-4 py-2 text-[0.84375rem] text-gray-700 hover:bg-teal-50 hover:text-orange-500 uppercase"
                       >
                         All {link.name}
                       </NavLink>
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
                         key={item.name}
                         to={item.path}
                         style={({ isActive }) => (isActive ? activeLinkStyle : {})}
-                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-orange-500 uppercase"
+                        className="block w-full text-left px-4 py-2 text-[0.84375rem] text-gray-700 hover:bg-teal-50 hover:text-orange-500 uppercase"
                       >
                         {item.name}
                       </NavLink>
@@ -119,7 +119,7 @@ const Header: React.FC = () => {
                   key={link.name}
                   to={link.path}
                   style={({ isActive }) => (isActive ? activeLinkStyle : {})}
-                  className="text-gray-600 hover:text-orange-500 px-1 py-2 rounded-md text-sm font-medium transition-colors uppercase"
+                  className="text-gray-600 hover:text-orange-500 px-1 py-2 rounded-md text-[0.84375rem] font-medium transition-colors uppercase"
                 >
                   {link.name}
                 </NavLink>

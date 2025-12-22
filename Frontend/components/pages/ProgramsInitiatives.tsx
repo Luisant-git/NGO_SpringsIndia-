@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import pi1 from '../../assets/pi1.png';
 import pi2 from '../../assets/pi2.png';
+import media1 from '../../assets/media-1.jpg';
+import media2 from '../../assets/media-2.jpg';
 
 const ProgramsInitiatives: React.FC = () => {
     const corePillars = [
@@ -376,6 +378,39 @@ const ProgramsInitiatives: React.FC = () => {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Media Section */}
+            <section className="py-20 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">Media Coverage</h2>
+                    <p className="text-center text-gray-600 mb-12">Our work in the spotlight</p>
+                    <div className="max-w-3xl mx-auto space-y-8">
+                        <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                            <div className="relative">
+                                <img src={media1} alt="Media Coverage 1" className="w-full h-auto object-contain"/>
+                                <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full">
+                                    <i className="fas fa-newspaper" style={{color: '#ff6f00'}}></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                            <div className="relative">
+                                <img src={media2} alt="Media Coverage 2" className="w-full h-auto object-contain"/>
+                                <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full">
+                                    <i className="fas fa-newspaper" style={{color: '#ff6f00'}}></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="mt-12 max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                        <div className="flex items-center justify-center mb-4">
+                            <div className="w-12 h-1 rounded" style={{backgroundColor: '#00695c'}}></div>
+                        </div>
+                        <h3 className="text-2xl font-bold text-center mb-4" style={{color: '#00695c'}}>Call for Action</h3>
+                        <p className="text-gray-600 text-center">Join us in making a difference in rural communities and partner with us to create lasting impact</p>
                     </div>
                 </div>
             </section>
