@@ -31,10 +31,15 @@ const ProgramsImpacts: React.FC = () => {
     const fetchData = async () => {
       try {
         const data = await getImpactYears();
-        const sortedData = data.map(year => ({
-          ...year,
-          impactMonths: [...year.impactMonths].sort((a, b) => b.monthNumber - a.monthNumber)
-        }));
+        const sortedData = data.map(year => {
+          const sorted = [...year.impactMonths].sort((a, b) => {
+            const aYear = a.monthNumber >= year.fromMonth ? year.fromYear : year.toYear;
+            const bYear = b.monthNumber >= year.fromMonth ? year.fromYear : year.toYear;
+            if (aYear !== bYear) return bYear - aYear;
+            return b.monthNumber - a.monthNumber;
+          });
+          return { ...year, impactMonths: sorted };
+        });
         setImpactYears(sortedData);
       } catch (error) {
         console.error('Error fetching impact years:', error);
