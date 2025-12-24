@@ -76,7 +76,7 @@ const Header: React.FC = () => {
                 {/* Springs India <span className="logo-highlight">Foundation</span> */}
               </div>
             </NavLink>
-            <div className="text-xs font-semibold text-center mt-1 whitespace-nowrap" style={{color: '#ff6f00'}}>80G, 12A, CSR-1-Certified</div>
+            <div className="text-xs font-semibold text-center mt-1 whitespace-nowrap" style={{color: '#ff6f00'}}>12A, 80G, CSR-1-certified</div>
           </div>
           <nav className="hidden md:flex items-center space-x-2">
             {navLinks.map((link) => {
