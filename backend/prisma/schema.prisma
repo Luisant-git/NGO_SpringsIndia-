@@ -37,8 +37,8 @@ model ImpactMonth {
   monthNumber        Int
   images             String[]   @default([])
   description        String     @db.Text
-  impactTitle        String
-  impactDescription  String     @db.Text
+  impactTitle        String?
+  impactDescription  String?     @db.Text
   isActive           Boolean    @default(true)
   createdAt          DateTime   @default(now())
   updatedAt          DateTime   @updatedAt

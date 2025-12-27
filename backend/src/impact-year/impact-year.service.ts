@@ -20,7 +20,7 @@ export class ImpactYearService {
           orderBy: [{ monthNumber: 'asc' }, { createdAt: 'asc' }]
         }
       },
-      orderBy: { toYear: 'desc' },
+      orderBy: [{ toYear: 'desc' }, { toMonth: 'desc' }],
     });
   }
 

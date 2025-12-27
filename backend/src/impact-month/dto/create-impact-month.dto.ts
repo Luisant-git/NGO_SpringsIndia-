@@ -22,14 +22,16 @@ export class CreateImpactMonthDto {
   @Transform(({ value }) => typeof value === 'string' ? value.replace(/\n/g, '\n') : value)
   description: string;
 
-  @ApiProperty({ example: 'Impact' })
+  @ApiProperty({ example: 'Impact', required: false })
+  @IsOptional()
   @IsString()
-  impactTitle: string;
+  impactTitle?: string;
 
-  @ApiProperty({ example: 'Reached over 7,000 children through awareness campaigns...' })
+  @ApiProperty({ example: 'Reached over 7,000 children through awareness campaigns...', required: false })
+  @IsOptional()
   @IsString()
   @Transform(({ value }) => typeof value === 'string' ? value.replace(/\n/g, '\n') : value)
-  impactDescription: string;
+  impactDescription?: string;
 
   @ApiProperty({ example: 1 })
   @IsInt()
