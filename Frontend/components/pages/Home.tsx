@@ -19,35 +19,35 @@ const heroSlides = [
     headline: "Stronger Communities. Brighter Futures.",
     subheadline: "Grassroots initiatives that uplift families and improve wellbeing.",
     cta: "View Community Work",
-    link: "/community"
+    link: "#"
   },
   {
     image: banner2,
     headline: "Scale Your CSR Impact With Us",
     subheadline: "Partnering with corporates to build sustainable community solutions.",
     cta: "Collaborate With Us",
-    link: "/csr"
+    link: "#"
   },
   {
     image: banner3,
     headline: "Impact That Scales. Change That Matters.",
     subheadline: "CSR-ready programs across education, women empowerment, and youth development.",
     cta: "Explore CSR Projects",
-    link: "/csr"
+    link: "#"
   },
   {
     image: banner4,
     headline: "Transforming Lives Through Partnerships.",
     subheadline: "Together, we create solutions that uplift rural India.",
     cta: "Partner With Us",
-    link: "/partner"
+    link: "#"
   },
   {
     image: banner5,
     headline: "Together, We Create Change That Lasts.",
     subheadline: "Join our mission to strengthen rural communities with dignity.",
     cta: "Join the Movement",
-    link: "/get-involved"
+    link: "#"
   }
 ];
 
@@ -342,7 +342,7 @@ const Home: React.FC = () => {
           />
         ))}
         <div className="hero-overlay absolute inset-0"></div>
-        <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
+        <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white -mt-16">
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight animate-fade-in-down px-2 sm:px-4">
             {heroSlides[currentSlide].headline}
           </h1>
