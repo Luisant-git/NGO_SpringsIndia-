@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import slider1 from "../../assets/home.jpg";
-import slider2 from "../../assets/home.jpg";
-import slider3 from "../../assets/home.jpg";
+import banner1 from "../../assets/banner1.jpeg";
+import banner2 from "../../assets/banner2.jpeg";
+import banner3 from "../../assets/banner3.jpeg";
+import banner4 from "../../assets/banner4.jpeg";
+import banner5 from "../../assets/banner5.jpeg";
 import st1 from "../../assets/st1.jpg";
 import st2 from "../../assets/st2.jpg";
 import st3 from "../../assets/st3.jpg";
@@ -11,7 +13,45 @@ import ph2 from "../../assets/ph2.png";
 import ph3 from "../../assets/ph3.png";
 import styles from "./Home.module.css";
 
-const sliderImages = [slider1, slider2, slider3];
+const heroSlides = [
+  {
+    image: banner1,
+    headline: "Stronger Communities. Brighter Futures.",
+    subheadline: "Grassroots initiatives that uplift families and improve wellbeing.",
+    cta: "View Community Work",
+    link: "/community"
+  },
+  {
+    image: banner2,
+    headline: "Scale Your CSR Impact With Us",
+    subheadline: "Partnering with corporates to build sustainable community solutions.",
+    cta: "Collaborate With Us",
+    link: "/csr"
+  },
+  {
+    image: banner3,
+    headline: "Impact That Scales. Change That Matters.",
+    subheadline: "CSR-ready programs across education, women empowerment, and youth development.",
+    cta: "Explore CSR Projects",
+    link: "/csr"
+  },
+  {
+    image: banner4,
+    headline: "Transforming Lives Through Partnerships.",
+    subheadline: "Together, we create solutions that uplift rural India.",
+    cta: "Partner With Us",
+    link: "/partner"
+  },
+  {
+    image: banner5,
+    headline: "Together, We Create Change That Lasts.",
+    subheadline: "Join our mission to strengthen rural communities with dignity.",
+    cta: "Join the Movement",
+    link: "/get-involved"
+  }
+];
+
+const sliderImages = [banner1, banner2, banner3];
 
 const runningSlides = [
   "Impacting Women, Youth, Children, general and Indigenous Community through Women Empowerment, Youth Development, and Child, General and Indigenous Community Welfare through long-term sustainable programs",
@@ -259,7 +299,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % runningSlides.length);
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
       setCurrentImageSlide((prev) => (prev + 1) % sliderImages.length);
     }, 5000);
     return () => clearInterval(timer);
@@ -292,40 +332,45 @@ const Home: React.FC = () => {
     <div>
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[80vh] overflow-hidden">
-        {sliderImages.map((img, index) => (
+        {heroSlides.map((slide, index) => (
           <div
             key={index}
             className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
-              index === currentImageSlide ? "opacity-100" : "opacity-0"
+              index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
-            style={{ backgroundImage: `url(${img})` }}
+            style={{ backgroundImage: `url(${slide.image})` }}
           />
         ))}
         <div className="hero-overlay absolute inset-0"></div>
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight animate-fade-in-down px-2 sm:px-4">
-            Empowering Lives. <br /> Building Futures. Creating Impact.
+            {heroSlides[currentSlide].headline}
           </h1>
           <p className="mt-3 sm:mt-4 md:mt-6 text-sm sm:text-base md:text-lg lg:text-xl max-w-xs sm:max-w-2xl md:max-w-3xl text-orange-200 animate-fade-in-up px-2 sm:px-4">
-            {runningSlides[currentSlide]}
+            {heroSlides[currentSlide].subheadline}
           </p>
           <div className="mt-4 sm:mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up px-2 sm:px-4">
             <Link
-              to="/contact"
+              to={heroSlides[currentSlide].link}
               className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 text-white font-semibold rounded-lg transition-colors text-center text-sm sm:text-base"
               style={{
                 background: "linear-gradient(135deg, #ff6f00 0%, #d32f2f 100%)",
               }}
             >
-              Donate Now
-            </Link>
-            <Link
-              to="/programs"
-              className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 bg-white text-teal-700 hover:bg-gray-100 font-semibold rounded-lg transition-colors text-center text-sm sm:text-base"
-            >
-              Our Programs
+              {heroSlides[currentSlide].cta}
             </Link>
           </div>
+        </div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
+          {heroSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full ${
+                index === currentSlide ? "bg-white" : "bg-white/50"
+              }`}
+            />
+          ))}
         </div>
       </section>
 
