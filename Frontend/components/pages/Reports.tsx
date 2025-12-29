@@ -29,8 +29,20 @@ const Reports: React.FC = () => {
     };
 
     const handleDownload = async (reportId: string, title: string) => {
-        const url = `${import.meta.env.VITE_API_URL}/reports/${reportId}/download`;
-        window.open(url, '_blank');
+        try {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/reports/${reportId}/download`);
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${title}.pdf`;
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        } catch (error) {
+            console.error('Error downloading report:', error);
+        }
     };
 
     return (
