@@ -3,6 +3,8 @@ import { FaFileAlt, FaDownload } from 'react-icons/fa';
 
 const Reports: React.FC = () => {
     const [reports, setReports] = useState<any[]>([]);
+    const [annualReports, setAnnualReports] = useState<any[]>([]);
+    const [financialReports, setFinancialReports] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -14,7 +16,10 @@ const Reports: React.FC = () => {
             const response = await fetch(`${import.meta.env.VITE_API_URL}/reports/published`);
             if (response.ok) {
                 const data = await response.json();
-                setReports(Array.isArray(data) ? data : []);
+                const allReports = Array.isArray(data) ? data : [];
+                setReports(allReports);
+                setAnnualReports(allReports.filter((r: any) => r.type === 'annual'));
+                setFinancialReports(allReports.filter((r: any) => r.type === 'financial'));
             }
         } catch (error) {
             console.error('Error fetching reports:', error);
@@ -41,20 +46,20 @@ const Reports: React.FC = () => {
 
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-2xl mx-auto">
+                    <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+                        {/* Annual Reports Card */}
                         <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
                             <div className="text-center mb-6">
                                 <FaFileAlt className="text-4xl mx-auto" style={{color: '#ff6f00'}} />
                             </div>
-                            <h3 className="text-xl font-bold text-center mb-6" style={{color: '#00695c'}}>Download Our Reports</h3>
+                            <h3 className="text-xl font-bold text-center mb-6" style={{color: '#00695c'}}>Annual Reports</h3>
                             <div className="space-y-4">
                                 {loading ? (
                                     <div className="text-center py-8">
                                         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto"></div>
-                                        <p className="mt-2 text-gray-600">Loading reports...</p>
                                     </div>
-                                ) : reports.length > 0 ? (
-                                    reports.map((report) => (
+                                ) : annualReports.length > 0 ? (
+                                    annualReports.map((report) => (
                                         <div key={report.id} className="flex items-center justify-between bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                                             <div className="flex items-center">
                                                 <FaDownload className="text-lg mr-3" style={{color: '#00695c'}} />
@@ -72,7 +77,43 @@ const Reports: React.FC = () => {
                                 ) : (
                                     <div className="text-center py-8">
                                         <FaFileAlt className="text-3xl mx-auto mb-4 text-gray-400" />
-                                        <p className="text-gray-600">No reports available at the moment.</p>
+                                        <p className="text-gray-600">No reports available.</p>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+
+                        {/* Financial Reports Card */}
+                        <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
+                            <div className="text-center mb-6">
+                                <FaFileAlt className="text-4xl mx-auto" style={{color: '#ff6f00'}} />
+                            </div>
+                            <h3 className="text-xl font-bold text-center mb-6" style={{color: '#00695c'}}>Financial Reports</h3>
+                            <div className="space-y-4">
+                                {loading ? (
+                                    <div className="text-center py-8">
+                                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto"></div>
+                                    </div>
+                                ) : financialReports.length > 0 ? (
+                                    financialReports.map((report) => (
+                                        <div key={report.id} className="flex items-center justify-between bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                                            <div className="flex items-center">
+                                                <FaDownload className="text-lg mr-3" style={{color: '#00695c'}} />
+                                                <span className="font-medium text-gray-800">{report.title}</span>
+                                            </div>
+                                            <button 
+                                                onClick={() => handleDownload(report.id, report.title)}
+                                                className="px-4 py-2 text-white rounded-lg hover:opacity-90 transition-opacity" 
+                                                style={{backgroundColor: '#ff6f00'}}
+                                            >
+                                                View
+                                            </button>
+                                        </div>
+                                    ))
+                                ) : (
+                                    <div className="text-center py-8">
+                                        <FaFileAlt className="text-3xl mx-auto mb-4 text-gray-400" />
+                                        <p className="text-gray-600">No reports available.</p>
                                     </div>
                                 )}
                             </div>
