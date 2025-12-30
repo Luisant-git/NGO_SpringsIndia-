@@ -152,7 +152,7 @@ const AdminImpactMonths: React.FC = () => {
   const handleFileUpload = async (files: File[]) => {
     if (files.length === 0) return;
     
-    const remainingSlots = 3 - formData.images.length;
+    const remainingSlots = 5 - formData.images.length;
     const filesToUpload = files.slice(0, remainingSlots);
     
     try {
@@ -396,7 +396,7 @@ const AdminImpactMonths: React.FC = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">Images (max 3)</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Images (max 5)</label>
                 
                 {formData.images.length > 0 && (
                   <div className="mb-3">
@@ -422,7 +422,7 @@ const AdminImpactMonths: React.FC = () => {
                   </div>
                 )}
                 
-                {formData.images.length < 3 && (
+                {formData.images.length < 5 && (
                   <>
                     <input
                       type="file"
@@ -436,13 +436,13 @@ const AdminImpactMonths: React.FC = () => {
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                     <p className="text-sm text-gray-600 mt-1">
-                      {formData.images.length}/3 images uploaded. Can add {3 - formData.images.length} more.
+                      {formData.images.length}/5 images uploaded. Can add {5 - formData.images.length} more.
                     </p>
                   </>
                 )}
                 
-                {formData.images.length >= 3 && (
-                  <p className="text-sm text-green-600">Maximum 3 images uploaded.</p>
+                {formData.images.length >= 5 && (
+                  <p className="text-sm text-green-600">Maximum 5 images uploaded.</p>
                 )}
               </div>
               <div className="flex space-x-3">
