@@ -82,14 +82,8 @@ const ProgramsImpacts: React.FC = () => {
                   <div key={month.id} className="border border-gray-200 rounded-lg overflow-hidden">
                     <div className="lg:flex">
                       <div className="lg:w-1/2">
-                        <div className={`gap-2 p-4 ${
-                          month.images.length === 1 ? 'grid grid-cols-1' :
-                          month.images.length === 2 ? 'grid grid-cols-2' :
-                          month.images.length === 3 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3' :
-                          month.images.length === 4 ? 'grid grid-cols-2' :
-                          'grid grid-cols-2 md:grid-cols-3'
-                        }`}>
-                          {month.images.slice(0, 5).map((image, index) => (
+                        <div className="gap-2 p-4 grid grid-cols-2 md:grid-cols-3">
+                          {month.images.slice(0, 9).map((image, index) => (
                             <div key={index} className="aspect-square overflow-hidden rounded-lg">
                               <img
                                 src={`${API_BASE_URL}/uploads/${image}`}
