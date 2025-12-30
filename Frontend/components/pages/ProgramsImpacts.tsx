@@ -85,9 +85,11 @@ const ProgramsImpacts: React.FC = () => {
                         <div className={`gap-2 p-4 ${
                           month.images.length === 1 ? 'grid grid-cols-1' :
                           month.images.length === 2 ? 'grid grid-cols-2' :
-                          'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+                          month.images.length === 3 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3' :
+                          month.images.length === 4 ? 'grid grid-cols-2' :
+                          'grid grid-cols-2 md:grid-cols-3'
                         }`}>
-                          {month.images.slice(0, 3).map((image, index) => (
+                          {month.images.slice(0, 5).map((image, index) => (
                             <div key={index} className="aspect-square overflow-hidden rounded-lg">
                               <img
                                 src={`${API_BASE_URL}/uploads/${image}`}
