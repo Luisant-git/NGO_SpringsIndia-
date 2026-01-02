@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaCertificate, FaIdCard, FaCheckCircle, FaShieldAlt, FaBuilding, FaChartLine, FaUniversity, FaChild, FaGavel, FaCalculator, FaLock, FaUsersCog, FaBullhorn, FaBalanceScale, FaUsers, FaHeart, FaCog, FaFileAlt, FaHandshake, FaChalkboardTeacher, FaHandsHelping, FaShareAlt } from 'react-icons/fa';
+import t1 from '../../assets/t1.jpg';
+import t2 from '../../assets/t2.jpg';
+import t3 from '../../assets/t3.jpg';
+import t4 from '../../assets/t4.png';
+import t5 from '../../assets/t5.jpg';
 
 const registrations = [
     { name: "Trust Registration", status: "Registered", icon: FaCertificate },
@@ -187,6 +192,61 @@ const Governance: React.FC = () => {
                                 <p className="text-xl font-bold" style={{color: '#00695c'}}>
                                     Our values guide every decision and every partnership.
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Board of Trustees */}
+            <section className="py-20 bg-white">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Board of Trustees</h2>
+                    <div className="max-w-6xl mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                                    <img src={t1} alt="Mr. Michael" className="w-full h-full object-contain" />
+                                </div>
+                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. Michael. MBA.</h3>
+                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Founder & Managing Trustee</p>
+                                <p className="text-gray-600 text-sm">Occupation: Business & Agriculture</p>
+                            </div>
+
+                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                                    <img src={t2} alt="Mrs. Kausalya" className="w-full h-full object-cover" />
+                                </div>
+                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mrs. Kausalya</h3>
+                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Trustee & Director - Community Relations & Public Affairs</p>
+                                <p className="text-gray-600 text-sm">Occupation: Retd. Assit Revenue Officer, Coimbatore Corporation, Govt. of Tamil Nadu</p>
+                            </div>
+
+                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                                    <img src={t3} alt="Mr. Johnson" className="w-full h-full object-cover" />
+                                </div>
+                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. Johnson. DME.</h3>
+                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Trustee & Director External Relations & Resource Mobilization</p>
+                                <p className="text-gray-600 text-sm">Occupation: Business</p>
+                            </div>
+
+                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                                    <img src={t4} alt="Mr. Venkatesh" className="w-full h-full object-cover" />
+                                </div>
+                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. Venkatesh. M.Sc., B. Ed.</h3>
+                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Trustee & Director Sustainable Livelihoods & Green Initiatives</p>
+                                <p className="text-gray-600 text-sm">Occupation: Nature Life Expert & Specialist – Hydroponics</p>
+                            </div>
+
+                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                                    <img src={t5} alt="Ms. Jubaira" className="w-full h-full object-contain" />
+                                </div>
+                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Ms. Jubaira. B.Sc., PGDCA</h3>
+                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Trustee & Financial Secretary</p>
+                                <p className="text-gray-600 text-sm">Occupation: Mentor E-Commerce</p>
                             </div>
                         </div>
                     </div>

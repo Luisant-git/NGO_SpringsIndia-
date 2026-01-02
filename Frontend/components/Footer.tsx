@@ -24,21 +24,19 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div>
-            <h4 className="text-lg font-semibold tracking-wider uppercase">Quick Links</h4>
+            <h4 className="text-lg font-semibold tracking-wider uppercase">About</h4>
             <ul className="mt-4 space-y-2">
               <li><Link to="/about" className="text-gray-300 hover:text-white text-sm">About Us</Link></li>
               <li><Link to="/programs" className="text-gray-300 hover:text-white text-sm">Our Programs</Link></li>
-              <li><Link to="/gallery" className="text-gray-300 hover:text-white text-sm">Gallery</Link></li>
-              <li><Link to="/partnerships" className="text-gray-300 hover:text-white text-sm">Partner with Us</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white text-sm">Contact</Link></li>
+              <li><Link to="/blog" className="text-gray-300 hover:text-white text-sm">Blog</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-lg font-semibold tracking-wider uppercase">Get Involved</h4>
+            <h4 className="text-lg font-semibold tracking-wider uppercase">Connect</h4>
             <ul className="mt-4 space-y-2">
-              <li><Link to="/contact" className="text-gray-300 hover:text-white text-sm">Volunteer / Intern</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white text-sm">Fund a Program</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white text-sm">Donate</Link></li>
+              <li><Link to="/partnerships" className="text-gray-300 hover:text-white text-sm">Partner with Us</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white text-sm">Contact</Link></li>
+              <li><Link to="/careers" className="text-gray-300 hover:text-white text-sm">Careers</Link></li>
             </ul>
           </div>
           <div>

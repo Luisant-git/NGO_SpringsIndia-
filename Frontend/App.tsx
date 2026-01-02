@@ -26,6 +26,7 @@ import AdminImpactMonths from './components/pages/AdminImpactMonths';
 import AdminBlogs from './components/pages/AdminBlogs';
 import AdminReports from './components/pages/AdminReports';
 import Reports from './components/pages/Reports';
+import Careers from './components/pages/Careers';
 import AdminLayout from './components/AdminLayout';
 import ProtectedRoute from './components/ProtectedRoute';
 import BackToTopButton from './components/BackToTopButton';
@@ -198,6 +199,16 @@ const App: React.FC = () => {
             <Header />
             <main className="flex-grow">
               <Reports />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/careers" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <Careers />
             </main>
             <Footer />
             <BackToTopButton />
