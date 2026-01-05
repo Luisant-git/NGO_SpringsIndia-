@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import aboutImage from '../../assets/about.jpeg';
 
 const timelineEvents = {
   "2022": [
@@ -116,7 +117,7 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="https://t3.ftcdn.net/jpg/06/06/47/44/360_F_606474445_KndjSzp1pWoFZM5Jd0kRY67ilfyZeOst.jpg"
+              src={aboutImage}
               alt="Community gathering"
               className="rounded-lg shadow-2xl w-full h-106 object-cover"
             />
@@ -856,7 +857,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -875,7 +876,7 @@ const About: React.FC = () => {
 
           <LeadershipCarousel />
         </div>
-      </section>
+      </section> */}
 
       {/* Join Our Movement Section */}
       <section className="py-20 bg-gradient-to-br from-teal-50 to-emerald-50">

@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
                 <h3 className="text-xl font-bold text-white">Foundation</h3> */}
               </div>
             </div>
-            <p className="text-gray-300 text-sm">Empowering Lives. Building Futures. Creating Impact.</p>
+            <p className="text-gray-300 text-sm">From villages to the nation, change starts small. Together, we grow hope—leaving no one behind.</p>
             <div className="mt-6 flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook-f"></i></a>
               <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i></a>
