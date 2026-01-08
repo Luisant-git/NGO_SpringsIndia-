@@ -11,7 +11,7 @@ import a2 from '../../assets/a2.jpg';
 import a3 from '../../assets/a3.png';
 import a4 from '../../assets/a4.jpg';
 import a5 from '../../assets/a5.jpg';
-import a6 from '../../assets/a5.jpg';
+import a6 from '../../assets/a6.jpg';
 import a7 from '../../assets/a7.jpg';
 import a8 from '../../assets/a8.jpg';
 import a9 from '../../assets/a9.jpg';
@@ -263,92 +263,93 @@ const Governance: React.FC = () => {
             </section>
 
             {/* Board of Advisors */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Board of Advisors</h2>
-                    <div className="max-w-6xl mx-auto">
-                        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
-                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                                    <img src={a1} alt="Mr. Jacob Belly" className="w-full h-full object-contain" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. Jacob Belly. M. Th</h3>
-                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Associate Director-Switzerland</p>
-                                <p className="text-gray-600 text-sm">www.globethics.net</p>
-                            </div>
-
-                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
-                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                                    <img src={a2} alt="Mrs. Angeline J Williams" className="w-full h-full object-cover" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mrs. Angeline J Williams</h3>
-                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Senior Educationist & Counsellor</p>
-                                <p className="text-gray-600 text-sm">M.sc., B.Ed -Maths, M.Sc - Psych., M.Sc., - Coun & Psyth., B.A., B.Ed – Hindi</p>
-                            </div>
-
-                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
-                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                                    <img src={a3} alt="Thiru. Kesavan Nair" className="w-full h-full object-cover" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Thiru. Kesavan Nair. DCE</h3>
-                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Retd. Overseer</p>
-                                <p className="text-gray-600 text-sm">Sheduled Casts & Scheduled Tribe Dept. Govt. of Tamil Nadu</p>
-                            </div>
-
-                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
-                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                                    <img src={a4} alt="Shanmugam Ramasamy" className="w-full h-full object-cover" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Aloevera Iya Shanmugam Ramasamy</h3>
-                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Mentor - Medicinal & Aromatic Plants</p>
-                            </div>
-
-                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
-                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                                    <img src={a5} alt="Dr. Richard" className="w-full h-full object-contain" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Dr. Richard. M. Div., PhD</h3>
-                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Mentor - NGO Management</p>
-                            </div>
-
-                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
-                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                                    <img src={a6} alt="Thiru. Shanmugam" className="w-full h-full object-contain" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Thiru. Shanmugam</h3>
-                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Retd. Head Master</p>
-                                <p className="text-gray-600 text-sm">M Sc., M.Ed., M.Phil., Govt. Hr. Sec. School</p>
-                            </div>
-
-                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
-                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                                    <img src={a7} alt="Mr. G. Sampath" className="w-full h-full object-contain" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. G. Sampath. M.A., (Yoga)</h3>
-                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Mentor - Organic Farming</p>
-                            </div>
-
-                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
-                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                                    <img src={a8} alt="Mr. Arunkarthick Selvaraj" className="w-full h-full object-contain" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. Arunkarthick Selvaraj M.C.A.</h3>
-                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Co-Founder</p>
-                                <p className="text-gray-600 text-sm">Luisant Software Solutions</p>
-                            </div>
-
-                            <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
-                                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                                    <img src={a9} alt="P. Gnanaprakash" className="w-full h-full object-contain" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>P. Gnanaprakash</h3>
-                                <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Founder & CEO. gooesy.com</p>
-                                <p className="text-gray-600 text-sm">Service Market Place</p>
-                            </div>
-                        </div>
+<section className="py-20 bg-white">
+    <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Board of Advisors</h2>
+        <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src={a1} alt="Mr. Jacob Belly" className="w-full h-full object-contain" />
                     </div>
+                    <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. Jacob Belly. M. Th</h3>
+                    <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>www.globethics.net</p>
+                    <p className="text-gray-600 text-sm">Associate Director-Switzerland</p>
                 </div>
-            </section>
+
+                <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src={a2} alt="Mrs. Angeline J Williams" className="w-full h-full object-cover" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mrs. Angeline J Williams</h3>
+                    <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>M.sc., B.Ed -Maths, M.Sc - Psych., M.Sc., - Coun & Psyth., B.A., B.Ed – Hindi</p>
+                    <p className="text-gray-600 text-sm">Senior Educationist & Counsellor</p>
+                </div>
+
+                <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src={a3} alt="Thiru. Kesavan Nair" className="w-full h-full object-cover" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Thiru. Kesavan Nair. DCE</h3>
+                    <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Retd. Overseer </p>
+                    <p className="text-gray-600 text-sm">Sheduled Casts & Scheduled Tribe Dept. Govt. of Tamil Nadu</p>
+                </div>
+
+                <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src={a4} alt="Shanmugam Ramasamy" className="w-full h-full object-cover" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Aloevera Iya Shanmugam Ramasamy</h3>
+                    <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Mentor - Medicinal & Aromatic Plants</p>
+                </div>
+
+                <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src={a5} alt="Dr. Richard" className="w-full h-full object-contain" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Dr. Richard. M. Div., PhD</h3>
+                    <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Mentor - NGO Management</p>
+                </div>
+
+                <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src={a6} alt="Thiru. Shanmugam" className="w-full h-full object-contain" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Thiru. Shanmugam</h3>
+                    <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>M Sc., M.Ed., M.Phil., Retd. Head Master</p>
+                    <p className="text-gray-600 text-sm">Govt. Hr. Sec. School</p>
+                </div>
+
+                <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src={a7} alt="Mr. G. Sampath" className="w-full h-full object-contain" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. G. Sampath. M.A., (Yoga)</h3>
+                    <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Mentor - Organic Farming</p>
+                </div>
+
+                <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src={a8} alt="Mr. Arunkarthick Selvaraj" className="w-full h-full object-contain" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. Arunkarthick Selvaraj M.C.A.</h3>
+                    <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Co-Founder</p>
+                    <p className="text-gray-600 text-sm">Luisant Software Solutions</p>
+                </div>
+
+                <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src={a9} alt="P. Gnanaprakash" className="w-full h-full object-contain" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>P. Gnanaprakash</h3>
+                    <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Founder & CEO. gooesy.com</p>
+                    <p className="text-gray-600 text-sm">Service Market Place</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
             {/* Board & Leadership Oversight */}
             <section className="py-20 bg-gray-50">
