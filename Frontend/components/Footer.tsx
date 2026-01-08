@@ -17,10 +17,10 @@ const Footer: React.FC = () => {
             </div>
             <p className="text-gray-300 text-sm">From villages to the nation, change starts small. Together, we grow hope—leaving no one behind.</p>
             <div className="mt-6 flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook-f"></i></a>
-              <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i></a>
-              <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-linkedin-in"></i></a>
-              <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-youtube"></i></a>
+              <a href="https://www.facebook.com/springsindiafoundation/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><i className="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/springsindiafoundation/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i></a>
+              <a href="https://x.com/springsfoundn" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/company/springindiafoundation" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><i className="fab fa-linkedin-in"></i></a>
             </div>
           </div>
           <div>
