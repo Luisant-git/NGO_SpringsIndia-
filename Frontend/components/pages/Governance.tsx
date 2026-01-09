@@ -270,7 +270,7 @@ const Governance: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
                 <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
                     <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                        <img src={a1} alt="Mr. Jacob Belly" className="w-full h-full object-contain" />
+                        <img src={a1} alt="Mr. Jacob Belly" className="w-full h-full object-contain scale-150" />
                     </div>
                     <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. Jacob Belly. M. Th</h3>
                     <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>www.globethics.net</p>
