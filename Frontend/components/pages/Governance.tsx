@@ -235,7 +235,7 @@ const Governance: React.FC = () => {
                                 <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
                                     <img src={t3} alt="Mr. Johnson" className="w-full h-full object-cover" />
                                 </div>
-                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. Johnson.</h3>
+                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. Johnson</h3>
                                 <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Trustee & Director External Relations & Resource Mobilization</p>
                                 <p className="text-gray-600 text-sm">Occupation: Business</p>
                             </div>
