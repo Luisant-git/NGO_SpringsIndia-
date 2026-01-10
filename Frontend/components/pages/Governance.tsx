@@ -235,7 +235,7 @@ const Governance: React.FC = () => {
                                 <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
                                     <img src={t3} alt="Mr. Johnson" className="w-full h-full object-cover" />
                                 </div>
-                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. Johnson. DME.</h3>
+                                <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Mr. Johnson.</h3>
                                 <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Trustee & Director External Relations & Resource Mobilization</p>
                                 <p className="text-gray-600 text-sm">Occupation: Business</p>
                             </div>
@@ -292,7 +292,7 @@ const Governance: React.FC = () => {
                     </div>
                     <h3 className="text-xl font-bold mb-3" style={{color: '#00695c'}}>Thiru. Kesavan Nair. DCE</h3>
                     <p className="text-sm font-semibold mb-3" style={{color: '#ff6f00'}}>Retd. Overseer </p>
-                    <p className="text-gray-600 text-sm">Sheduled Casts & Scheduled Tribe Dept. Govt. of Tamil Nadu</p>
+                    <p className="text-gray-600 text-sm">Scheduled Casts & Scheduled Tribe Dept. Govt. of Tamil Nadu</p>
                 </div>
 
                 <div className="bg-gray-50 p-8 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
