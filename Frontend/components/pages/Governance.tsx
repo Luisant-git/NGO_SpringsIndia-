@@ -7,7 +7,7 @@ import t3 from '../../assets/t3.jpg';
 import t4 from '../../assets/t4.png';
 import t5 from '../../assets/t5.jpg';
 import a1 from '../../assets/a1.jpg';
-import a2 from '../../assets/a2.jpg';
+import a2 from '../../assets/a2.jpeg';
 import a3 from '../../assets/a3.png';
 import a4 from '../../assets/a4.jpg';
 import a5 from '../../assets/a5.jpg';
