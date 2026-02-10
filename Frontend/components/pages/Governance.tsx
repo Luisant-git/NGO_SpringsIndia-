@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaCertificate, FaIdCard, FaCheckCircle, FaShieldAlt, FaBuilding, FaChartLine, FaUniversity, FaChild, FaGavel, FaCalculator, FaLock, FaUsersCog, FaBullhorn, FaBalanceScale, FaUsers, FaHeart, FaCog, FaFileAlt, FaHandshake, FaChalkboardTeacher, FaHandsHelping, FaShareAlt } from 'react-icons/fa';
+import UnderMaintenance from '../common/UnderMaintenance';
 import t1 from '../../assets/t1.jpg';
 import t2 from '../../assets/t2.jpg';
 import t3 from '../../assets/t3.jpg';
@@ -73,8 +74,9 @@ const boardOversight = [
 
 const Governance: React.FC = () => {
     return (
-        <div className="bg-gray-50">
-            <section className="cta-gradient text-white py-20">
+        <div className="bg-gray-50 relative">
+            <UnderMaintenance />
+            {/* <section className="cta-gradient text-white py-20">
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="text-4xl font-bold">Governance & Policies</h1>
                     <p className="mt-4 text-lg max-w-4xl mx-auto">
@@ -84,10 +86,10 @@ const Governance: React.FC = () => {
                         At Springs India Foundation, good governance is our foundation. We operate with ethical practices, strong compliance, and transparent reporting to ensure donor trust and community confidence. We follow statutory norms, internal controls, and structured processes to deliver sustainable social impact with accountability.
                     </p>
                 </div>
-            </section>
+            </section> */}
 
             {/* Legal & Statutory Compliance */}
-            <section className="py-20 bg-white">
+            {/* <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Legal & Statutory Compliance</h2>
                     <p className="text-center text-gray-600 mb-12">We are registered and compliant with the legal framework for NGOs in India.</p>
@@ -105,10 +107,10 @@ const Governance: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Governance Structure */}
-            <section className="py-20 bg-gray-50">
+            {/* <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Governance Structure</h2>
                     <p className="text-center text-gray-600 mb-12">We follow a structured governance system with:</p>
@@ -130,7 +132,7 @@ const Governance: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Policies & Frameworks */}
             {/* <section className="py-20 bg-white">
@@ -156,7 +158,7 @@ const Governance: React.FC = () => {
             </section> */}
 
             {/* Transparency & Accountability */}
-            <section className="py-20 bg-gray-50">
+            {/* <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Transparency & Accountability Practices</h2>
                     <div className="max-w-4xl mx-auto">
@@ -180,10 +182,10 @@ const Governance: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Ethical Partnership Promise */}
-            <section className="py-20 bg-white">
+            {/* <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Ethical Partnership Promise</h2>
                     <div className="max-w-4xl mx-auto">
@@ -205,10 +207,10 @@ const Governance: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Board of Trustees */}
-            <section className="py-20 bg-white">
+            {/* <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Board of Trustees</h2>
                     <div className="max-w-6xl mx-auto">
@@ -260,10 +262,10 @@ const Governance: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Board of Advisors */}
-<section className="py-20 bg-white">
+{/* <section className="py-20 bg-white">
     <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Board of Advisors</h2>
         <div className="max-w-6xl mx-auto">
@@ -348,11 +350,11 @@ const Governance: React.FC = () => {
             </div>
         </div>
     </div>
-</section>
+</section> */}
 
 
             {/* Board & Leadership Oversight */}
-            <section className="py-20 bg-gray-50">
+            {/* <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Board & Leadership Oversight</h2>
                     <div className="max-w-4xl mx-auto">
@@ -370,14 +372,10 @@ const Governance: React.FC = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="text-center">
-                            {/* <p className="text-gray-600 italic">
-                                Names & profiles will be listed below (we will create crisp professional bios later)
-                            </p> */}
-                        </div>
+    
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Annual and Financial Reports */}
             {/* <section className="py-20 bg-white">
@@ -402,7 +400,7 @@ const Governance: React.FC = () => {
             </section> */}
 
             {/* Contact Governance Cell */}
-            <section className="py-20 text-gray-800" style={{backgroundColor: 'rgb(232, 245, 232)'}}>
+            {/* <section className="py-20 text-gray-800" style={{backgroundColor: 'rgb(232, 245, 232)'}}>
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold mb-8" style={{color: '#00695c'}}>Report Concerns / Contact Governance Cell</h2>
                     <p className="text-lg mb-8 max-w-2xl mx-auto">
@@ -451,7 +449,7 @@ const Governance: React.FC = () => {
                         </Link>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 };

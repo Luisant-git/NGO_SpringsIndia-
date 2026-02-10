@@ -100,7 +100,7 @@ const App: React.FC = () => {
             <main className="flex-grow">
               <Governance />
             </main>
-            <Footer />
+            {/* <Footer /> */}
             <BackToTopButton />
           </div>
         } />
