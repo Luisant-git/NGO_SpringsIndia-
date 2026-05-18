@@ -27,7 +27,7 @@ const navLinks = [
   { name: 'Impacts', path: '/programs-impacts' },
   { name: 'Media', path: '/media' },
   { name: 'CSR Partnerships', path: '/partnerships' },
-  { name: 'Governance', path: '/governance' },
+  // { name: 'Governance', path: '/governance' },
   { name: 'Annual Reports', path: '/reports' },
   { name: 'Blog', path: '/blog' },
   { name: 'Contact Us', path: '/contact' },

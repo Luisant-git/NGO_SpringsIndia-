@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import media1Jpeg from '../../assets/media-1.jpeg';
 import media2Jpeg from '../../assets/media-2.jpeg';
 import media3Jpeg from '../../assets/media-3.jpeg';
 
 const Media: React.FC = () => {
-    const mediaItems = [
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const mediaItems = [
     { id: 1, image: media1Jpeg, title: 'Media Coverage 1' },
     { id: 2, image: media2Jpeg, title: 'Media Coverage 2' },
     { id: 3, image: media3Jpeg, title: 'Media Coverage 3' },
@@ -39,7 +41,8 @@ const Media: React.FC = () => {
               {mediaItems.map((item) => (
                 <div 
                   key={item.id} 
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                  onClick={() => setSelectedImage(item.image)}
                 >
                   <div className="relative">
                     <img 
@@ -60,6 +63,29 @@ const Media: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Image Popup Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-7xl max-h-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-10 right-0 text-white text-3xl hover:text-gray-300 transition-colors"
+            >
+              <i className="fas fa-times"></i>
+            </button>
+            <img 
+              src={selectedImage} 
+              alt="Media coverage"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
