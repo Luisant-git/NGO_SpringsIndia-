@@ -8,14 +8,7 @@ import finalLogo from '../assets/final.png';
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about' },
-  { 
-    name: 'Flagship Programs', 
-    path: '/rwedp',
-    dropdown: [
-      { name: 'Rural Women Educator Development Program –(RWEDP)', path: '/rwedp' },
-      { name: 'Research, Learning and Innovation Centre-(RLIC)', path: '/research-center' },
-    ]
-  },
+  { name: 'Projects', path: '/flagship-projects' },
   { name: 'Programs & Initiatives', path: '/programs-initiatives' },
   { name: 'Programs & Impacts', path: '/programs-impacts' },
   { name: 'CSR Partnerships', path: '/partnerships' },
@@ -93,7 +86,7 @@ const Header: React.FC = () => {
                     <i className="fas fa-chevron-down ml-1 text-xs"></i>
                   </NavLink>
                   <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-64 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
-                    {link.name !== 'Flagship Programs' && (
+                    {link.name !== 'Projects' && (
                       <NavLink
                         to={link.path}
                         style={({ isActive }) => (isActive ? activeLinkStyle : {})}
@@ -171,7 +164,7 @@ const Header: React.FC = () => {
                   </button>
                   {openDropdown === link.name && (
                     <div className="pl-6 pt-1 pb-2">
-                      {link.name !== 'Flagship Programs' && (
+                      {link.name !== 'Projects' && (
                         <NavLink to={link.path} onClick={closeMobileMenu} style={({ isActive }) => (isActive ? activeLinkStyle : {})} className="block px-3 py-2 rounded-md text-lg font-medium text-gray-600 hover:bg-teal-100 hover:text-orange-500 uppercase">
                           All {link.name}
                         </NavLink>

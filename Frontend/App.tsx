@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
@@ -15,6 +14,7 @@ import Gallery from './components/pages/Gallery';
 import StepsAcademy from './components/pages/StepsAcademy';
 import RWEDP from './components/pages/RWEDP';
 import ResearchCenter from './components/pages/ResearchCenter';
+import FlagshipProjects from './components/pages/FlagshipProjects';
 import ProgramsInitiatives from './components/pages/ProgramsInitiatives';
 import ProgramsImpacts from './components/pages/ProgramsImpacts';
 import Blog from './components/pages/Blog';
@@ -144,7 +144,18 @@ const App: React.FC = () => {
             <BackToTopButton />
           </div>
         } />
-        <Route path="/research-center" element={
+        <Route path="/flagship-projects" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <FlagshipProjects />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        {/* Research Center - Unpublished */}
+        {/* <Route path="/research-center" element={
           <div className="flex flex-col min-h-screen bg-white">
             <Header />
             <main className="flex-grow">
@@ -153,7 +164,7 @@ const App: React.FC = () => {
             <Footer />
             <BackToTopButton />
           </div>
-        } />
+        } /> */}
         <Route path="/programs-initiatives" element={
           <div className="flex flex-col min-h-screen bg-white">
             <Header />
