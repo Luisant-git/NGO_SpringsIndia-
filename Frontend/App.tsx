@@ -11,6 +11,7 @@ import Partnerships from './components/pages/Partnerships';
 import Governance from './components/pages/Governance';
 import Contact from './components/pages/Contact';
 import Gallery from './components/pages/Gallery';
+import Media from './components/pages/Media';
 import StepsAcademy from './components/pages/StepsAcademy';
 import RWEDP from './components/pages/RWEDP';
 import ResearchCenter from './components/pages/ResearchCenter';
@@ -110,6 +111,16 @@ const App: React.FC = () => {
             <Header />
             <main className="flex-grow">
               <Gallery />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/media" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <Media />
             </main>
             <Footer />
             <BackToTopButton />
