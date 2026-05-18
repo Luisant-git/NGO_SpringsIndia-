@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -14,7 +14,8 @@ import Gallery from './components/pages/Gallery';
 import StepsAcademy from './components/pages/StepsAcademy';
 import RWEDP from './components/pages/RWEDP';
 import ResearchCenter from './components/pages/ResearchCenter';
-import FlagshipProjects from './components/pages/FlagshipProjects';
+import ProjectSheWins from './components/pages/ProjectSheWins';
+import ProjectBurgurHills from './components/pages/ProjectBurgurHills';
 import ProgramsInitiatives from './components/pages/ProgramsInitiatives';
 import ProgramsImpacts from './components/pages/ProgramsImpacts';
 import Blog from './components/pages/Blog';
@@ -144,16 +145,28 @@ const App: React.FC = () => {
             <BackToTopButton />
           </div>
         } />
-        <Route path="/flagship-projects" element={
+        <Route path="/project-shewins" element={
           <div className="flex flex-col min-h-screen bg-white">
             <Header />
             <main className="flex-grow">
-              <FlagshipProjects />
+              <ProjectSheWins />
             </main>
             <Footer />
             <BackToTopButton />
           </div>
         } />
+        <Route path="/project-burgur-hills" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <ProjectBurgurHills />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        {/* Redirect old flagship-projects route to project-shewins */}
+        <Route path="/flagship-projects" element={<Navigate to="/project-shewins" replace />} />
         {/* Research Center - Unpublished */}
         {/* <Route path="/research-center" element={
           <div className="flex flex-col min-h-screen bg-white">

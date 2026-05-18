@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const FlagshipProjects: React.FC = () => {
+const ProjectSheWins: React.FC = () => {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
       <section className="cta-gradient text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold">Our Projects</h1>
+          <h1 className="text-4xl font-bold">Project SheWins</h1>
           <p className="mt-4 text-lg max-w-3xl mx-auto">
-            Transforming lives through sustainable and impactful initiatives
+            Winning Through Learning - Empowering Rural Women Educators
           </p>
         </div>
       </section>
@@ -357,4 +357,4 @@ const FlagshipProjects: React.FC = () => {
   );
 };
 
-export default FlagshipProjects;
+export default ProjectSheWins;
