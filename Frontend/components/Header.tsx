@@ -16,8 +16,8 @@ const navLinks = [
       { name: 'Project Burgur Hills', path: '/project-burgur-hills' },
     ]
   },
-  { name: 'Programs & Initiatives', path: '/programs-initiatives' },
-  { name: 'Programs & Impacts', path: '/programs-impacts' },
+  { name: 'Initiatives', path: '/programs-initiatives' },
+  { name: 'Impacts', path: '/programs-impacts' },
   { name: 'CSR Partnerships', path: '/partnerships' },
   { name: 'Governance', path: '/governance' },
   { name: 'Annual Reports', path: '/reports' },
