@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import aboutImage from '../../assets/about.jpeg';
+import michaelImage from '../../assets/Michael.jpeg';
+import jacobImage from '../../assets/Jacob.jpeg';
+import jubairaImage from '../../assets/Jubaira.jpeg';
 
 const timelineEvents = {
   "2022": [
@@ -878,6 +881,220 @@ const About: React.FC = () => {
         </div>
       </section> */}
 
+      {/* Dropdown Sections */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          {/* Who We Are Dropdown */}
+          <div className="mb-6">
+            <details open className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <summary className="cursor-pointer bg-gradient-to-r from-teal-600 to-emerald-600 text-white px-6 py-4 text-xl font-bold hover:from-teal-700 hover:to-emerald-700 transition-all">
+                Who We Are
+              </summary>
+              <div className="p-8 text-gray-700 leading-relaxed space-y-4">
+                <p>
+                  We are registered with the <span className="font-bold">Government of India</span> and authorized to receive <span className="font-bold">CSR funding</span> under CSR-1 certification. Our mission is simple yet powerful — to empower people, uplift communities, and build a sustainable and inclusive future for all.
+                </p>
+                <p className="font-bold">
+                  Springs India Foundation- A Light in someone's darkest hour, to show the path of <span className="text-orange-700">'HOPE'</span> and <span className="text-green-700">'SUCCESS'</span>.
+                </p>
+                <p>
+                  Springs India Foundation is a Non-Profit Organisation and an NGO - a social welfare trust that works for bringing in a social change in the community.
+                </p>
+                <p>
+                  <span className="font-bold text-gray-800">Springs India Foundation</span> is on a mission to serve the human community by transforming human lives, aiming at the betterment of women empowerment, Youth development, child welfare, general and indigenous community welfare and upliftment.
+                </p>
+                <p>
+                  Springs India Foundation is a value-driven trust and serves towards national developmental goals, that impact the lives of the Women, Youth, Children and general and indigenous community through long-term, sustainable programs. The trust aims to develop the skills of the community and thus helps them to come out of poverty and achieve inclusive growth, development, and success with its main focus on education, mental health, skill development, livelihood and environment. The project and programs of the trust always focus on the Women, Youth and Child Skill development, general and indigenous community welfare that led towards a better, sustainable way of life for the weaker sections of society and enhances their livelihood.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          {/* Governance Dropdown */}
+          <div className="mb-6">
+            <details open className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <summary className="cursor-pointer bg-gradient-to-r from-teal-600 to-emerald-600 text-white px-6 py-4 text-xl font-bold hover:from-teal-700 hover:to-emerald-700 transition-all">
+                Governance
+              </summary>
+              <div className="p-8 text-gray-700 leading-relaxed space-y-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4">Governance at Springs India Foundation</h3>
+                  <p>
+                    At Springs India Foundation, governance is not merely an administrative responsibility — it is the foundation on which trust, accountability, transparency, and sustainable social impact are built. As a mission-driven organization committed to education, women empowerment, community welfare, and rural development, we believe that strong governance is essential to creating meaningful and lasting change in society.
+                  </p>
+                  <p className="mt-4">
+                    Our governance framework is guided by ethical leadership, responsible decision-making, and a deep commitment to the communities we serve. Every initiative undertaken by the Foundation is carefully planned, monitored, and evaluated to ensure that resources are utilized effectively and that the intended beneficiaries receive maximum impact.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">A Vision Rooted in Responsibility</h4>
+                  <p>
+                    The Foundation functions under the guidance of experienced professionals, educators, social workers, and development leaders who share a common vision of transforming lives through compassionate and sustainable interventions. The governing body works collectively to ensure that every project reflects the values and mission of the organization.
+                  </p>
+                  <p className="mt-4">
+                    We believe that true development happens when governance is people-centered. Therefore, our policies and practices are designed to uphold dignity, inclusion, equality, and community participation at every level.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">The Visionary Board of Trustees</h4>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="bg-gray-50 p-6 rounded-lg text-center">
+                      <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src={michaelImage} alt="Mr. Michael A" className="w-full h-full object-cover" />
+                      </div>
+                      <p className="font-semibold text-gray-900 text-lg mb-1">Mr. Michael A</p>
+                      <p className="text-sm text-teal-600 font-medium mb-3">A visionary Educationist</p>
+                      <p className="text-sm text-gray-700">Mr. Michael A with 27 years of experience in operating and executing projects under Women Empowerment, Youth development and Child Welfare. He carries with him years of rich experience in operating various institutions and implementing and executing various projects. His forward thinking skills and innovative ideas has brought laurels to the institutions and success in the projects.</p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-lg text-center">
+                      <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src={jacobImage} alt="Mr. Jacob Belly" className="w-full h-full object-cover" />
+                      </div>
+                      <p className="font-semibold text-gray-900 text-lg mb-1">Mr. Jacob Belly</p>
+                      <p className="text-sm text-teal-600 font-medium mb-3">Social Work Expert</p>
+                      <p className="text-sm text-gray-700">Mr. Jacob Belly brings extensive experience in the field of social work through his involvement with various organizations. He has served as a member of committees responsible for channeling CSR initiatives and has actively contributed as Project Director of Globethics, headquartered in Geneva.</p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-lg text-center">
+                      <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src={jubairaImage} alt="Ms. Jubaira" className="w-full h-full object-cover" />
+                      </div>
+                      <p className="font-semibold text-gray-900 text-lg mb-1">Ms. Jubaira</p>
+                      <p className="text-sm text-teal-600 font-medium mb-3">Women Empowerment Advocate</p>
+                      <p className="text-sm text-gray-700">Ms. Jubaira is a compassionate and dedicated individual who actively contributes to women's empowerment initiatives, counselling and teaching, with a strong commitment to supporting and uplifting communities.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">Legal & Statutory Compliance</h4>
+                  <p className="mb-4">We are registered and compliant with the legal framework for NGOs in India.</p>
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b">
+                          <th className="text-left py-2 font-semibold">Certificate / Registration</th>
+                          <th className="text-left py-2 font-semibold">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y">
+                        <tr><td className="py-2">Trust Registration</td><td className="py-2"><i className="fas fa-check-circle text-green-600 mr-2"></i>Registered</td></tr>
+                        <tr><td className="py-2">PAN</td><td className="py-2"><i className="fas fa-check-circle text-green-600 mr-2"></i>Available</td></tr>
+                        <tr><td className="py-2">12A</td><td className="py-2"><i className="fas fa-check-circle text-green-600 mr-2"></i>Approved</td></tr>
+                        <tr><td className="py-2">80G</td><td className="py-2"><i className="fas fa-check-circle text-green-600 mr-2"></i>Approved</td></tr>
+                        <tr><td className="py-2">CSR-1</td><td className="py-2"><i className="fas fa-check-circle text-green-600 mr-2"></i>Registered under MCA</td></tr>
+                        <tr><td className="py-2">Annual Financial Audit</td><td className="py-2"><i className="fas fa-check-circle text-green-600 mr-2"></i>Conducted</td></tr>
+                        <tr><td className="py-2">Banking & Accounting</td><td className="py-2"><i className="fas fa-check-circle text-green-600 mr-2"></i>Dedicated NGO bank account & bookkeeping</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">Committed to Transparency, Ethics & Accountability</h4>
+                  <p className="mb-4">
+                    At Springs India Foundation, good governance is our foundation. We operate with ethical practices, strong compliance, and transparent reporting to ensure donor trust and community confidence.
+                  </p>
+                  <p className="mb-4">
+                    We follow statutory norms, internal controls, and structured processes to deliver sustainable social impact with accountability.
+                  </p>
+                  <p className="font-semibold mb-2">We are committed to:</p>
+                  <ul className="list-disc list-inside space-y-1 ml-4">
+                    <li>Ethical utilization of funds and resources</li>
+                    <li>Compliance with statutory and regulatory requirements</li>
+                    <li>Transparent financial practices</li>
+                    <li>Fair and inclusive decision-making</li>
+                    <li>Responsible project management and monitoring</li>
+                  </ul>
+                  <p className="mt-4">
+                    Through these measures, we aim to build confidence among beneficiaries, partners, donors, volunteers, and stakeholders.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">Transparency & Accountability Practices</h4>
+                  <ul className="list-disc list-inside space-y-1 ml-4">
+                    <li>Annual audited financial statements</li>
+                    <li>CSR & donor utilization certificates</li>
+                    <li>Program monitoring & field reports</li>
+                    <li>Impact measurement & dashboards</li>
+                    <li>Public communication & community feedback channels</li>
+                  </ul>
+                  <p className="mt-4">
+                    All funds are utilised for approved social development programs.
+                  </p>
+                  <p>
+                    Decision-making is based on transparency, accountability & community needs.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">Ethical Partnership Promise</h4>
+                  <p className="mb-2 font-semibold">We ensure:</p>
+                  <ul className="list-disc list-inside space-y-1 ml-4">
+                    <li>Responsible stakeholder engagement</li>
+                    <li>Respect for community dignity & culture</li>
+                    <li>Safe environment for children & women</li>
+                    <li>Honest reporting — no exaggerated claims</li>
+                    <li>Ethical volunteer & staff conduct</li>
+                  </ul>
+                  <p className="mt-4 italic">Our values guide every decision and every partnership.</p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">Community-Centered Leadership</h4>
+                  <p>
+                    Our governance philosophy recognizes that communities themselves are important stakeholders in development. We encourage community participation, local leadership, and collaborative decision-making in our welfare initiatives, particularly in rural and underserved regions.
+                  </p>
+                  <p className="mt-4">
+                    Whether it is empowering rural women through educational training programs, supporting children's development, strengthening schools, or implementing community welfare projects, the Foundation ensures that the voices and needs of the people remain at the heart of every initiative.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">Commitment to Ethical Social Impact</h4>
+                  <p className="mb-4">
+                    Springs India Foundation believes that social work must be carried out with compassion, professionalism, and accountability. We are dedicated to maintaining high standards of integrity in all partnerships, collaborations, and community engagements.
+                  </p>
+                  <p className="mb-2 font-semibold">Our governance approach helps us:</p>
+                  <ul className="list-disc list-inside space-y-1 ml-4">
+                    <li>Strengthen institutional credibility</li>
+                    <li>Ensure sustainable program implementation</li>
+                    <li>Promote responsible leadership</li>
+                    <li>Build long-term partnerships</li>
+                    <li>Deliver measurable social impact</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">Building a Better Future Together</h4>
+                  <p>
+                    Governance at Springs India Foundation is driven by the belief that every action taken today shapes the future of communities tomorrow. With integrity as our guiding principle and service as our mission, we continue to work towards building empowered communities, educated children, skilled women, and a more compassionate society.
+                  </p>
+                  <p className="mt-4">
+                    Through responsible governance and collective commitment, Springs India Foundation strives to become a trusted force for social transformation and inclusive development in India.
+                  </p>
+                </div>
+
+                {/* <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-600">
+                  <h4 className="text-lg font-bold text-gray-800 mb-3">📞 Report Concerns / Contact Governance Cell</h4>
+                  <p className="mb-2">For any compliance or governance-related communication:</p>
+                  <div className="space-y-1">
+                    <p>📍 Coimbatore, Tamil Nadu</p>
+                    <p>📧 info@springsindiafoundation.ngo</p>
+                    <p>📞 +91-9150931818</p>
+                    <p>🌐 springsindiafoundation.ngo</p>
+                  </div>
+                  <p className="mt-4 text-sm">Follow us on: FB | Insta | LinkedIn | YouTube</p>
+                  <p className="mt-2 font-semibold">We are committed to ethical operations and continuous improvement.</p>
+                </div> */}
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
       {/* Join Our Movement Section */}
       <section className="py-20 bg-gradient-to-br from-teal-50 to-emerald-50">
         <div className="container mx-auto px-4">
@@ -1013,13 +1230,6 @@ const LeadershipCarousel: React.FC = () => {
       image:
         "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face",
       description: "Supporting strategic initiatives and community outreach.",
-    },
-    {
-      name: "Advisory Board",
-      role: "Senior Board",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-      description: "Providing strategic guidance and expertise.",
     },
     {
       name: "Media Head",
