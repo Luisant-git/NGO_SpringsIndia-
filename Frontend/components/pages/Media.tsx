@@ -51,9 +51,9 @@ const Media: React.FC = () => {
                       <i className="fas fa-newspaper" style={{color: '#ff6f00'}}></i>
                     </div>
                   </div>
-                  <div className="p-6">
+                  {/* <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>
