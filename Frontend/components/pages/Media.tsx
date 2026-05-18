@@ -35,7 +35,7 @@ const Media: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {mediaItems.map((item) => (
                 <div 
                   key={item.id} 
@@ -45,11 +45,14 @@ const Media: React.FC = () => {
                     <img 
                       src={item.image} 
                       alt={item.title}
-                      className="w-full h-auto object-contain"
+                      className="w-full h-64 object-cover"
                     />
                     <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full shadow-md">
                       <i className="fas fa-newspaper" style={{color: '#ff6f00'}}></i>
                     </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
                   </div>
                 </div>
               ))}
