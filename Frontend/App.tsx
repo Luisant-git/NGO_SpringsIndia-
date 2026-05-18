@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
+import WhoWeAre from './components/pages/WhoWeAre';
+import AboutGovernance from './components/pages/AboutGovernance';
 import Programs from './components/pages/Programs';
 import Impact from './components/pages/Impact';
 import Partnerships from './components/pages/Partnerships';
@@ -71,6 +73,26 @@ const App: React.FC = () => {
             <Header />
             <main className="flex-grow">
               <About />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/who-we-are" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <WhoWeAre />
+            </main>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        } />
+        <Route path="/about-governance" element={
+          <div className="flex flex-col min-h-screen bg-white">
+            <Header />
+            <main className="flex-grow">
+              <AboutGovernance />
             </main>
             <Footer />
             <BackToTopButton />

@@ -4,7 +4,7 @@ import media2Jpeg from '../../assets/media-2.jpeg';
 import media3Jpeg from '../../assets/media-3.jpeg';
 
 const Media: React.FC = () => {
-  const mediaItems = [
+    const mediaItems = [
     { id: 1, image: media1Jpeg, title: 'Media Coverage 1' },
     { id: 2, image: media2Jpeg, title: 'Media Coverage 2' },
     { id: 3, image: media3Jpeg, title: 'Media Coverage 3' },

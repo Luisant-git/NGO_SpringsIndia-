@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import aboutImage from '../../assets/about.jpeg';
 import michaelImage from '../../assets/Michael.jpeg';
-import jacobImage from '../../assets/Jacob.jpeg';
-import jubairaImage from '../../assets/Jubaira.jpeg';
+import jacobImage from '../../assets/Jacob.png';
+import jubairaImage from '../../assets/Jubaira.png';
 
 const timelineEvents = {
   "2022": [
@@ -104,6 +105,23 @@ const TimelineItem: React.FC<{
 );
 
 const About: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Handle anchor link scrolling
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    } else {
+      // Scroll to top if no hash
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   return (
     <div className="bg-gray-50">
       <section className="cta-gradient text-white py-20">
@@ -116,7 +134,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-16" id="who-we-are">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img
@@ -882,7 +900,7 @@ const About: React.FC = () => {
       </section> */}
 
       {/* Dropdown Sections */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" id="governance">
         <div className="container mx-auto px-4 max-w-6xl">
           {/* Who We Are Dropdown */}
           <div className="mb-6">
