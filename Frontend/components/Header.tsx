@@ -7,14 +7,7 @@ import finalLogo from '../assets/final.png';
 
 const navLinks = [
   { name: 'Home', path: '/' },
-  { 
-    name: 'About Us', 
-    path: '/about',
-    dropdown: [
-      { name: 'Who We Are', path: '/about' },
-      { name: 'Governance', path: '/about-governance' },
-    ]
-  },
+  { name: 'About Us', path: '/about' },
   { 
     name: 'Projects', 
     path: '/project-shewins',
@@ -27,7 +20,7 @@ const navLinks = [
   { name: 'Impacts', path: '/programs-impacts' },
   { name: 'Media', path: '/media' },
   { name: 'CSR Partnerships', path: '/partnerships' },
-  // { name: 'Governance', path: '/governance' },
+  { name: 'Governance', path: '/about-governance' },
   { name: 'Annual Reports', path: '/reports' },
   { name: 'Blog', path: '/blog' },
   { name: 'Contact Us', path: '/contact' },
