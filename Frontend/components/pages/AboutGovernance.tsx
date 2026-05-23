@@ -1,7 +1,7 @@
 import React from 'react';
 import michaelImage from '../../assets/Michael.jpeg';
 import jacobImage from '../../assets/Jacob.png';
-import jubairaImage from '../../assets/Jubaira.png';
+import jubairaImage from '../../assets/Jubaira.jpeg';
 
 const AboutGovernance: React.FC = () => {
   return (

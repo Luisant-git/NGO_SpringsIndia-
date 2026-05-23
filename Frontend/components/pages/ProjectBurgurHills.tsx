@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import burgurHillsImage from '../../assets/burgur-hills.jpeg';
 
 const ProjectBurgurHills: React.FC = () => {
   return (
@@ -27,6 +28,13 @@ const ProjectBurgurHills: React.FC = () => {
 
             {/* Introduction */}
             <div className="mb-12">
+              <div className="mb-8">
+                <img 
+                  src={burgurHillsImage} 
+                  alt="Burgur Hills Community" 
+                  className="w-full h-96 object-cover rounded-lg shadow-xl"
+                />
+              </div>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 Amidst the beautiful yet underserved landscapes of the Burgur Hills in Erode District, thousands of families continue to live with limited access to essential opportunities that many take for granted. Behind the quiet villages and remote hill pathways are stories of struggle, resilience, hope, and untapped potential.
               </p>
